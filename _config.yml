@@ -4,8 +4,8 @@ author: Benjamin Berhault
 email: benjamin.berhault@hotmail.com
 description: "Personal blog"
 
-baseurl: ""
-url: "http://benjamin-berhault.github.io/" # "http://benjamin-berhault.github.io/benjamin-berhault.github.io"
+baseurl: "/http://benjamin-berhault.github.io"
+url: "http://benjamin-berhault.github.io/benjamin-berhault.github.io" # "http://benjamin-berhault.github.io/benjamin-berhault.github.io"
 tagline: ""
 
 # twitter_username: macrod68
