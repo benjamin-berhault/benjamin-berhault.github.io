@@ -4,7 +4,7 @@ author: Benjamin Berhault
 email: benjamin.berhault@hotmail.com
 description: "Personal blog"
 
-baseurl: "/"
+baseurl: "/my_personal_blog"
 url: "http://benjamin-berhault.github.io/my_personal_blog" # "http://benjamin-berhault.github.io/benjamin-berhault.github.io"
 tagline: ""
 
