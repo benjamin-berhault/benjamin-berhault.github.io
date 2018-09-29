@@ -8,7 +8,7 @@ meta: "Springfield"
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.
 
-## Some great heading (h2)
+## Some great heading
 
 Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu.
 
@@ -36,14 +36,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eg
 
 Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum.
 
-```html
-<html>
-  <head>
-  </head>
-  <body>
-    <p>Hello, World!</p>
-  </body>
-</html>
+```javascript
+var ma_var = 3;
 ```
 
 

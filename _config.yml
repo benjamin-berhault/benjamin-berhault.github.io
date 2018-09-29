@@ -5,7 +5,8 @@ email: benjamin.berhault@hotmail.com
 description: > # this means to ignore newlines until "baseurl:"
   "Personal blog"
 
-url: ""
+baseurl:"/my_personal_blog"
+url: "http://benjamin-berhault.github.io/my_personal_blog" # "http://benjamin-berhault.github.io/benjamin-berhault.github.io"
 tagline: ""
 
 # twitter_username: macrod68
@@ -19,3 +20,5 @@ markdown: kramdown
 kramdown:
    syntax_highlighter_opts:
       disable : true
+
+
