@@ -28,4 +28,6 @@ layout: default
     </div>
 </div>
 <script>$('.carousel.carousel-slider').carousel({fullWidth: true});</script>
-{% include disqus.html %}
+{% if site.disqus.shortname %}
+  {% include disqus.html %}
+{% endif %}

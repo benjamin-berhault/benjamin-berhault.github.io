@@ -14,8 +14,12 @@ github_username:  benjamin-berhault
 
 sass:
     style: compressed
-    
-disqus_shortname: "blog-4xh2nyx9aq"
+
+# Disqus Comments
+disqus:
+    # Leave shortname blank to disable comments site-wide.
+    # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+    shortname: blog-4xh2nyx9aq
 
 # disable built-in Rouge highlighting in Jekyll
 markdown: kramdown
