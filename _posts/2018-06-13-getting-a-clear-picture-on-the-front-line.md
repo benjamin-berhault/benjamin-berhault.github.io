@@ -7,9 +7,9 @@ author: "Benjamin Berhault"
 tags: ["mission critical technologies", "london tech week"]
 ---
 
-<p style="text-align: right"><a href="https://benjamin-berhault.github.io/Getting-a-clear-picture-on-the-front-line"><i>Original presentation</i></a></p>
-
 Nowadays emergency services have a great opportunity to improve their service, thanks to the latest technical advances. By giving managers a better view of the activity and optimizing the relief allocation process, resources will be better exploited and more lives will be saved. 
+
+<p style="text-align: right"><a href="https://benjamin-berhault.github.io/Getting-a-clear-picture-on-the-front-line"><i>Original presentation given during the London Tech Week 2018</i></a></p>
 
 This article is a taste of how an emergency dispatch system could be improve for greater efficiency.
 
@@ -17,8 +17,6 @@ This article is a taste of how an emergency dispatch system could be improve for
   <source src="{{ site.url }}/videos/split_second_decision.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
-
-### Effectiveness of an emergency service
 
 What is the basis of an emergency service's effectiveness?
 
@@ -78,7 +76,7 @@ With those notions in mind, let's see what might look like an effective dispatch
 
 As example, let's say that we are about to send a team for a <b>non-critical request</b> while the operational coverage is suffering due to a strong demand of relief, leading to 30% of the units remaining available.
 
-#### Dispatch option 1
+##### Dispatch option 1
 
 <img src="{{ site.url }}/images/01-Project-Getting_a_clear_picture_on_the_front_line/option01.jpg" style='width: 100%;height: 100%;'>
 
@@ -92,7 +90,7 @@ The ambulances are represented by blue points of interest and the request by a r
 For the road segments, red means that those segments are not reachable by a team under the 8 minutes quality of service threshold. For those reachable by 1 to 5 teams they are assigned a color from yellow to green, green if 5 teams are able to reach them under 8 minutes.
 Cartographic representations are really great for quickly assessing the service situation.
 
-#### Dispatch option 2
+##### Dispatch option 2
 
 <img src="{{ site.url }}/images/01-Project-Getting_a_clear_picture_on_the_front_line/option02.jpg" style='width: 100%;height: 100%;'>
 
@@ -100,7 +98,7 @@ But in some cases, things may not be so obvious, so for that, each allocation op
 
 Even if the interface could have been more exhaustive, I hope it’s made it obvious the benefits of such information in a dispatch application.
 
-#### Dispatch option 3
+##### Dispatch option 3
 
 <img src="{{ site.url }}/images/01-Project-Getting_a_clear_picture_on_the_front_line/option03.jpg" style='width: 100%;height: 100%;'>
 
