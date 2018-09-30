@@ -3,8 +3,9 @@ title: Ben's Blog
 author: Benjamin Berhault
 email: benjamin.berhault@hotmail.com
 description: "Personal blog"
-
+# Because we use a redirection to a custom domain we have to set baseurl this way
 baseurl: "/"
+# otherwise it would have been baseurl: "/my_personal_blog"
 url: "http://benjamin-berhault.github.io/my_personal_blog" # "http://benjamin-berhault.github.io/benjamin-berhault.github.io"
 tagline: ""
 
@@ -13,6 +14,8 @@ github_username:  benjamin-berhault
 
 sass:
     style: compressed
+    
+disqus_shortname: "blog-4xh2nyx9aq"
 
 # disable built-in Rouge highlighting in Jekyll
 markdown: kramdown
