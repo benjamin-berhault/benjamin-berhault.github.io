@@ -1,19 +1,29 @@
 ---
 layout: post
+<<<<<<< HEAD
 comments: true
 title: "SQL Server Queries"
 categories: article
 author: "Benjamin Berhault"
+=======
+>>>>>>> be75b0f33eaf4a25ba2918eb337b5ff97ffd2e3b
 ---
 
 In case of a GROUP BY query, to get the value of one column based on the MAX value of another, you can do:
 
 ```sql
 SELECT
+<<<<<<< HEAD
         CASE 
              WHEN MAX(col_C) > 0 THEN MAX(col_D)
              ELSE NULL 
         END     AS col_D_value_when_col_C_MAX
+=======
+		CASE 
+             WHEN MAX(col_C) > 0 THEN MAX(col_D)
+             ELSE NULL 
+        END		AS col_D_value_when_col_C_MAX
+>>>>>>> be75b0f33eaf4a25ba2918eb337b5ff97ffd2e3b
 FROM table 
 GROUP BY col_A, col_B
 ```
@@ -45,7 +55,11 @@ WHERE
     t.NAME NOT LIKE 'dt%' 
     AND t.is_ms_shipped = 0
     AND i.OBJECT_ID > 255 
+<<<<<<< HEAD
     AND t.NAME IN ('My First Table','My Second Table')
+=======
+	AND t.NAME IN ('My First Table','My Second Table')
+>>>>>>> be75b0f33eaf4a25ba2918eb337b5ff97ffd2e3b
 GROUP BY 
     t.Name, s.Name, p.Rows
 ORDER BY 
