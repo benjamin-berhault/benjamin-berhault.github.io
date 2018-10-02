@@ -9,6 +9,16 @@ baseurl: "/"
 url: "http://benjamin-berhault.github.io/my_personal_blog" # "http://benjamin-berhault.github.io/benjamin-berhault.github.io"
 tagline: ""
 
+paginate: 6
+paginate_path: "/blog/page:num/"
+
+# Specific configurations
+github_profile: "https://github.com/benjamin-berhault"
+user: "Benjamin Berhault"
+user_email: "benjamin.berhault@hotmail.com"
+# contact_url: "https://goo.gl/tVljbV"
+google_tracking_id: "UA-63901496-2"
+
 # twitter_username: macrod68
 github_username:  benjamin-berhault
 
@@ -23,8 +33,11 @@ disqus:
 
 # disable built-in Rouge highlighting in Jekyll
 markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
 kramdown:
    syntax_highlighter_opts:
       disable : true
-
-

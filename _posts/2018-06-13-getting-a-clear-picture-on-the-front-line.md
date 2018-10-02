@@ -1,9 +1,9 @@
 ---
 layout: post
 comments: true
-title: "Getting a clear picture on the front line"
+title: "Getting a Clear Picture on the Front Line"
 categories: project
-author: "Benjamin Berhault"
+author: "Benjamin Berhault" 
 tags: ["mission critical technologies", "london tech week"]
 ---
 
