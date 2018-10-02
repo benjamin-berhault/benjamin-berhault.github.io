@@ -16,8 +16,6 @@ GROUP BY col_A, col_B
 
 Space used by tables 
 
-
-My First Table
 ```sql
 SELECT 
     t.NAME AS TableName,
