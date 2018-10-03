@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Projects
-permalink: /Projects/
+permalink: /projects/
 ---
   <div class="section no-pad-bot" id="index-banner">
     <div class="container" >

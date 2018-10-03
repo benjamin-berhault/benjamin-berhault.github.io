@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Notebooks
-permalink: /Notebooks/
+permalink: /notebooks/
 ---
   <div class="section no-pad-bot" id="index-banner">
     <div class="container" >
