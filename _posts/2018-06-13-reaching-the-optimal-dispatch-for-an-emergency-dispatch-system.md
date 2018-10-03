@@ -9,7 +9,7 @@ tags: ["mission critical technologies", "london tech week"]
 
 <div class="row">
 	<div class="col grid s12 m6 l3">
-		<img src="{{ site.baseurl | replace: '//', '/' }}images/01-Project-Getting_a_clear_picture_on_the_front_line/coverage_capacity.jpg" class="responsive-img">
+		<img src="{{ '/images/01-Project-Getting_a_clear_picture_on_the_front_line/coverage_capacity.jpg' | relative_url }}" class="responsive-img">
 	</div>
 	<div class="col grid s12 m6 l9 ">
 		Nowadays emergency services have a great opportunity to improve their service, thanks to the latest technical advances. By giving managers a better view of the actual coverage of the population and optimizing the relief allocation process, resources will be better exploited and more lives will be saved. Actual emergency dispatch systems are not optimal. An optimal engagement of a rescue team following an emergency call does not necessarily result in the assignment of the one offering the shortest transit delay. It should be used in cases where the urgency is known. However, this selection should be put into perspective for situations that are less critical. For these less critical cases, the service coverage preservation should be taken into account in order to ensure a good quality of service for emergency assistance requests with proven severity. Sadly, it is not what current systems do. This article exposes this problem and technical solutions to resolve it. 

@@ -8,7 +8,7 @@ meta: "Springfield"
 
 <div class="row">
   <div class="col grid s12 m6 l3">
-    <img src="{{ site.baseurl | replace: '//', '/' }}images/jekyll.png" class="responsive-img">
+    <img src="{{ '/images/jekyll.png' | relative_url }}" class="responsive-img">
   </div>
   <div class="col grid s12 m6 l9 ">
     Jekyll is a simple, blog-aware, static site generator for personal, project, or organization sites. Written in Ruby by Tom Preston-Werner, GitHub's co-founder, it is distributed under an open source license. This page is one the post demo pages provided by the Jekyll Theme used.

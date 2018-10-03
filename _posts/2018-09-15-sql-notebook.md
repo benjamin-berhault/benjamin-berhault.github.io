@@ -8,7 +8,7 @@ author: "Benjamin Berhault"
 
 <div class="row">
   <div class="col grid s12 m6 l3">
-    <img src="{{ site.baseurl | replace: '//', '/' }}images/sql.png" class="responsive-img">
+    <img src="{{ '/images/sql.png' | relative_url }}" class="responsive-img">
   </div>
   <div class="col grid s12 m6 l9 ">
     Microsoft SQL Server queries memo.

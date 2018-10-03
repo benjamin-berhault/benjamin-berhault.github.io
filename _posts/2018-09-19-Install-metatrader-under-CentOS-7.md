@@ -10,7 +10,7 @@ tags: ["metatrader"]
 
 <div class="row">
   <div class="col grid s12 m6 l3">
-    <img src="{{ site.baseurl | replace: '//', '/' }}images/metatrader4.png" class="responsive-img">
+    <img src="{{ '/images/metatrader4.png' | relative_url }}" class="responsive-img">
   </div>
   <div class="col grid s12 m6 l9 ">
     MetaTrader can be installed and run on computers with Linux using Wine. Wine is a free software that allows users of the Unix-based systems to run an application developed for the Microsoft Windows systems. Even if the documentation explains <a href="https://www.metatrader4.com/en/trading-platform/help/userguide/install_linux">how to install it on Ubuntu</a>, it seems to be more tricky on some other Linux distributions. This post focuses on how to have MeatTrader 4 operational on CentOS 7.
