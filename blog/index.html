@@ -13,11 +13,19 @@ layout: page
 
 <div class="row">
   {% for post in paginator.posts %}
-<!-- {% if post.categories contains "post" %} -->
+
   <div class="col s12">
     <div class="card hoverable">
       <div class="card-content">
-        <span id="post-title" class="card-title"><b>{{post.title}}</b></span>
+        <span id="post-title" class="card-title">
+          <b>
+            {% if post.categories contains "project" %}
+              <font style="font-size: 1.1em;" class="blue-text">[Project]</font>&nbsp;
+            {% elsif post.categories contains "notebook" %}
+              <font style="font-size: 1.1em;" class="blue-text">[Notebook]</font>&nbsp;
+            {% endif %}
+              {{post.title}}
+          </b></span>
         <p id="post-date">
           <i class="material-icons">date_range</i>
           {{post.date | date: "%d/%m/%Y"}}
@@ -31,7 +39,6 @@ layout: page
       </div>
     </div>
   </div>
-   <!-- {% endif %} -->
   {% endfor %}
 
   <!-- pagination -->
