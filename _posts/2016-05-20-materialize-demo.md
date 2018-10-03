@@ -6,7 +6,14 @@ categories: post
 author: "Benjamin Berhault"
 ---
 
-Materialize is a modern responsive CSS framework based on Material Design by Google.
+<div class="row">
+  <div class="col grid s12 m6 l3">
+    <img src="{{ site.baseurl | replace: '//', '/' }}images/materialize.png" class="responsive-img">
+  </div>
+  <div class="col grid s12 m6 l9 ">
+    Materialize is a modern responsive CSS framework based on Material Design by Google. This page gathers together the materialize components demo pages provided by the Jekyll Theme used.
+  </div>
+</div>
 
 <p style="margin-left: 40px;">
   &bull; <a href="#buttons">Buttons</a><br>

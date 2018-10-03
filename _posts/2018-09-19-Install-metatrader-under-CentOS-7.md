@@ -7,7 +7,20 @@ author: "Benjamin Berhault"
 tags: ["metatrader"]
 ---
 
-Wine is a free software that allows users of the Unix-based systems to run an application developed for the Microsoft Windows systems.
+
+<div class="row">
+  <div class="col grid s12 m6 l3">
+    <img src="{{ site.baseurl | replace: '//', '/' }}images/metatrader4.png" class="responsive-img">
+  </div>
+  <div class="col grid s12 m6 l9 ">
+    MetaTrader can be installed and run on computers with Linux using Wine. Wine is a free software that allows users of the Unix-based systems to run an application developed for the Microsoft Windows systems. Even if the documentation explains <a href="https://www.metatrader4.com/en/trading-platform/help/userguide/install_linux">how to install it on Ubuntu</a>, it seems to be more tricky on some other Linux distributions. This post focuses on how to have MeatTrader 4 operational on CentOS 7.
+  </div>
+</div>
+
+2 steps are involved: 
+* &bull; Installing Wine
+* &bull; Solving Specify the Proxy problem during the MT4 installation on Linux
+
 
 ### Install Wine on CentOS 7‎‎
 
@@ -128,9 +141,9 @@ Note the “ELF 32-bit” and “ELF 64-bit” in the file type strings.
 
 Now you can run your 32-bit Windows application on CentOS 7. Enjoy :-)
 
-### How to solve Specify the Proxy problem when installing MT4 under Linux
+### Solving Specify the Proxy problem during the MT4 installation on Linux
 
-<p style="text-align: right"><b>Source:</b> <i><a href="https://www.techiediaries.com/trading/how-to-solve-specify-the-proxy-problem-when-installing-mt4-under-ubuntu-linux/">How to solve Specify The Proxy problem when installing MT4 under Ubuntu (Linux)</a></i></p>
+<p style="text-align: right"><b>Source:</b> <i><a href="https://www.techiediaries.com/trading/how-to-solve-specify-the-proxy-problem-when-installing-mt4-under-ubuntu-linux/">How to solve Specify The Proxy problem when installing MT4 on Ubuntu (Linux)</a></i></p>
 
 #### Problem
 

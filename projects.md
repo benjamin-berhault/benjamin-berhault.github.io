@@ -18,10 +18,10 @@ permalink: /projects/
   <div class="col s12">
     <div class="card hoverable">
       <div class="card-content">
-        <span id="post-title" class="card-title">{{post.title}}</span>
+        <span id="post-title" class="card-title"><b>{{post.title}}</b></span>
         <p id="post-date">
           <i class="material-icons">date_range</i>
-          {{post.date | date: "%d/%m/%Y %H:%M"}}
+          {{post.date | date: "%d/%m/%Y"}}
         </p>
         <p id="post-content">{{post.excerpt | remove: '<p>' | remove: '</p>'}}</p>
       </div>

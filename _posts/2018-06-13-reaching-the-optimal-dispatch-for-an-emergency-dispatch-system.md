@@ -1,20 +1,26 @@
 ---
-layout: page
+layout: post
 comments: true
-title: "Getting a Clear Picture on the Front Line"
+title: "Reaching the Optimal Dispatch for an Emergency Dispatch System"
 categories: [project, post]
 author: "Benjamin Berhault" 
 tags: ["mission critical technologies", "london tech week"]
 ---
 
-Nowadays emergency services have a great opportunity to improve their service, thanks to the latest technical advances. By giving managers a better view of the activity and optimizing the relief allocation process, resources will be better exploited and more lives will be saved. 
+<div class="row">
+	<div class="col grid s12 m6 l3">
+		<img src="{{ site.baseurl | replace: '//', '/' }}images/01-Project-Getting_a_clear_picture_on_the_front_line/coverage_capacity.jpg" class="responsive-img">
+	</div>
+	<div class="col grid s12 m6 l9 ">
+		Nowadays emergency services have a great opportunity to improve their service, thanks to the latest technical advances. By giving managers a better view of the actual coverage of the population and optimizing the relief allocation process, resources will be better exploited and more lives will be saved. Actual emergency dispatch systems are not optimal. An optimal engagement of a rescue team following an emergency call does not necessarily result in the assignment of the one offering the shortest transit delay. It should be used in cases where the urgency is known. However, this selection should be put into perspective for situations that are less critical. For these less critical cases, the service coverage preservation should be taken into account in order to ensure a good quality of service for emergency assistance requests with proven severity. Sadly, it is not what current systems do. This article exposes this problem and technical solutions to resolve it. 
+	</div>
+</div>
 
-<p style="text-align: right"><a href="https://benjamin-berhault.github.io/Getting-a-clear-picture-on-the-front-line"><i>Original presentation given during the London Tech Week 2018</i></a></p>
 
-This article is a taste of how an emergency dispatch system could be improve for greater efficiency.
+<p style="text-align: right"><a href="https://benjamin-berhault.github.io/Getting-a-clear-picture-on-the-front-line"><i class="material-icons" style="vertical-align:middle">view_carousel</i>&nbsp;&nbsp;<i>London Tech Week 2018 Presentation</i></a></p>
 
 <video style='width: 100%;height: 100%;' controls>
-  <source src="{{ site.url }}/videos/split_second_decision.mp4" type="video/mp4">
+ <source src="{{ site.url }}/videos/split_second_decision.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
@@ -41,7 +47,7 @@ Do you think that with this information, it is easy for allocators to decide whi
 Let's see..
 
 <video style='width: 100%;height: 100%;' controls>
-  <source src="{{ site.url }}/videos/difficult_decision.mp4" type="video/mp4">
+ <source src="{{ site.url }}/videos/difficult_decision.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
@@ -54,7 +60,7 @@ And why is it difficult? ... let's take an example ... with the following call .
 Is it difficult to choose whether or not to allocate a team, and which one to allocate? 
 
 <video style='width: 100%;height: 100%;' controls>
-  <source src="{{ site.url }}/videos/emergency_call.mp4" type="video/mp4">
+ <source src="{{ site.url }}/videos/emergency_call.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
