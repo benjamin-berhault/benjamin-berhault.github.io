@@ -2,7 +2,7 @@
 title: Ben's Blog
 author: Benjamin Berhault
 email: benjamin.berhault@hotmail.com
-description: "Personal blog"
+description: "Blog of a computer science and data science enthusiast with a great interest for the open source world."
 # Because we use a redirection to a custom domain we have to set baseurl this way
 baseurl: "/"
 # otherwise it would have been baseurl: "/my_personal_blog"
@@ -36,7 +36,6 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-paginate
-  #- jekyll-paginate-v2
   - jekyll-seo-tag
   - jekyll-sitemap
 kramdown:
