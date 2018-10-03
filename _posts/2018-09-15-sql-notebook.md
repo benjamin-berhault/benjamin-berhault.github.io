@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "SQL Notebook"
-categories: notebook
+categories: [notebook, post]
 author: "Benjamin Berhault"
 ---
 
