@@ -5,9 +5,9 @@
 
           <ul class="right hide-on-med-and-down">
 
-            <li><a href="{{ site.baseurl | replace: '//', '/' }}">Home</a></li>
+            <li><a href="{{ '/' | relative_url }}">Home</a></li>
 
-            <li><a href="{{ site.baseurl | replace: '//', '/'}}blog">Posts</a></li>
+            <li><a href="{{ '/blog/' | relative_url }}">Posts</a></li>
 <!--
             <li><script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
 <script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/benjaminberhault" data-format="hover" data-related="false"></script></li>
@@ -26,9 +26,9 @@
 
           <ul id="nav-mobile" class="side-nav">
 
-            <li><a href="{{ site.baseurl | replace: '//', '/' }}">Home</a></li>
+            <li><a href="{{ '/' | relative_url }}">Home</a></li>
 
-            <li><a href="{{ site.baseurl | replace: '//', '/' }}blog">Posts</a></li>
+            <li><a href="{{ '/blog/' | relative_url }}">Posts</a></li>
             <!--
             {% if page_paths %}
                 {% for path in page_paths %}
