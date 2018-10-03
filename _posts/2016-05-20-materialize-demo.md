@@ -2,7 +2,7 @@
 layout: post
 comments: false
 title: "Materialize demo"
-categories: article
+categories: post
 author: "Benjamin Berhault"
 ---
 

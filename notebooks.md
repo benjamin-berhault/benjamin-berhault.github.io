@@ -1,19 +1,20 @@
 ---
 layout: page
+title: Notebooks
+permalink: /Notebooks/
 ---
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container" >
 
-<div class="section no-pad-bot" id="index-banner">
-  <div class="container" >
-
-    <h1 class="header center black-text">Posts</h1>
-    
-    <br>
+      <h1 class="header center black-text">{{ page.title | escape }}</h1>
+      
+      <br>
+    </div>
   </div>
-</div>
 
 <div class="row">
-  {% for post in paginator.posts %}
-<!--  {% if post.categories contains "post" %} -->
+  {% for post in site.posts %}
+  {% if post.categories contains "notebook" %}
   <div class="col s12">
     <div class="card hoverable">
       <div class="card-content">
@@ -31,16 +32,16 @@ layout: page
       </div>
     </div>
   </div>
-<!--  {% endif %} -->
+  {% endif %}
   {% endfor %}
 
   <!-- pagination -->
-{% if paginator.total_pages > 1 %}
+{% if site.total_pages > 1 %}
   <div class="col s12 center-align">
     <ul class="pagination">
-      <li class="{% unless paginator.previous_page %}disabled{% else %}waves-effect{% endunless %}">
-        {% if paginator.previous_page %}
-          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+      <li class="{% unless site.previous_page %}disabled{% else %}waves-effect{% endunless %}">
+        {% if site.previous_page %}
+          <a href="{{ site.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
             <i class="material-icons">chevron_left</i>
           </a>
         {% else %}
@@ -49,7 +50,7 @@ layout: page
       </li>
 
 
-      {% if paginator.page == 1 %}
+      {% if site.page == 1 %}
         <li class="active teal">
           <a href="#!">1</a>
         </li>
@@ -59,8 +60,8 @@ layout: page
         </li>
       {% endif %}
 
-  {% for page in (2..paginator.total_pages) %}
-    {% if page == paginator.page %}
+  {% for page in (2..site.total_pages) %}
+    {% if page == site.page %}
 
       <li class="active teal">
         <a href="#!">{{ page }}</a>
@@ -76,9 +77,9 @@ layout: page
 
   {% endfor %}
 
-      <li class="{% unless paginator.next_page %}disabled{% else %}waves-effect{% endunless %}">
-        {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+      <li class="{% unless site.next_page %}disabled{% else %}waves-effect{% endunless %}">
+        {% if site.next_page %}
+        <a href="{{ site.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
           <i class="material-icons">chevron_right</i>
         </a>
         {% else %}

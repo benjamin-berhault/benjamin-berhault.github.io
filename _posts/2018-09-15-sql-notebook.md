@@ -1,8 +1,8 @@
 ---
 layout: post
 comments: true
-title: "SQL Server Queries"
-categories: article
+title: "SQL Notebook"
+categories: notebook
 author: "Benjamin Berhault"
 ---
 

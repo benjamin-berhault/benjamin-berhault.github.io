@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Install MetaTrader under CentOS 7"
-categories: article
+categories: post
 author: "Benjamin Berhault"
 tags: ["metatrader"]
 ---
