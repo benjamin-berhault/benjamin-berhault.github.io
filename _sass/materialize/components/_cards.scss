@@ -165,6 +165,7 @@
     background-color: inherit;
     border-top: 1px solid rgba(160,160,160,.2);
     padding: 16px $card-padding;
+    font-weight:bolder;
 
     a:not(.btn):not(.btn-large):not(.btn-floating) {
       color: $card-link-color;

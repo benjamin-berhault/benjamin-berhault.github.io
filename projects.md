@@ -27,7 +27,7 @@ permalink: /projects/
       </div>
       <div class="card-action">
         <a href="{{ post.url | relative_url }}">
-          Read More
+          Read More <i class="material-icons" style="vertical-align:middle">touch_app</i>
         </a>
       </div>
     </div>
