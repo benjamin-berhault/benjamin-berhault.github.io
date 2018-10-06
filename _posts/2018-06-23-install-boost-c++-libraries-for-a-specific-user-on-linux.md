@@ -73,7 +73,7 @@ or you can also use the shorter version of the command:
 
 <h3>Test it</h3>
 
-Edit a script to check if Boost has been properly installed
+Edit a script <b>`Hello.cpp`</b> to check if Boost has been properly installed
 ```cpp
 #include <iostream>
 #include <boost/format.hpp>
