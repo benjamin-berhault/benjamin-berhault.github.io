@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Jekyll post demo"
+title: "Jekyll Post Demo"
 categories: post
 author: "Bart Simpson"
 meta: "Springfield"

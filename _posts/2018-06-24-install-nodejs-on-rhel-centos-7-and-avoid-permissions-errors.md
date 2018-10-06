@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Install last Node.js and avoid permissions errors"
+title: "Install Last Node.js on RHEL/CentOS 7 and Avoid Permissions Errors"
 categories: post
 author: "Benjamin Berhault"
 ---
@@ -17,9 +17,9 @@ author: "Benjamin Berhault"
 
 
 ## Install Node.js and npm
-<b>Reference:</b>
- * [Node.js GitHub repo](https://github.com/nodesource/distributions)
- * [Node.js official website](https://nodejs.org/en/)
+<b>References:</b>
+ * &bull; [Node.js GitHub repo](https://github.com/nodesource/distributions)
+ * &bull; [Node.js official website](https://nodejs.org/en/)
 
 Update the system and install necessary packages
 ```bash
@@ -99,7 +99,7 @@ server is running on 0.0.0.0:3000
 If you now visit http://your_server_IP:3000 from your browser, you will see ‘Hello World’.
 
 ## Prevent Permissions Errors: Change npm's Default Directory
-**Source:** [How to Prevent Permissions Errors](https://docs.npmjs.com/getting-started/fixing-npm-permissions)
+<b>Source:</b> [How to Prevent Permissions Errors](https://docs.npmjs.com/getting-started/fixing-npm-permissions)
 
 To minimize the chance of permissions errors, you can configure npm to use a different directory. In this example, it will be a hidden directory on your home folder.
 

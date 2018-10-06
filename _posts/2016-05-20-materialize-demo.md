@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: false
-title: "Materialize demo"
+title: "Materialize Demo"
 categories: post
 author: "Benjamin Berhault"
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "Install MetaTrader under CentOS 7"
+title: "Install MetaTrader on RHEL/CentOS 7"
 categories: post
 author: "Benjamin Berhault"
 tags: ["metatrader"]
