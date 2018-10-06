@@ -14,8 +14,6 @@ author: "Benjamin Berhault"
   </div>
 </div>
 
-
-
 ## Install Node.js and npm
 <b>References:</b>
  * &bull; [Node.js GitHub repo](https://github.com/nodesource/distributions)
@@ -23,14 +21,14 @@ author: "Benjamin Berhault"
 
 Update the system and install necessary packages
 ```bash
-yum install curl
+sudo yum install curl
 ```
 
 We will install Node.js v6 LTS and npm from the NodeSource repository which depend on the EPEL repository being available.
 
 To enable the EPEL repository on your CentOS 7 VPS, issue the following command:
 ```bash
-yum install epel-release
+sudo yum install epel-release
 ```
 
 Once the EPEL repository is enabled run the following command to add the Node.js v10 repository:

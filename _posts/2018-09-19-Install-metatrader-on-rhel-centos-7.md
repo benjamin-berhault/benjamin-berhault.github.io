@@ -33,7 +33,7 @@ We have today only x86-64 Wine versions. However, many Windows .exe files are 32
 The whole process in this post has already been written as a shell script.
 * &bull; Erase old wine versions installed.
 ```bash
-yum erase wine wine-*
+sudo yum erase wine wine-*
 ```
 
 * &bull; Download this script: <a href="{{ site.url }}/scripts/install-wine-i686-centos7.sh">install-wine-i686-centos7.sh</a>.
@@ -54,16 +54,16 @@ Erase old wine versions installed
 If you ever installed wine packages, erase them first as we will build wine from the source.
 
 ```bash
-yum erase wine wine-*
+sudo yum erase wine wine-*
 ```
 
 Install packages needed to build wine
 
 ```bash
-yum install samba-winbind-clients -y
-yum groupinstall 'Development Tools' -y
-yum install libjpeg-turbo-devel libtiff-devel freetype-devel -y
-yum install glibc-devel.{i686,x86_64} libgcc.{i686,x86_64} libX11-devel.{i686,x86_64} freetype-devel.{i686,x86_64} gnutls-devel.{i686,x86_64} libxml2-devel.{i686,x86_64} libjpeg-turbo-devel.{i686,x86_64} libpng-devel.{i686,x86_64} libXrender-devel.{i686,x86_64} alsa-lib-devel.{i686,x86_64} -y 
+sudo yum install samba-winbind-clients -y
+sudo yum groupinstall 'Development Tools' -y
+sudo yum install libjpeg-turbo-devel libtiff-devel freetype-devel -y
+sudo yum install glibc-devel.{i686,x86_64} libgcc.{i686,x86_64} libX11-devel.{i686,x86_64} freetype-devel.{i686,x86_64} gnutls-devel.{i686,x86_64} libxml2-devel.{i686,x86_64} libjpeg-turbo-devel.{i686,x86_64} libpng-devel.{i686,x86_64} libXrender-devel.{i686,x86_64} alsa-lib-devel.{i686,x86_64} -y 
 
 # ... and more ...
 # Check the `install-wine-i686-centos7.sh` script for more packages needed.

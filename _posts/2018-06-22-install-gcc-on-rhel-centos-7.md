@@ -45,7 +45,7 @@ make
 sudo make install
 ```
 
-<i>(If you prefer to have GCC in your HOME directory add <code>--prefix=$HOME/gcc-8.2.0</code> to configure command)</i>
+<i>(If you prefer to have GCC in your HOME directory add `--prefix=$HOME/gcc-8.2.0` to the `configure` command)</i>
 
 The last command will end up with message specifying where GCC has been installed. 
 ```bash
