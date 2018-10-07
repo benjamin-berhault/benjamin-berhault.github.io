@@ -13,7 +13,7 @@ tags: ["metatrader"]
     <img src="{{ '/images/metatrader4.png' | relative_url }}" class="responsive-img">
   </div>
   <div class="col grid s12 m6 l9 ">
-    MetaTrader can be installed and run on computers with Linux using Wine. Wine is a free software that allows users of the Unix-based systems to run an application developed for the Microsoft Windows systems. Even if the documentation explains <a href="https://www.metatrader4.com/en/trading-platform/help/userguide/install_linux">how to install it on Ubuntu</a>, it seems to be more tricky on some other Linux distributions. This post focuses on how to have MeatTrader 4 operational on CentOS 7.
+    MetaTrader can be installed and run on computers with Linux using Wine. Wine is a free software that allows users of the Unix-based systems to run an application developed for the Microsoft Windows systems. Even if the documentation explains <a href="https://www.metatrader4.com/en/trading-platform/help/userguide/install_linux">how to install it on Ubuntu</a>, it seems to be more tricky on some other Linux distributions. This post focuses on how to have MeatTrader 4 operational on RHEL/CentOS 7.
   </div>
 </div>
 
@@ -22,7 +22,7 @@ tags: ["metatrader"]
 * &bull; Solving Specify the Proxy problem during the MT4 installation on Linux
 
 
-### Install Wine on CentOS 7‎‎
+### Install Wine on RHEL/CentOS 7
 
 <p style="text-align: right"><b>Source:</b> <i><a href="https://www.systutorials.com/239913/install-32-bit-wine-1-8-centos-7/">How to Install Wine 32-bit on CentOS</a></i></p>
 
@@ -54,16 +54,16 @@ Erase old wine versions installed
 If you ever installed wine packages, erase them first as we will build wine from the source.
 
 ```bash
-sudo yum erase wine wine-*
+yum erase wine wine-*
 ```
 
 Install packages needed to build wine
 
 ```bash
-sudo yum install samba-winbind-clients -y
-sudo yum groupinstall 'Development Tools' -y
-sudo yum install libjpeg-turbo-devel libtiff-devel freetype-devel -y
-sudo yum install glibc-devel.{i686,x86_64} libgcc.{i686,x86_64} libX11-devel.{i686,x86_64} freetype-devel.{i686,x86_64} gnutls-devel.{i686,x86_64} libxml2-devel.{i686,x86_64} libjpeg-turbo-devel.{i686,x86_64} libpng-devel.{i686,x86_64} libXrender-devel.{i686,x86_64} alsa-lib-devel.{i686,x86_64} -y 
+yum install samba-winbind-clients -y
+yum groupinstall 'Development Tools' -y
+yum install libjpeg-turbo-devel libtiff-devel freetype-devel -y
+yum install glibc-devel.{i686,x86_64} libgcc.{i686,x86_64} libX11-devel.{i686,x86_64} freetype-devel.{i686,x86_64} gnutls-devel.{i686,x86_64} libxml2-devel.{i686,x86_64} libjpeg-turbo-devel.{i686,x86_64} libpng-devel.{i686,x86_64} libXrender-devel.{i686,x86_64} alsa-lib-devel.{i686,x86_64} -y 
 
 # ... and more ...
 # Check the `install-wine-i686-centos7.sh` script for more packages needed.
