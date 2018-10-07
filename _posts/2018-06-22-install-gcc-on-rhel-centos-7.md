@@ -21,7 +21,7 @@ The default GCC that comes with the CentOS 7.2 is GCC 4.8.5 which does not suppo
 
 <h3>Downloading GCC source code</h3>
 
-You can download the GCC source code from the [official GNU ftp](https://ftp.gnu.org/gnu/gcc/). I choose to install [version 8.1.0](https://ftp.gnu.org/gnu/gcc/gcc-8.2.0/).
+You can download the GCC source code from the [official GNU ftp](https://ftp.gnu.org/gnu/gcc/). I choose to install [version 8.2.0](https://ftp.gnu.org/gnu/gcc/gcc-8.2.0/).
 
 ```bash
 cd ~/Downloads
@@ -106,9 +106,13 @@ int main()
 }
 ```
 
-Build & run
-```console
-~]$ g++ --std=c++14 Hello.cpp -o run
-~]$ ./run 
+Build & run it
+```bash
+g++ --std=c++14 Hello.cpp -o run
+./run 
+```
+
+Should return
+```bash
 Hello World!
 ```

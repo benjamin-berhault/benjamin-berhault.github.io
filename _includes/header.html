@@ -1,5 +1,20 @@
 <nav class="indigo lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" class="brand-logo" href="{{ "/" | relative_url }}"><!--<img src="{{ "images/geek.png" | relative_url }}">--></a>
+    <div class="nav-wrapper container">
+        <div class="left hide-on-med-and-down">
+            <form action="/search.html" method="get">
+
+              <div style="float: left"><input type="text" id="search-box" name="query" ></div>
+              <!--<input type="submit" value="Search" class="waves-effect waves-light blue">-->
+
+              <div style="vertical-align:middle;float: left; padding-left: 10px;">
+                <a href="#" onclick="$(this).closest('form').submit()" id="download-button">
+                  <i class="material-icons" style="vertical-align:bottom;">search</i>
+                </a>
+              </div>
+
+            </form>
+        </div>
+        <!--<a id="logo-container" class="brand-logo" href="{{ "/" | relative_url }}">image</a>-->
     {% assign default_paths = site.pages | map: "path" %}
     {% assign page_paths = site.header_pages | default: default_paths %}
 

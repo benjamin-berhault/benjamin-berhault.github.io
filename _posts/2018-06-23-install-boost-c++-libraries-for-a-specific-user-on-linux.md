@@ -94,12 +94,13 @@ int main()
 }
 ```
 
-Compile it 
+Build and run this script
 ```bash
 g++ --std=c++14 Hello.cpp -o run
+./run
 ```
 
-Run it
+Should return
 ```bash
-./run
+05-04-AA-0F-0D
 ```

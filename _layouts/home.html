@@ -4,10 +4,13 @@ layout: default
 
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
-            <h1 class="header center black-text" >
 
-              <div><img src="{{ site.baseurl | replace: '//', '/' }}images/me.jpg" style="vertical-align:middle"> <span style="vertical-align:middle">&nbsp;&nbsp;&nbsp;{{ site.title }}</span></div>
-            </h1>
+      <div class="row" style="padding-top: 25px;">
+          <center>
+              <div class="col grid s12 m6 l3 offset-l3"><img src="{{ site.baseurl | replace: '//', '/' }}images/me.jpg"> </div>
+              <div class="col grid s12 m6 l3" style="display: table;"><div style="display: table-cell; vertical-align: middle;"><h1 class="header center black-text">{{ site.title }}</h1></div></div>
+          </center>
+            
 
       <div class="row center">
      <!--   <h4 class="header col s12 light">{{ content }}</h4> -->
@@ -17,8 +20,7 @@ layout: default
         <a href="{{ site.baseurl | replace: '//', '/' }}blog" id="download-button" class="btn-large waves-effect waves-light blue">
   <i class="material-icons" style="vertical-align:middle">sentiment_very_satisfied</i>&nbsp;&nbsp;<span style="vertical-align:middle">Enter</span></a>
       </div>
-      <br>
-
+</div>
     </div>
   </div>
 
