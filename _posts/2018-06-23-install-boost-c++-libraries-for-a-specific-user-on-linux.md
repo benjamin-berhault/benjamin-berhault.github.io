@@ -94,7 +94,7 @@ int main()
 }
 ```
 
-Build and run this script
+Compile and run this script
 ```bash
 g++ --std=c++14 Hello.cpp -o run
 ./run
