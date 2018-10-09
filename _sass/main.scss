@@ -71,3 +71,18 @@ h1.page-title {
 p.rss-subscribe {
     margin: 0;
 }
+
+.tabs {
+    background-color: #03a9f4;
+    
+}
+.tabs .tab a {
+    color: #FFF;
+
+}
+
+.tabs .tab a.active {
+    background-color: tomato;
+    color: #000;
+
+}
