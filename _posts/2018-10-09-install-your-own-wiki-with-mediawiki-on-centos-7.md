@@ -242,7 +242,7 @@ sudo setsebool -P httpd_can_network_connect_db 1
 ```
 
 #### Setup file uploads permissions
-<b>Reference</b> [https://www.mediawiki.org/wiki/Manual:Configuring_file_uploads](https://www.mediawiki.org/wiki/Manual:Configuring_file_uploads)
+<b>Reference:</b> [https://www.mediawiki.org/wiki/Manual:Configuring_file_uploads](https://www.mediawiki.org/wiki/Manual:Configuring_file_uploads)
 The following needs to be set in php.ini:
 ```bash
 file_uploads = On
