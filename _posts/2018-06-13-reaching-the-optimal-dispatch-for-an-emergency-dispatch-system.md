@@ -16,6 +16,15 @@ tags: ["mission critical technologies", "london tech week"]
 	</div>
 </div>
 
+Today's technological progress allow you with the computing power of a netbook to get the response capacity of each road segments of a Brigade (that is around 140 000 for Paris as for London) in less than a second. Sadly most of emergency services do not have such a precise information, as for example the Paris Fire Brigade with only a 70 pixels resolution information to manage their ressources and taking seconds to be displayed.
+
+Here, I will show you that :
+<div style="padding-left: 30px">
+&bull; a <b>high resolution</b> coverage capacity of a Brigade can be computed in <b>less than a second</b>, <br>
+&bull; <b>why</b> it's important <br>
+&bull; and <b>how</b> we can <b>improve the efficiency</b> of an emergency service with that information.
+</div>
+
 
 <p style="text-align: right"><a href="https://benjamin-berhault.github.io/Getting-a-clear-picture-on-the-front-line"><i class="material-icons" style="vertical-align:middle">view_carousel</i>&nbsp;&nbsp;<i>London Tech Week 2018 Presentation</i></a></p>
 
