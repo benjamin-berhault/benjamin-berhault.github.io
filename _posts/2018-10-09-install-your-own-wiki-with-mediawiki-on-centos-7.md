@@ -11,10 +11,10 @@ author: "Benjamin Berhault"
     <img src="{{ '/images/dark_wiki.png' | relative_url }}" class="responsive-img">
   </div>
   <div class="col grid s12 m6 l9 ">
-  	It does not matter whether you are employed in a real estate company or a restaurant. Every company needs a wiki. A wiki is a tool for managing knowledge. And as a manager you will want to perpetuate and promote the rapid transmission of knowledge among collaborators, so you will need an operational manual aka wiki. A wiki is critical for competitive business but it is also incredibly useful for an individual to manage and organize knowledge.<br>
-  		<br>
-	In short, whether you are a company or an individual wishing to manage a knowledge a wiki is the tool you have to have.<br>
-    	<br>
+    It does not matter whether you are employed in a real estate company or a restaurant. Every company needs a wiki. A wiki is a tool for managing knowledge. And as a manager you will want to perpetuate and promote the rapid transmission of knowledge among collaborators, so you will need an operational manual aka wiki. A wiki is critical for competitive business but it is also incredibly useful for an individual to manage and organize knowledge.<br>
+      <br>
+  In short, whether you are a company or an individual wishing to manage a knowledge a wiki is the tool you have to have.<br>
+      <br>
     Here, we'll see how to install MediaWiki on RHEL/CentOS 7 supported by PostgreSQL and Apache that makes it working like a charm.
   </div>
 </div>
@@ -22,8 +22,8 @@ author: "Benjamin Berhault"
 #### Page content
 <div style="padding-left: 30px">
 &bull; <a href="#mediawiki_prerequisites">MediaWiki Prerequisites</a>
-	<div style="padding-left: 30px">
-		&minus; <a href="#install_postgresql">Install PostgreSQL 10 on CentOS 7</a><br>
+  <div style="padding-left: 30px">
+    &minus; <a href="#install_postgresql">Install PostgreSQL 10 on CentOS 7</a><br>
         &minus; <a href="#install_latest_php">Install the latest PHP</a>
     </div>
 &bull; <a href="#install_mediawiki">Install MediaWiki</a>
