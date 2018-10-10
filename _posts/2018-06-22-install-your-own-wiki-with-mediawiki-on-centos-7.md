@@ -38,7 +38,7 @@ author: "Benjamin Berhault"
 
 Install PostgreSQL repository in your system
 ```bash
-rpm -Uvh https://yum.postgresql.org/10/redhat/rhel-7-x86_64/pgdg-centos10-10-2.noarch.rpm
+sudo rpm -Uvh https://yum.postgresql.org/10/redhat/rhel-7-x86_64/pgdg-centos10-10-2.noarch.rpm
 ```
 
 Install PostgreSQL server & development shared library
