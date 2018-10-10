@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "Install Last Node.js on RHEL/CentOS 7 and Avoid Permissions Errors"
 categories: post
 author: "Benjamin Berhault"

@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "Install Boost C++ Libraries for a Specific User on Linux"
 categories: post
 author: "Benjamin Berhault"

@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "Build and Install the Last GCC on RHEL/CentOS 7"
 categories: post
 author: "Benjamin Berhault"
