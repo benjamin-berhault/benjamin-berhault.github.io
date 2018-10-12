@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: math_post
 comments: true
 title: "Reaching the Optimal Dispatch for an Emergency Dispatch System"
 categories: [project, post]
@@ -112,10 +112,84 @@ Cartographic representations are really great for quickly assessing the service 
 But in some cases, things may not be so obvious, so for that, each allocation option is associated with an estimate of the population covered under 8 minutes.
 
 Even if the interface could have been more exhaustive, I hope it’s made it obvious the benefits of such information in a dispatch application.
-
+0
 ##### Dispatch option 3
 
 <img src="{{ site.url }}/images/01-Project-Getting_a_clear_picture_on_the_front_line/option03.jpg" style='width: 100%;height: 100%;'>
+
+  <ul class="collapsible">
+    <li>
+      <div class="collapsible-header red lighten-2"><i class="material-icons">touch_app</i>The example above refers to a dispatch situation, but what about monitoring an entire brigade jurisdiction? </div>
+      <div class="collapsible-body"><span>
+An emergency operations centre needs to have the big picture of the scene. How fast and precise this information can be computed? <br>
+Lets take as example the fire coverage of the Greater London area whose OpenStreetMap data hold 144 087 road segments. To make that test, we need a few assumptions, let's consider those parameters: 
+    <ul style="padding: 20px">
+    	<li>&bull; the brigade consists of 142 fire trucks (declared in 2016) </li>
+		<li>&bull; 80% of the units are still available </li>
+		<li>&bull; it takes 1 minute from the call to engage a team </li>
+		<li>&bull; the trucks speed is equivalent to 70% of the speed limit  </li>
+		<li>&bull; we are interesting by the coverage for a response capacity under 10 minutes </li>
+	</ul>
+
+	To test that I have made a little console application, so let's see how fast can be computed the Greater London area coverage capacity (rating each road segment this area is made of).
+
+<pre class="language-console"><code class="language-console">[0] Greater London
+[1] Greece
+[2] Hungary
+[3] New-York
+[4] Iceland
+[5] Ile-de-France
+[6] Luxembourg
+[7] Andorra
+
+Select an area to benchmark the capacity response computation time: 0
+
+*** Will be load: /home/benjamin/Documents/data/PBF/Greater London.osm.pbf ***
+
+Graph loading from PBF file!!
+
+Scanning OSM PBF data to determine IDs
+Not all modelling nodes are routing nodes
+Finished scan, needed 2165263 musec.
+OSM ID range goes up to 8589934592 for routing nodes.
+OSM ID range goes up to 8589934592 for modelling nodes.
+OSM ID range goes up to 1073741824 for routing ways.
+Found 211342 routing nodes.
+Found 576308 modelling nodes.
+Found 144087 routing ways.
+Start computing ID mappings
+Finished, needed 471003 musec.
+Scanning OSM PBF data to load routing arcs
+
+[...]
+
+Finished, needed 16730 musec.
+Sorting forbidden turns
+Finished, needed 529 musec.
+Extracted 2439 forbidden turns.
+
+Contraction Hierarchy built in: 0 min 6 sec 177 msec 285 µs.
+
+*** Parameterization ***
+Number of units deployed randomly on the graph [default = 70]: 114
+Time (seconds) under which the coverage will be assessed [default = 300]: 378
+
+Random positionning of 114 intervention units on the graph
+Assessment of the coverage capacity....
+
+The road segment with the highest coverage is reachable by 13 unit(s)
+
+COVERAGE COMPUTED IN: 0 min 0 sec 909 msec 356 µs
+</code></pre>
+
+The Greater London coverage capacity has been computed in less than a second (on a netbook Acer Spin 3, Intel Core i3), making of this information relevant and usable to conduct ongoing operations.<br>
+<br>
+There is still to render it of course... for that the trick is to use a JS library like Mapbox GL. Believe me, such a precise information displayed on map is what any emergency control center manager would have to have, but rare are the emergency services having something close to that.
+</span></div>
+    </li>
+
+  </ul>
+
 
 I hope not being the only one who finds that this is not a gadget but that this tool has a real interest in improving the quality of service for an emergency service.
 And do not see this as an end in itself, but as a brick needed and suitable for outstanding future applications that will increase the capacity of the emergency services in terms of control of their coverage and responsiveness. 

@@ -234,6 +234,7 @@ mv mediawiki-1.31.0-rc.0/* /var/www/html/mediawiki
 
 #### Permit PHP to connect to PostgreSQL
 <b>Source:</b> [https://stackoverflow.com/questions/27749691/php-cant-connect-to-postgresql-on-centos-7](https://stackoverflow.com/questions/27749691/php-cant-connect-to-postgresql-on-centos-7)
+
 SELinux could block your database connection.
 
 Make sure that you set the correct boolean to allow your web application to talk to the database:
@@ -243,6 +244,7 @@ sudo setsebool -P httpd_can_network_connect_db 1
 
 #### Setup file uploads permissions
 <b>Reference:</b> [https://www.mediawiki.org/wiki/Manual:Configuring_file_uploads](https://www.mediawiki.org/wiki/Manual:Configuring_file_uploads)
+
 The following needs to be set in php.ini:
 ```bash
 file_uploads = On

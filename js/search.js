@@ -3,14 +3,18 @@
     var searchResults = document.getElementById('search-results');
 
     if (results.length) { // Are there any results?
-      var appendString = '';
+      var appendString = '<div class="row">';
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
-        appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>';
-        appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>';
+        appendString += '<div class="col s12"><div class="card hoverable"><div class="card-content">';
+        appendString += '<span id="post-title" class="card-title"><b><font style="font-size: 1.1em;">' + item.title + '</font></b></span>';
+        appendString += '<p>' + item.content.substring(0, 500) + '...</p></div>';
+        appendString += '<div class="card-action"><a href="' + item.url + '">Read More <i class="material-icons" style="vertical-align:middle">touch_app</i></a></div>';
+        appendString += '</div></div>';
 
       }
+      appendString += '</div>';
 
       searchResults.innerHTML = appendString;
     } else {
