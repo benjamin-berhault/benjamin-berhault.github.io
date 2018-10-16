@@ -16,10 +16,10 @@ author: "Benjamin Berhault"
 </div>
 
 <p style="margin-left: 40px;">
-  &bull; <a href="#buttons">Buttons</a><br>
-  &bull; <a href="#css">CSS</a><br>
-  &bull; <a href="#table">Table</a><br>
-  &bull; <a href="#carousel">Carousel</a><br>
+  <a href="#buttons">Buttons</a><br>
+  <a href="#css">CSS</a><br>
+  <a href="#table">Table</a><br>
+  <a href="#carousel">Carousel</a><br>
 </p>
 
 <h1 id="buttons">Buttons</h1>

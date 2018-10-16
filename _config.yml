@@ -6,7 +6,7 @@ description: "Blog of a computer science and data science enthusiast with a grea
 # Because we use a redirection to a custom domain we have to set baseurl this way
 baseurl: "/"
 # otherwise it would have been baseurl: "/my_personal_blog"
-url: "http://benjamin-berhault.github.io/my_personal_blog" # "http://benjamin-berhault.github.io/benjamin-berhault.github.io"
+url: "http://benjamin-berhault.github.io/my_personal_blog/" # "http://benjamin-berhault.github.io/benjamin-berhault.github.io"
 tagline: ""
 
 paginate: 6
@@ -17,7 +17,7 @@ github_profile: "https://github.com/benjamin-berhault"
 user: "Benjamin Berhault"
 user_email: "benjamin.berhault@hotmail.com"
 # contact_url: "https://goo.gl/tVljbV"
-google_tracking_id: "UA-63901496-2"
+google_tracking_id: "UA-127477560-1"
 
 # twitter_username: macrod68
 github_username:  benjamin-berhault

@@ -17,8 +17,8 @@ author: "Benjamin Berhault"
 
 ## Install Node.js and npm
 <b>References:</b>
- * &bull; [Node.js GitHub repo](https://github.com/nodesource/distributions)
- * &bull; [Node.js official website](https://nodejs.org/en/)
+ * [Node.js GitHub repo](https://github.com/nodesource/distributions)
+ * [Node.js official website](https://nodejs.org/en/)
 
 Update the system and install necessary packages
 ```bash

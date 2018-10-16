@@ -19,11 +19,11 @@ tags: ["mission critical technologies", "london tech week"]
 Today's technological progress allow you with the computing power of a netbook to get the response capacity of each road segments of a Brigade (that is around 140 000 for Paris as for London) in less than a second. Sadly most of emergency services do not have such a precise information, as for example the Paris Fire Brigade with only a 70 pixels resolution information to manage their ressources and taking seconds to be displayed.
 
 Here, I will show you that :
-<div style="padding-left: 30px">
-&bull; a <b>high resolution</b> coverage capacity of a Brigade can be computed in <b>less than a second</b>, <br>
-&bull; <b>why</b> it's important <br>
-&bull; and <b>how</b> we can <b>improve the efficiency</b> of an emergency service with that information.
-</div>
+<ul>
+	<li>a <b>high resolution</b> coverage capacity of a Brigade can be computed in <b>less than a second</b>, </li>
+	<li><b>why</b> it's important </li>
+	<li>and <b>how</b> we can <b>improve the efficiency</b> of an emergency service with that information.</li>
+</ul>
 
 
 <p style="text-align: right"><a href="https://benjamin-berhault.github.io/Getting-a-clear-picture-on-the-front-line"><i class="material-icons" style="vertical-align:middle">view_carousel</i>&nbsp;&nbsp;<i>London Tech Week 2018 Presentation</i></a></p>
@@ -47,9 +47,9 @@ It seems that all our current allocation systems present more or less lack of in
 
 Currently, a call processing operator is sending a rescue team using the following information: 
 
-* &bull; He or she **assesses** the severity of the request and whether or not an emergency team has to be sent, usually based on a decision support tree
-* &bull; If needed, he/she can visualize the location of the demand on a map
-* &bull; Finally, the system proposes various allocation options with estimated delivery times for the different teams
+* He or she **assesses** the severity of the request and whether or not an emergency team has to be sent, usually based on a decision support tree
+* If needed, he/she can visualize the location of the demand on a map
+* Finally, the system proposes various allocation options with estimated delivery times for the different teams
 
 Do you think that with this information, it is easy for allocators to decide which team is the optimal one?
 
@@ -82,8 +82,8 @@ Current systems do not specify to the operators, the consequence of their alloca
 Before going further I need you to have in mind 2 important concepts of operations management for emergency services.
 To effectively manage an emergency service the concept of coverage of the population is important ..., and we can split it into 2 types:
 
-* &bull; The <b>immediate response</b> - relying on: <i>How long will it take for a first team to reach a location?</i>
-* &bull; And the <b>response capacity</b> - <i>How many teams can be on site within a given timeframe?</i> (for example, the target timeframe for London Ambulance Service is 8 minutes)
+* The <b>immediate response</b> - relying on: <i>How long will it take for a first team to reach a location?</i>
+* And the <b>response capacity</b> - <i>How many teams can be on site within a given timeframe?</i> (for example, the target timeframe for London Ambulance Service is 8 minutes)
 
 The latter is the most important and you will have a representation of it below.
 
@@ -98,8 +98,8 @@ As example, let's say that we are about to send a team for a <b>non-critical req
 This application has been setup to recover the first 3 fastest units (this is of course just a parameter modifiable, if needed).
 The allocation options are now presented with 2 maps:
 
-* &bull; One showing the response capacity before allocation, at the top
-* &bull; And after allocation for the bottom one
+* One showing the response capacity before allocation, at the top
+* And after allocation for the bottom one
 
 The ambulances are represented by blue points of interest and the request by a red one.
 For the road segments, red means that those segments are not reachable by a team under the 8 minutes quality of service threshold. For those reachable by 1 to 5 teams they are assigned a color from yellow to green, green if 5 teams are able to reach them under 8 minutes.
@@ -117,21 +117,21 @@ Even if the interface could have been more exhaustive, I hope it’s made it obv
 
 <img src="{{ site.url }}/images/01-Project-Getting_a_clear_picture_on_the_front_line/option03.jpg" style='width: 100%;height: 100%;'>
 
-  <ul class="collapsible">
+  <ul class="collapsible no_bullets">
     <li>
       <div class="collapsible-header red lighten-2"><i class="material-icons">touch_app</i>The example above refers to a dispatch situation, but what about monitoring an entire brigade jurisdiction? </div>
       <div class="collapsible-body"><span>
 An emergency operations centre needs to have the big picture of the scene. How fast and precise this information can be computed? <br>
 Lets take as example the fire coverage of the Greater London area whose OpenStreetMap data hold 144 087 road segments. To make that test, we need a few assumptions, let's consider those parameters: 
     <ul style="padding: 20px">
-    	<li>&bull; the brigade consists of 142 fire trucks (declared in 2016) </li>
-		<li>&bull; 80% of the units are still available </li>
-		<li>&bull; it takes 1 minute from the call to engage a team </li>
-		<li>&bull; the trucks speed is equivalent to 70% of the speed limit  </li>
-		<li>&bull; we are interesting by the coverage for a response capacity under 10 minutes </li>
+    	<li>the brigade consists of 142 fire trucks (declared in 2016) </li>
+		<li>80% of the units are still available </li>
+		<li>it takes 1 minute from the call to engage a team </li>
+		<li>the trucks speed is equivalent to 70% of the speed limit  </li>
+		<li>we are interesting by the coverage for a response capacity under 10 minutes </li>
 	</ul>
 
-	To test that I have made a little console application, so let's see how fast can be computed the Greater London area coverage capacity (rating each road segment this area is made of).
+	To test that I have made a little console application (using a wonderful routing C++ library made and supported by the the group of Prof. Dorothea Wagner from the Karlsruhe Institute of Technology), so let's see how fast can be computed the Greater London area coverage capacity (rating each road segment this area is made of).
 
 <pre class="language-console"><code class="language-console">[0] Greater London
 [1] Greece

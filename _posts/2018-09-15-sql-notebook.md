@@ -13,9 +13,9 @@ author: "Benjamin Berhault"
   <div class="col grid s12 m6 l9 ">
     Microsoft SQL Server queries memo.
     <ul>
-        <li>&bull; Get the value of one column based on the MAX value of another with a GROUP BY query</li>
-        <li>&bull; Space used by tables</li>
-        <li>&bull; BI Dimension Date & Time</li>
+        <li>Get the value of one column based on the MAX value of another with a GROUP BY query</li>
+        <li>Space used by tables</li>
+        <li>BI Dimension Date & Time</li>
     </ul>  
   </div>
 </div>

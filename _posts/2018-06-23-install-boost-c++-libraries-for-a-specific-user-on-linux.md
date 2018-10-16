@@ -18,7 +18,7 @@ author: "Benjamin Berhault"
 <b>Reference:</b> [https://www.boost.org/](https://www.boost.org/)
 
 <h3>Prerequisite</h3> 
-* &bull; GCC installed
+* GCC installed
 
 <h3>Installation</h3>
 Check the last archive of Boost C++ libraries available from: [https://www.boost.org/users/download/](https://www.boost.org/users/download/)

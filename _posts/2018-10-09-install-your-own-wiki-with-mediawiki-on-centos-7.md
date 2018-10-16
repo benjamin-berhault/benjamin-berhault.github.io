@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "Install Your Own Wiki with Mediawiki on Rhel/Centos 7"
+title: "Install Your Own Wiki with Mediawiki on RHEL/CentOS 7"
 categories: post
 author: "Benjamin Berhault"
 ---
@@ -21,12 +21,12 @@ author: "Benjamin Berhault"
 
 #### Page content
 <div style="padding-left: 30px">
-&bull; <a href="#mediawiki_prerequisites">MediaWiki Prerequisites</a>
+<a href="#mediawiki_prerequisites">MediaWiki Prerequisites</a>
   <div style="padding-left: 30px">
     &minus; <a href="#install_postgresql">Install PostgreSQL 10 on CentOS 7</a><br>
         &minus; <a href="#install_latest_php">Install the latest PHP</a>
     </div>
-&bull; <a href="#install_mediawiki">Install MediaWiki</a>
+<a href="#install_mediawiki">Install MediaWiki</a>
 </div>
 
 
@@ -126,21 +126,21 @@ systemctl restart httpd.service
 ```
 
 #### Install PHP modules
-* &bull; <b>OPcache (php-opcache)</b> – The Zend OPcache provides faster PHP execution through opcode caching and optimization.
-* &bull; <b>APCu (php-pecl-apcu)</b> – APCu userland caching
-* &bull; <b>CLI (php-cli)</b> – Command-line interface for PHP
-* &bull; <b>PEAR (php-pear)</b> – PHP Extension and Application Repository framework
-* &bull; <b>PDO (php-pdo)</b> – A database access abstraction module for PHP applications
-* &bull; <b>MySQL (php-mysqlnd)</b> – A module for PHP applications that use MySQL databases
-* &bull; <b>PostgreSQL (php-pgsql)</b> – A PostgreSQL database module for PHP
-* &bull; <b>MongoDB (php-pecl-mongodb)</b> – PHP MongoDB database driver
-* &bull; <b>Redis (php-pecl-redis)</b> – Extension for communicating with the Redis key-value store
-* &bull; <b>Memcache (php-pecl-memcache)</b> – Extension to work with the Memcached caching daemon
-* &bull; <b>Memcached (php-pecl-memcached)</b> – Extension to work with the Memcached caching daemon
-* &bull; <b>GD (php-gd)</b> – A module for PHP applications for using the gd graphics library
-* &bull; <b>XML (php-xml)</b> – A module for PHP applications which use XML
-* &bull; <b>MBString (php-mbstring)</b> – A module for PHP applications which need multi-byte string handling
-* &bull; <b>MCrypt (php-mcrypt)</b> – Standard PHP module provides mcrypt library support
+* <b>OPcache (php-opcache)</b> – The Zend OPcache provides faster PHP execution through opcode caching and optimization.
+* <b>APCu (php-pecl-apcu)</b> – APCu userland caching
+* <b>CLI (php-cli)</b> – Command-line interface for PHP
+* <b>PEAR (php-pear)</b> – PHP Extension and Application Repository framework
+* <b>PDO (php-pdo)</b> – A database access abstraction module for PHP applications
+* <b>MySQL (php-mysqlnd)</b> – A module for PHP applications that use MySQL databases
+* <b>PostgreSQL (php-pgsql)</b> – A PostgreSQL database module for PHP
+* <b>MongoDB (php-pecl-mongodb)</b> – PHP MongoDB database driver
+* <b>Redis (php-pecl-redis)</b> – Extension for communicating with the Redis key-value store
+* <b>Memcache (php-pecl-memcache)</b> – Extension to work with the Memcached caching daemon
+* <b>Memcached (php-pecl-memcached)</b> – Extension to work with the Memcached caching daemon
+* <b>GD (php-gd)</b> – A module for PHP applications for using the gd graphics library
+* <b>XML (php-xml)</b> – A module for PHP applications which use XML
+* <b>MBString (php-mbstring)</b> – A module for PHP applications which need multi-byte string handling
+* <b>MCrypt (php-mcrypt)</b> – Standard PHP module provides mcrypt library support
 
 ```bash
 sudo yum --enablerepo=remi,remi-php72 install php-pecl-apcu php-cli php-pear php-pdo php-mysqlnd php-pgsql php-pecl-mongodb php-pecl-memcache php-pecl-memcached php-gd php-mbstring php-mcrypt php-xml

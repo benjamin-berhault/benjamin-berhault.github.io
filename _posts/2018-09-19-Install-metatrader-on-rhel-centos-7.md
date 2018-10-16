@@ -18,8 +18,8 @@ tags: ["metatrader"]
 </div>
 
 2 steps are involved: 
-* &bull; Installing Wine
-* &bull; Solving Specify the Proxy problem during the MT4 installation on Linux
+* Installing Wine
+* Solving Specify the Proxy problem during the MT4 installation on Linux
 
 
 ### Install Wine on RHEL/CentOS 7
@@ -31,18 +31,18 @@ We have today only x86-64 Wine versions. However, many Windows .exe files are 32
 #### One single script to build and install Wine
 
 The whole process in this post has already been written as a shell script.
-* &bull; Erase old wine versions installed.
+* Erase old wine versions installed.
 ```bash
 sudo yum erase wine wine-*
 ```
 
-* &bull; Download this script: <a href="{{ site.url }}/scripts/install-wine-i686-centos7.sh">install-wine-i686-centos7.sh</a>.
-* &bull; Give execute permission to it
+* Download this script: <a href="{{ site.url }}/scripts/install-wine-i686-centos7.sh">install-wine-i686-centos7.sh</a>.
+* Give execute permission to it
 ```bash
 chmod +x ./install-wine-i686-centos7.sh
 ```
 
-* &bull; And execute it
+* And execute it
 ```bash
 sudo ./install-wine-i686-centos7.sh
 ```
