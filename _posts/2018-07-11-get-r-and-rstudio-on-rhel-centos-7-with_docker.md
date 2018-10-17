@@ -83,10 +83,6 @@ Verify that you can run docker commands without sudo.
 docker run hello-world
 ```
 
-## Install Docker Machine
-
-
-
 ## Install a RStudio Docker container
 
 
