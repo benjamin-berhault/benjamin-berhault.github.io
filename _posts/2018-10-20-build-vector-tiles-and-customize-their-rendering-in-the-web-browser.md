@@ -35,7 +35,7 @@ make
 sudo make install
 ```
 
-Install Expat andSQLite
+#### Install Expat and SQLite
 
 * Expat is a C library for parsing XML, started by James Clark in 1997
 * Development tools for the sqlite3 embeddable SQL database engine
