@@ -284,7 +284,7 @@ Edit also a Javascript file <b>base_style.json</b> defining your custom renderin
 }
 ```
 
-Check [Mapbox Style Specification](https://www.mapbox.com/mapbox-gl-js/style-spec) to know more the above the properties used.
+Check [Mapbox Style Specification](https://www.mapbox.com/mapbox-gl-js/style-spec) to know more about the above the properties used.
 
 Notice that the source-layer property should correspond to the layer property seen before in a .pbf tile. 
 
