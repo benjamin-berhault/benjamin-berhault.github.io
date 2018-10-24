@@ -105,7 +105,7 @@ in
   </li>
 </ul>
 
-#### Optimize your model in database (competence - technician infocentre)
+#### Optimize your model in database
 
 <ul>
   <li>Prefer the type <code>DATE</code> to type <code>DATETIME</code> to fill a date.</li>

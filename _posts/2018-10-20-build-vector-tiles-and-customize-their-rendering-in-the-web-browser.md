@@ -16,6 +16,7 @@ author: "Benjamin Berhault"
   </div>
 </div>
 
+The below instructions detail the process for a RHEL/CentOS 7 Linux distribution.
 
 ## Prerequisites
 
@@ -51,6 +52,8 @@ sudo yum install expat sqlite-devel
 <b>GDAL</b> is a translator library for raster and vector geospatial data formats that is released under an [X/MIT](http://trac.osgeo.org/gdal/wiki/FAQGeneral#WhatlicensedoesGDALOGRuse) style [Open Source](http://www.opensource.org/) license by the [Open Source Geospatial Foundation](http://www.osgeo.org/).
 
 <i>(GDAL must be installed with SQLite and Expat support.)</i>
+
+Download last GDAL from: [http://trac.osgeo.org/gdal/wiki/DownloadSource](http://trac.osgeo.org/gdal/wiki/DownloadSource)
 
 Install GDAL
 ```bash
@@ -140,13 +143,38 @@ Check how your data has been encoded inside a tile (having a tile/a file: ./Grea
 tippecanoe-decode ./Greater_London/8/127/84.pbf 8 127 82 | head -c 500
 ```
 
-I get 
+I get <i>(The output below has been formatted after the command)</i>
 ```javascript
-{ "type": "FeatureCollection", "properties": { "zoom": 8, "x": 127, "y": 82 }, "features": [
-{ "type": "FeatureCollection", "properties": { "layer": "Greater_London", "version": 2, "extent": 4096 }, "features": [
-{ "type": "Feature", "properties": { "osm_id": "3702620", "highway": "residential" }, "geometry": { "type": "LineString", "coordinates": [ [ -0.499535, 53.343583 ], [ -0.501251, 53.344813 ], [ -0.502625, 53.347272 ], [ -0.504341, 53.347887 ] ] } }
-,
-{ "type": "Feature", "properties":
+{
+   "type":"FeatureCollection",
+   "properties":{
+      "zoom":8,
+      "x":127,
+      "y":82
+   },
+   "features":[
+      {
+         "type":"FeatureCollection",
+         "properties":{
+            "layer":"Greater_London",
+            "version":2,
+            "extent":4096
+         },
+         "features":[
+            {
+               "type":"Feature",
+               "properties":{
+                  "osm_id":"3702620",
+                  "highway":"residential"
+               },
+               "geometry":{
+                  "type":"LineString",
+                  "coordinates":[[-0.499535,53.343583],[-0.501251,53.344813],[-0.502625,53.347272],[-0.504341,53.347887]]
+               }
+            },
+            {
+               "type":"Feature",
+               "properties":
 ```
 
 ## Render your tiles with Mapbox GL JavaScript library
@@ -284,7 +312,7 @@ Edit also a Javascript file <b>base_style.json</b> defining your custom renderin
 }
 ```
 
-Check [Mapbox Style Specification](https://www.mapbox.com/mapbox-gl-js/style-spec) to know more about the above the properties used.
+Check [Mapbox Style Specification](https://www.mapbox.com/mapbox-gl-js/style-spec) to know more about the above properties used.
 
 Notice that the source-layer property should correspond to the layer property seen before in a .pbf tile. 
 

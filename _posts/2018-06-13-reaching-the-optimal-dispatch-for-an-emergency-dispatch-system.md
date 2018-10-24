@@ -182,7 +182,7 @@ The road segment with the highest coverage is reachable by 13 unit(s)
 COVERAGE COMPUTED IN: 0 min 0 sec 909 msec 356 µs
 </code></pre>
 
-The Greater London coverage capacity has been computed in less than a second (on a netbook Acer Spin 3, Intel Core i3), making of this information relevant and usable to conduct ongoing operations.<br>
+The Greater London coverage capacity over 144 087 road segments has been computed in less than a second (on a netbook Acer Spin 3, Intel Core i3), making of this information relevant and usable to conduct ongoing operations.<br>
 <br>
 There is still to render it of course... for that the trick is to use a JS library like Mapbox GL. Believe me, such a precise information displayed on map is what any emergency control center manager would have to have, but rare are the emergency services having something close to that.
 </span></div>
