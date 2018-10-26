@@ -25,7 +25,7 @@ Read the Anaconda documentation to see what the [difference between Anaconda and
 
 Choose, download and install the one that fits best for your needs:
 * Miniconda download page: [https://conda.io/miniconda.html](https://conda.io/miniconda.html)
-* Anaconda download page: [https://www.anaconda.com/download/#linux](https://www.anaconda.com/download/#linux)
+* Prefer Anaconda under an entreprise network constraint (having a bunch of package already installed will save you lot of time), Anaconda download page: [https://www.anaconda.com/download/#linux](https://www.anaconda.com/download/#linux)
 
 ```bash
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
