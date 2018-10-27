@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+<title>Data profiling</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<!-- Custom stylesheet, it must be in the same directory as the html file -->
+<link rel="stylesheet" href="styles.css">
+
+<!-- Loading mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration --></head>
+<body>
+
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[17]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>county</th>
+      <th>population</th>
+      <th>householdsize</th>
+      <th>racepctblack</th>
+      <th>racePctWhite</th>
+      <th>racePctAsian</th>
+      <th>racePctHisp</th>
+      <th>agePct12t21</th>
+      <th>agePct12t29</th>
+      <th>agePct16t24</th>
+      <th>...</th>
+      <th>LandArea</th>
+      <th>PopDens</th>
+      <th>PctUsePubTrans</th>
+      <th>PolicCars</th>
+      <th>PolicOperBudg</th>
+      <th>LemasPctPolicOnPatr</th>
+      <th>LemasGangUnitDeploy</th>
+      <th>LemasPctOfficDrugUn</th>
+      <th>PolicBudgPerPop</th>
+      <th>ViolentCrimesPerPop</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>820.000000</td>
+      <td>1994.000000</td>
+      <td>1994.000000</td>
+      <td>1994.000000</td>
+      <td>1994.000000</td>
+      <td>1994.000000</td>
+      <td>1994.000000</td>
+      <td>1994.000000</td>
+      <td>1994.000000</td>
+      <td>1994.000000</td>
+      <td>...</td>
+      <td>1994.000000</td>
+      <td>1994.000000</td>
+      <td>1994.000000</td>
+      <td>319.000000</td>
+      <td>319.000000</td>
+      <td>319.000000</td>
+      <td>319.000000</td>
+      <td>1994.000000</td>
+      <td>319.000000</td>
+      <td>1994.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>58.826829</td>
+      <td>0.057593</td>
+      <td>0.463395</td>
+      <td>0.179629</td>
+      <td>0.753716</td>
+      <td>0.153681</td>
+      <td>0.144022</td>
+      <td>0.424218</td>
+      <td>0.493867</td>
+      <td>0.336264</td>
+      <td>...</td>
+      <td>0.065231</td>
+      <td>0.232854</td>
+      <td>0.161685</td>
+      <td>0.163103</td>
+      <td>0.076708</td>
+      <td>0.698589</td>
+      <td>0.440439</td>
+      <td>0.094052</td>
+      <td>0.195078</td>
+      <td>0.237979</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>126.420560</td>
+      <td>0.126906</td>
+      <td>0.163717</td>
+      <td>0.253442</td>
+      <td>0.244039</td>
+      <td>0.208877</td>
+      <td>0.232492</td>
+      <td>0.155196</td>
+      <td>0.143564</td>
+      <td>0.166505</td>
+      <td>...</td>
+      <td>0.109459</td>
+      <td>0.203092</td>
+      <td>0.229055</td>
+      <td>0.214778</td>
+      <td>0.140207</td>
+      <td>0.213944</td>
+      <td>0.405808</td>
+      <td>0.240328</td>
+      <td>0.164718</td>
+      <td>0.232985</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>9.000000</td>
+      <td>0.010000</td>
+      <td>0.350000</td>
+      <td>0.020000</td>
+      <td>0.630000</td>
+      <td>0.040000</td>
+      <td>0.010000</td>
+      <td>0.340000</td>
+      <td>0.410000</td>
+      <td>0.250000</td>
+      <td>...</td>
+      <td>0.020000</td>
+      <td>0.100000</td>
+      <td>0.020000</td>
+      <td>0.040000</td>
+      <td>0.020000</td>
+      <td>0.620000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.110000</td>
+      <td>0.070000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>23.000000</td>
+      <td>0.020000</td>
+      <td>0.440000</td>
+      <td>0.060000</td>
+      <td>0.850000</td>
+      <td>0.070000</td>
+      <td>0.040000</td>
+      <td>0.400000</td>
+      <td>0.480000</td>
+      <td>0.290000</td>
+      <td>...</td>
+      <td>0.040000</td>
+      <td>0.170000</td>
+      <td>0.070000</td>
+      <td>0.080000</td>
+      <td>0.030000</td>
+      <td>0.750000</td>
+      <td>0.500000</td>
+      <td>0.000000</td>
+      <td>0.150000</td>
+      <td>0.150000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>59.500000</td>
+      <td>0.050000</td>
+      <td>0.540000</td>
+      <td>0.230000</td>
+      <td>0.940000</td>
+      <td>0.170000</td>
+      <td>0.160000</td>
+      <td>0.470000</td>
+      <td>0.540000</td>
+      <td>0.360000</td>
+      <td>...</td>
+      <td>0.070000</td>
+      <td>0.280000</td>
+      <td>0.190000</td>
+      <td>0.195000</td>
+      <td>0.060000</td>
+      <td>0.840000</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>0.220000</td>
+      <td>0.330000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>840.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>...</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+<p>8 rows × 124 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+</body>
+
+ 
+
+
+</html>

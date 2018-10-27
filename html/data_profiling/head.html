@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+<title>Data profiling</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<!-- Custom stylesheet, it must be in the same directory as the html file -->
+<link rel="stylesheet" href="styles.css">
+
+<!-- Loading mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration --></head>
+<body>
+
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[16]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>state</th>
+      <th>county</th>
+      <th>community</th>
+      <th>communityname</th>
+      <th>fold</th>
+      <th>population</th>
+      <th>householdsize</th>
+      <th>racepctblack</th>
+      <th>racePctWhite</th>
+      <th>racePctAsian</th>
+      <th>...</th>
+      <th>LandArea</th>
+      <th>PopDens</th>
+      <th>PctUsePubTrans</th>
+      <th>PolicCars</th>
+      <th>PolicOperBudg</th>
+      <th>LemasPctPolicOnPatr</th>
+      <th>LemasGangUnitDeploy</th>
+      <th>LemasPctOfficDrugUn</th>
+      <th>PolicBudgPerPop</th>
+      <th>ViolentCrimesPerPop</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>8</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Lakewoodcity</td>
+      <td>1</td>
+      <td>0.19</td>
+      <td>0.33</td>
+      <td>0.02</td>
+      <td>0.90</td>
+      <td>0.12</td>
+      <td>...</td>
+      <td>0.12</td>
+      <td>0.26</td>
+      <td>0.20</td>
+      <td>0.06</td>
+      <td>0.04</td>
+      <td>0.9</td>
+      <td>0.5</td>
+      <td>0.32</td>
+      <td>0.14</td>
+      <td>0.20</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>53</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Tukwilacity</td>
+      <td>1</td>
+      <td>0.00</td>
+      <td>0.16</td>
+      <td>0.12</td>
+      <td>0.74</td>
+      <td>0.45</td>
+      <td>...</td>
+      <td>0.02</td>
+      <td>0.12</td>
+      <td>0.45</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>NaN</td>
+      <td>0.67</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>24</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Aberdeentown</td>
+      <td>1</td>
+      <td>0.00</td>
+      <td>0.42</td>
+      <td>0.49</td>
+      <td>0.56</td>
+      <td>0.17</td>
+      <td>...</td>
+      <td>0.01</td>
+      <td>0.21</td>
+      <td>0.02</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>NaN</td>
+      <td>0.43</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>34</td>
+      <td>5.0</td>
+      <td>81440.0</td>
+      <td>Willingborotownship</td>
+      <td>1</td>
+      <td>0.04</td>
+      <td>0.77</td>
+      <td>1.00</td>
+      <td>0.08</td>
+      <td>0.12</td>
+      <td>...</td>
+      <td>0.02</td>
+      <td>0.39</td>
+      <td>0.28</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>NaN</td>
+      <td>0.12</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>42</td>
+      <td>95.0</td>
+      <td>6096.0</td>
+      <td>Bethlehemtownship</td>
+      <td>1</td>
+      <td>0.01</td>
+      <td>0.55</td>
+      <td>0.02</td>
+      <td>0.95</td>
+      <td>0.09</td>
+      <td>...</td>
+      <td>0.04</td>
+      <td>0.09</td>
+      <td>0.02</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>NaN</td>
+      <td>0.03</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 128 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+</body>
+
+ 
+
+
+</html>

@@ -15,6 +15,12 @@ author: "Benjamin Berhault"
   </div>
 </div>
 
+* Install Python with Anaconda on Windows
+* Deal with corporate network constraints
+  - Solve proxy problems
+  - Install a Python package with pip without internet access neither administrator permissions
+  - Install a Python package manually
+
 ## Install Python with Anaconda on Windows
 <b>Reference:</b> [Conda documentation](https://conda.io/docs/user-guide/install/windows.html)
 
@@ -22,7 +28,7 @@ Read the Anaconda documentation to see what the [difference between Anaconda and
 
 Choose, download and install the one that fits best for your needs:
 * Miniconda download page: [https://conda.io/miniconda.html](https://conda.io/miniconda.html)
-* Prefer Anaconda under an entreprise network constraint (having a bunch of package already installed will save you lot of time), Anaconda download page: [https://www.anaconda.com/download/#linux](https://www.anaconda.com/download/#linux)
+* Prefer Anaconda under an entreprise network constraint (having a bunch of package already installed will save you lot of time) - Anaconda download page: [https://www.anaconda.com/download/#linux](https://www.anaconda.com/download/#linux)
 
 ## Deal with corporate network constraints
 
