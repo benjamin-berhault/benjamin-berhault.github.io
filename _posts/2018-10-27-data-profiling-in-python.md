@@ -10,7 +10,7 @@ author: "Benjamin Berhault"
     <img src="{{ '/images/data_profiling.png' | relative_url }}" class="responsive-img">
   </div>
   <div class="col grid s12 m6 l9 ">
-Data profiling is intended by helping you to understand your data leading to a better data prepping and data quality.<br>
+Data profiling is intended to help understand data leading to a better data prepping and data quality.<br>
 <br>
 <i>Data profiling is the systematic up front analysis of the content of a data source, all the way from counting the bytes and checking cardinalities up to the most thoughtful diagnosis of whether the data can meet the high level goals of the data warehouse.</i> Ralph Kimball
   </div>
