@@ -28,7 +28,7 @@ Data profiling is intended to help understand data leading to a better data prep
 ## Prerequisites
 * Install Python and the Jupyter Notebook
   - [On Linux]({% post_url 2018-07-11-install-python-jupyter-notebook-on-rhel-centos-7 %})
-  - [On Windows]({% post_url 2018-07-11-install-python-jupyter-notebook-on-rhel-centos-7 %})
+  - [On Windows]({% post_url 2018-10-26-install-python-package-on-windows-with-corporate-network-constraints %})
 * Install pandas-profiling module
   - <b>GitHub repo:</b> <a href="https://github.com/pandas-profiling/pandas-profiling">https://github.com/pandas-profiling/pandas-profiling</a>
   - With Anaconda: 
