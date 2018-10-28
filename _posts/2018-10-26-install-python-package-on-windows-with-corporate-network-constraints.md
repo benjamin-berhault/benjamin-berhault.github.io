@@ -34,7 +34,7 @@ Choose, download and install the one that fits best for your needs:
 
 Let's say that we would like to install the `pandas_profiling` package. 
 
-#### Solve proxy problems
+#### Solve proxy problems for the Anaconda package manager
 Trying to install a Python package with the `conda` command line tool, you could end up with a corporate proxy problem and being stuck with something like:
 
 ```console
