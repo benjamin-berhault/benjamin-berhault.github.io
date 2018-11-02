@@ -189,10 +189,10 @@ So the solution is simple you just need to install MT5 under a computer with Win
   <li>Run MT5 with Wine
       <ol>
         <li>for MetaTrader:
-          <pre class="language-bash"><code class="language-bash">wine64 terminal.exe</code></pre>
+          <pre class="language-bash"><code class="language-bash">wine64 terminal64.exe</code></pre>
         </li>
         <li>for MetaEditor :
-           <pre class="language-bash"><code class="language-bash">wine64 metaeditor.exe</code></pre>
+           <pre class="language-bash"><code class="language-bash">wine64 metaeditor64.exe</code></pre>
         </li>
       </ol>
   </li>
