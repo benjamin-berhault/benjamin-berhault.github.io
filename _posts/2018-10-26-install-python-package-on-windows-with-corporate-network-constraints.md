@@ -86,7 +86,7 @@ You could probably face a red warning as:
 xxxxxx xx.x.x requires xxxxxx>=xx.x.x, which is not installed.
 ```
 
-This message indicates tha you have to follow this process first for each missing Python package before being able to install the initial desired package. 
+This message indicates that you have to follow this process first for each missing Python package before being able to install the initial desired package. 
 
 #### Install a Python package manually
 

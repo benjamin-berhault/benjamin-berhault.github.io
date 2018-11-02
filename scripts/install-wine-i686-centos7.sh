@@ -13,13 +13,19 @@ log=`mktemp -t install-wine.XXXXXX.log`
 
 # Install
 
-ver=1.8.7
+ver=3.19
+verurlstr=3.x
+
 if [[ "$1" != "" ]]; then
   ver=$1
 fi
 
+if [[ "$2" != "" ]]; then
+  verurlstr=$2
+fi
+
 vermajor=$(echo ${ver} | cut -d'.' -f1)
-verurlstr=$(echo ${ver} | cut -d'.' -f1,2)
+#$(echo ${ver} | cut -d'.' -f1,2)
 
 date > $log
 echo "Hello there. Start to download, build and install wine $ver 32-bit version..." | tee -a $log
@@ -59,7 +65,7 @@ cd /usr/src 2>&1 >> $log
 if [[ "${vermajor}" == "1" ]]; then
   wget http://dl.winehq.org/wine/source/${verurlstr}/wine-${ver}.tar.bz2 -O wine-${ver}.tar.bz2 2>&1 >> $log
   tar xjf wine-${ver}.tar.bz2 2>&1 >> $log
-elif [[ "${vermajor}" == "2" ]]; then
+else
   wget http://dl.winehq.org/wine/source/${verurlstr}/wine-${ver}.tar.xz -O wine-${ver}.tar.xz 2>&1 >> $log
   tar xf wine-${ver}.tar.xz 2>&1 >> $log
 fi

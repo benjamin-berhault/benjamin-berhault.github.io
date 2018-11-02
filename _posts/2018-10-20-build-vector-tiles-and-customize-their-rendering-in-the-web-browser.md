@@ -184,7 +184,7 @@ Under your web server directory create a new directory
 mkdir serving_custom_tiles_demo
 ```
 
-In it edit an <b>index.html</b> file under your web server directory
+In it edit an <b>index.html</b> file
 ```html
 <!DOCTYPE html>
 <html>

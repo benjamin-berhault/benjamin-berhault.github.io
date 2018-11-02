@@ -88,9 +88,9 @@ profile.to_file(outputfile="./report.html")
 import pandas as pd
 import pyodbc
 
-sql_conn = pyodbc.connect('DRIVER={ODBC Driver 13 for SQL Server};
-                            SERVER=SQLSERVER2017;
-                            DATABASE=Adventureworks;
+sql_conn = pyodbc.connect('DRIVER={SQL Server Native Client 11.0}; \
+                            SERVER=server_name; \
+                            DATABASE=db_name; \
                             Trusted_Connection=yes') 
 query = "SELECT [BusinessEntityID],[FirstName],[LastName],
                  [PostalCode],[City] FROM [Sales].[vSalesPerson]"
@@ -98,8 +98,19 @@ df = pd.read_sql(query, sql_conn)
 
 pandas_profiling.ProfileReport(df)
 ```
+With credentials replace pyodbc.connect instruction with the following
+
+```python
+sql_conn = pyodbc.connect('DRIVER={SQL Server Native Client 11.0}; \
+                            SERVER=server_name; \
+                            DATABASE=db_name; \
+                            uid=User; \
+                            pwd=password') 
+```
+As alternative you could consider the [pymssql module](http://www.pymssql.org/en/stable/pymssql_examples.html).
 
 ## Other data profiling commands
+
 
 ```python
 df.head()
@@ -145,6 +156,67 @@ df.info()
 ```
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" height="100" width="100%" src="{{ '/html/data_profiling/info.html' | relative_url }}"></iframe>
+
+Plot a hierarchical clustering as a dendrogram.
+```python
+%matplotlib notebook
+import matplotlib.pyplot as plt
+from scipy.cluster import hierarchy as hc
+
+corr = 1 - df.corr() 
+corr_condensed = hc.distance.squareform(corr) # convert to condensed
+z = hc.linkage(corr_condensed, method='average')
+dendrogram = hc.dendrogram(z, labels=corr.columns)
+```
+<img src="{{ '/images/05-data-profiling-in-python/01-data-profiling-in-python.png' | relative_url }}" class="responsive-img">
+
+Principal Component Analysis (PCA) in Python ([https://stackoverflow.com/a/50572561/9489744](https://stackoverflow.com/a/50572561/9489744))
+```python
+%matplotlib notebook
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn import datasets
+from sklearn.decomposition import PCA
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+
+iris = datasets.load_iris()
+X = iris.data
+y = iris.target
+X = iris.data
+y = iris.target
+#In general a good idea is to scale the data
+scaler = StandardScaler()
+scaler.fit(X)
+X=scaler.transform(X)    
+
+pca = PCA()
+x_new = pca.fit_transform(X)
+
+def myplot(score,coeff,labels=None):
+    xs = score[:,0]
+    ys = score[:,1]
+    n = coeff.shape[0]
+    scalex = 1.0/(xs.max() - xs.min())
+    scaley = 1.0/(ys.max() - ys.min())
+    plt.scatter(xs * scalex,ys * scaley, c = y)
+    for i in range(n):
+        plt.arrow(0, 0, coeff[i,0], coeff[i,1],color = 'r',alpha = 0.5)
+        if labels is None:
+            plt.text(coeff[i,0]* 1.15, coeff[i,1] * 1.15, "Var"+str(i+1), color = 'g', ha = 'center', va = 'center')
+        else:
+            plt.text(coeff[i,0]* 1.15, coeff[i,1] * 1.15, labels[i], color = 'g', ha = 'center', va = 'center')
+plt.xlim(-1,1)
+plt.ylim(-1,1)
+plt.xlabel("PC{}".format(1))
+plt.ylabel("PC{}".format(2))
+plt.grid()
+
+#Call the function. Use only the 2 PCs.
+myplot(x_new[:,0:2],np.transpose(pca.components_[0:2, :]))
+plt.show()
+```
+<img src="{{ '/images/05-data-profiling-in-python/02-data-profiling-in-python.png' | relative_url }}" class="responsive-img">
 
 <!--
 
