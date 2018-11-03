@@ -105,3 +105,15 @@ p.rss-subscribe {
     border: 1px solid blue;
     border-style:double;
 }
+
+code {
+    background-color:#272822;
+    color:#f8f8f2;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    line-height: 1.5;
+    font-size: 1rem;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  padding: 4px 8px 2px;
+
+  border-radius: .3em;
+}
