@@ -46,6 +46,18 @@ To tackle that problem contact your network administrator and ask for details on
 
 With it edit your `.condarc` config file.
 
+<div class="row">
+  <div class="col">
+    <div class="card grey darken-1">
+      <div class="card-content white-text">
+<a href="https://conda.io/docs/user-guide/configuration/use-condarc.html">&#91;conda.io&#93;</a> The conda configuration file, <code>.condarc</code>, is an optional runtime configuration file that allows advanced users to configure various aspects of conda, such as which channels it searches for packages, proxy settings and environment directories.<br>
+<br>
+The <code>.condarc</code> file is not included by default, but it is automatically created in your home directory (<code>C:\Users\Username</code>) the first time you run the command: <code>conda config</code>
+      </div>
+    </div>
+  </div>
+</div>
+
 * with credentials:
 
 ```bash
@@ -100,3 +112,30 @@ python setup.py install
 ```
 
 You may need administrator privileges for the last step.
+
+#### Upgrade all Python packages at once
+```python
+pip install -U $(pip list --outdated | awk 'NR>2 {print $1}')
+```
+
+#### Export a Jupyter Notebook in PDF via LaTeX on Windows
+
+Download and install [MiKTeX](https://miktex.org/download)
+
+If needed, set proxy settings for MikTeX thorugh the MiKTeX Console: Settings > General
+* Check <b>Always install missing packages on-the-fly</b>
+* Change...
+* Check <b>Remote package repository</b>
+* Connexion Settings...
+* Enter your proxy infos
+* OK
+* Next
+* Select a Host from your Country
+* Finish
+
+Still in the MiKTeXConsole, update MiKTeX packages from the Updates tab with the <b>Check for updates</b> and <b>Update now</b> buttons.
+
+Install nbconvert
+```console
+conda install -c conda-forge nbconvert
+```

@@ -49,6 +49,15 @@ Check your default python location
 ```bash
 which python
 ```
+Check your Python version
+```bash
+python --version
+```
+
+Anaconda having currently no internal update to 3.7, for upgrading Python being under 3.6 for example, you will have to do something like 
+```bash
+conda install python==3.7
+```
 
 Install Ipython Notebook
 ```bash
@@ -66,3 +75,4 @@ The IPython Notebook should open in your web browser.
 ```bash
 jupyter notebook
 ```
+
