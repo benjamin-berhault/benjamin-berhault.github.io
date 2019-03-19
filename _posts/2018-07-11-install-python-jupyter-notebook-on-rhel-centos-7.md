@@ -59,20 +59,23 @@ Anaconda having currently no internal update to 3.7, for upgrading Python being 
 conda install python==3.7
 ```
 
-Install Ipython Notebook
+Upgrade the packages to the newest version
 ```bash
-conda install ipython-notebook
+conda update --all
+```
+Anaconda update doesn't clean automatically older packages, for this we have to use the following command
+```bash
+conda clean -p
 ```
 
-You can now launch the IPython Notebook with:
+Install Jupyter Notebook
 ```bash
-ipython notebook
+conda install -c conda-forge notebook
 ```
 
-The IPython Notebook should open in your web browser.
-
-<i>NB: The IPython Notebook is now known as the Jupyter Notebook, so you can also the command:</i>
+You can now launch the Jupyter Notebook with:
 ```bash
 jupyter notebook
 ```
 
+The Jupyter Notebook should open in your web browser.

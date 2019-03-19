@@ -122,3 +122,9 @@ You can check your response with the [Google Interactive Polyline Encoder Utilit
 <center>
 	<img src="{{ '/images/08-OSRM/01-OSRM.png' | relative_url }}" class="responsive-img">
 </center>
+
+
+{% comment %}
+Monitor TCP Traffic on specific port
+tcpdump port 5000 and '(tcp-syn|tcp-ack)!=0'
+{% endcomment %}
