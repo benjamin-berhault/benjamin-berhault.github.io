@@ -1,0 +1,153 @@
+I"�<p>Install Docker</p>
+
+<p>Reference: Get Docker CE for CentOS</p>
+
+<p>Uninstall old versions</p>
+<pre><code class="language-console">sudo yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-selinux \
+                  docker-engine-selinux \
+                  docker-engine
+</code></pre>
+
+<p>Install required packages</p>
+<pre><code class="language-console">sudo yum install -y yum-utils \
+  device-mapper-persistent-data \
+  lvm2
+</code></pre>
+
+<p>Set up the stable Docker repository</p>
+<pre><code class="language-console">sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+</code></pre>
+
+<p>Install Docker CE</p>
+<pre><code class="language-console">sudo yum install docker-ce
+</code></pre>
+
+<p>Start Docker service</p>
+<pre><code class="language-console">sudo service docker start
+</code></pre>
+<p>Manage Docker as a non-root user</p>
+
+<p>Reference: Post-installation steps for Linux</p>
+
+<p>Add your user to the docker group.</p>
+<pre><code class="language-console">sudo usermod -aG docker $USER
+</code></pre>
+<p>Log out of your session completely and then log back in so that your group membership is re-evaluated.</p>
+
+<p>Start Docker</p>
+<pre><code class="language-console">sudo service docker start
+</code></pre>
+<p>Verify that you can run docker commands without sudo.</p>
+<pre><code class="language-console">docker run hello-world
+</code></pre>
+
+<p>An instance of an image is called a container</p>
+<pre><code class="language-console">docker search osrm
+</code></pre>
+
+<pre><code class="language-console">docker pull osrm/osrm-backend
+</code></pre>
+<pre><code class="language-console">docker run --name osrm -p 5000:5000 -ti osrm/osrm-backend
+</code></pre>
+
+<ul>
+  <li><code>-t</code> -</li>
+  <li><code>-i</code> -</li>
+  <li><code>-d</code> - causes Docker to start the container in “detached” mode. A simple way to think of this is to think of -d as running the container in “the background,” just like any other Unix process.</li>
+  <li><code>-p</code> - publish a port</li>
+</ul>
+
+<p>Update your container</p>
+<pre><code class="language-console">apt-get update
+</code></pre>
+
+<p>Install <code>wget</code></p>
+<pre><code class="language-console">apt-get install wget -y
+</code></pre>
+
+<p>Download Ile-de-France OSM data in the <code>/data</code> dircetory</p>
+<pre><code class="language-console">wget https://download.geofabrik.de/europe/france/ile-de-france-latest.osm.pbf -P /data
+</code></pre>
+
+<p>Build osrm graph</p>
+<pre><code class="language-console">osrm-extract -p /opt/car.lua /data/ile-de-france-latest.osm.pbf
+osrm-contract /data/ile-de-france-latest.osrm
+</code></pre>
+
+<p>Run orsm service</p>
+
+<pre><code class="language-console">osrm-routed /data/ile-de-france-latest.osrm
+</code></pre>
+<h2 id="check-the-service-is-running-in-your-browser">Check the service is running in your browser</h2>
+
+<p>Open any browser and copy paste the following url: http://0.0.0.0:5000/trip/v1/driving/2.25975,48.923557;2.262194,48.922554</p>
+
+<p>The service should returned :</p>
+<pre><code class="language-console">{"code":"Ok","trips":[{"geometry":"gkriHmjxLpCkBBcILcBHBICMbBCbIqCjB","legs":[{"steps":[],"distance":251.2,"duration":34,"summary":"","weight":34},{"steps":[],"distance":251.2,"duration":36,"summary":"","weight":36}],"distance":502.4,"duration":70,"weight_name":"routability","weight":70}],"waypoints":[{"waypoint_index":0,"trips_index":0,"location":[2.259746,48.923556],"name":"Rue Victor Hugo","distance":0.313522,"hint":"tkAAgLkYC4AHAAAABQAAAAAAAAAmAAAAHvuhQA7XVUAAAAAAYpXVQQcAAAAFAAAAAAAAACYAAABIBQAAInsiAKSD6gImeyIApYPqAgAArwknhS-p"},{"waypoint_index":1,"trips_index":0,"location":[2.262393,48.922692],"name":"","distance":21.170758,"hint":"xhsNgMcbDYANAAAAAAAAAAAAAAAAAAAACWqrQAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAAAAAABIBQAAeYUiAESA6gKyhCIAun_qAgAADwwnhS-p"}]}
+</code></pre>
+
+<p>You can check the</p>
+
+<h2 id="check-your-service-is-running-under-another-terminal">Check your service is running under another terminal</h2>
+<p>Under another terminal window retrieve your ID container</p>
+<pre><code class="language-console">docker ps
+</code></pre>
+
+<p>It will return something like</p>
+<pre><code class="language-console">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+7c76febe30b7        osrm/osrm-backend   "bash"              15 minutes ago      Up 15 minutes       5000/tcp            unruffled_raman
+</code></pre>
+
+<p>Here the Id container is 7c76febe30b7</p>
+
+<p>Get into this Docker container’s shell</p>
+<pre><code class="language-console">docker exec -it 7c76febe30b7 bash
+</code></pre>
+
+<p>Install Curl</p>
+<pre><code class="language-console">apt-get install curl
+</code></pre>
+
+<p>Check your OSRM service with a request</p>
+<pre><code class="language-console">curl "0.0.0.0:5000/trip/v1/driving/2.25975,48.923557;2.262194,48.922554"
+</code></pre>
+<h2 id="quit-the-terminal">Quit the terminal</h2>
+<p>By typing ctrl+p and ctrl+q after each other, you turn interactive mode to daemon mode, which keeps the container running but frees up your terminal.</p>
+
+<p>To stop your container
+docker stop osrm</p>
+
+<p>To start your container
+docker start osrm</p>
+
+<h2 id="restart-the-container-and-the-service">Restart the container and the service</h2>
+
+<p>Start/Restart the container</p>
+<pre><code class="language-console">docker start osrm
+</code></pre>
+
+<p>Start the service in detach mode</p>
+<pre><code class="language-console">docker exec -it -d osrm osrm-routed /data/ile-de-france-latest.osrm
+</code></pre>
+
+<p>mkdir -p ~/Downloads/ile-de-france/data</p>
+
+<p>cd ~/Downloads/ile-de-france</p>
+
+<p>docker run -t -v “${PWD}:/data” osrm/osrm-backend wget https://download.geofabrik.de/europe/france/ile-de-france-latest.osm.pbf -P /data</p>
+
+<p>docker run -t -v “${PWD}:/data” osrm/osrm-backend osrm-extract -p /opt/car.lua /data/ile-de-france-latest.osm.pbf</p>
+
+<p>wget https://download.geofabrik.de/europe/france/ile-de-france-latest.osm.pbf -P /data</p>
+
+<p>curl “0.0.0.0:5000/trip/v1/driving/2.25975,48.923557;2.248389,48.922695;2.235361,48.916889;2.2255,48.91325;2.225833,48.914028;2.225861,48.914001;2.225833,48.914055;2.225861,48.914055;2.226417,48.914333;2.230083,48.91486;2.23725,48.917557;2.242917,48.920029;2.24775,48.922417;2.249278,48.922749;2.252528,48.922916;2.256556,48.923054;2.261778,48.922779;2.262389,48.922638;2.262333,48.922611;2.262361,48.922611;2.262194,48.922585;2.262194,48.922585;2.262194,48.922585;2.262167,48.922585;2.262139,48.922585;2.262167,48.922585;2.262167,48.922554;2.262194,48.922554?source=first&amp;destination=last”</p>
+:ET

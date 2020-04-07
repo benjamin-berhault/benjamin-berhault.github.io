@@ -1,0 +1,11 @@
+I"Þ<div class="row">
+  <div class="col grid s12 m6 l3">
+    <img src="/images/mapbox.png" class="responsive-img" />
+  </div>
+  <div class="col grid s12 m6 l9 ">
+    Mapbox GL JS is a web mapping library based on WebGL.<br />
+    <br />
+    Using Mapbox GL JS for serving tilesets is an interesting option especially if rendering a map on the fly in the client web browser is what you are looking for. This ability allows you to render efficiently data-driven map. 
+  </div>
+</div>
+:ET

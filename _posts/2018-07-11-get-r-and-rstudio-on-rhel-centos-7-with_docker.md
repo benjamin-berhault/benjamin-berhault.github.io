@@ -139,5 +139,14 @@ To start the container
 docker start abf97894d537
 ```
 
+## Docker maintenance commands
 
+Delete all your containers
+```bash
+docker rm $(docker ps -a -q)
+```
 
+Delete all your  images
+```bash
+docker rmi $(docker images -q)
+```

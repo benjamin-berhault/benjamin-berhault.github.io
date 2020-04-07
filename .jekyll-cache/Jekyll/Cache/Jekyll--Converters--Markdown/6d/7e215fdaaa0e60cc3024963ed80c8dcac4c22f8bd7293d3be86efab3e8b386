@@ -1,0 +1,277 @@
+I"Ù<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+
+      <h1 class="header center black-text">Notebooks</h1>
+      
+      <br />
+    </div>
+  </div>
+
+<div class="row">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="col s12">
+    <div class="card hoverable">
+      <div class="card-content">
+        <span id="post-title" class="card-title"><b>Python Notebook</b></span>
+        <p id="post-date">
+          <i class="material-icons">date_range</i>
+          30/10/2018
+        </p>
+        <p id="post-content"><div class="row">
+  <div class="col grid s12 m6 l3">
+    <img src="/images/vocabulary.png" class="responsive-img" />
+  </div>
+  <div class="col grid s12 m6 l9 ">
+  	blablabla 
+  </div>
+</div>
+</p>
+      </div>
+      <div class="card-action">
+        <a href="/notebook/post/2018/10/30/python-notebook.html">
+          Read More <i class="material-icons" style="vertical-align:middle">touch_app</i>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="col s12">
+    <div class="card hoverable">
+      <div class="card-content">
+        <span id="post-title" class="card-title"><b>MQL5 Notebook</b></span>
+        <p id="post-date">
+          <i class="material-icons">date_range</i>
+          30/10/2018
+        </p>
+        <p id="post-content"><div class="row">
+  <div class="col grid s12 m6 l3">
+    <img src="/images/vocabulary.png" class="responsive-img" />
+  </div>
+  <div class="col grid s12 m6 l9 ">
+  	<b>Source:</b> <a href="https://code.tutsplus.com/tutorials/create-a-algorithm-trading-robot-the-basics-of-writing-a-expert-advisor-in-mql4--cms-27984">Create an Algorithm Trading Robot: The Basics of Writing An Expert Advisor in MQL4</a><br />
+    Far too often, emotions, psychological mind traps and mental discipline stand in the way of profits and are the main reasons 95% (or more) of all new traders lose all their investment capital in the first month. <br />
+    <br />
+  	Using an Expert Advisor algorithm trading robot in Meta Trader written in the MQL4 language is one way of accessing the market via code, thus taking the emotions out of the picture and working with just the numbers and your program logic. <br />
+  	<br />
+  	Taking emotions out of the equation is one measure, but this does not mean robots cannot lose. In fact, even the big investment banks have had to pull the plug on their trading robots before the loss became fatal. 
+  </div>
+</div>
+</p>
+      </div>
+      <div class="card-action">
+        <a href="/notebook/post/2018/10/30/mql5-notebook.html">
+          Read More <i class="material-icons" style="vertical-align:middle">touch_app</i>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="col s12">
+    <div class="card hoverable">
+      <div class="card-content">
+        <span id="post-title" class="card-title"><b>Linux/Centos 7 Notebook</b></span>
+        <p id="post-date">
+          <i class="material-icons">date_range</i>
+          10/10/2018
+        </p>
+        <p id="post-content"><div class="row">
+  <div class="col grid s12 m6 l3">
+    <center><img src="/images/centos.jpg" class="responsive-img" /></center>
+  </div>
+  <div class="col grid s12 m6 l9 ">
+    Setup Essential Multimedia Tools on CentOS 7
+  </div>
+</div>
+</p>
+      </div>
+      <div class="card-action">
+        <a href="/notebook/post/2018/10/10/linux-centos7-notebook.html">
+          Read More <i class="material-icons" style="vertical-align:middle">touch_app</i>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  <div class="col s12">
+    <div class="card hoverable">
+      <div class="card-content">
+        <span id="post-title" class="card-title"><b>Vocabulary Notebook</b></span>
+        <p id="post-date">
+          <i class="material-icons">date_range</i>
+          07/10/2018
+        </p>
+        <p id="post-content"><div class="row">
+  <div class="col grid s12 m6 l3">
+    <img src="/images/vocabulary.png" class="responsive-img" />
+  </div>
+  <div class="col grid s12 m6 l9 ">
+    IT vocabulary.
+    <ul>
+        <li>...</li>
+    </ul>  
+  </div>
+</div>
+</p>
+      </div>
+      <div class="card-action">
+        <a href="/notebook/post/2018/10/07/vocabulary-notebook.html">
+          Read More <i class="material-icons" style="vertical-align:middle">touch_app</i>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="col s12">
+    <div class="card hoverable">
+      <div class="card-content">
+        <span id="post-title" class="card-title"><b>Statistics Notebook</b></span>
+        <p id="post-date">
+          <i class="material-icons">date_range</i>
+          07/10/2018
+        </p>
+        <p id="post-content"><div class="row">
+  <div class="col grid s12 m6 l3">
+    <img src="/images/statistics.png" class="responsive-img" />
+  </div>
+  <div class="col grid s12 m6 l9 ">
+    Todo.
+    <ul>
+        <li>...</li>
+    </ul>  
+  </div>
+</div>
+</p>
+      </div>
+      <div class="card-action">
+        <a href="/notebook/post/2018/10/07/statistics-notebook.html">
+          Read More <i class="material-icons" style="vertical-align:middle">touch_app</i>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  <div class="col s12">
+    <div class="card hoverable">
+      <div class="card-content">
+        <span id="post-title" class="card-title"><b>SQL Notebook</b></span>
+        <p id="post-date">
+          <i class="material-icons">date_range</i>
+          15/09/2018
+        </p>
+        <p id="post-content"><div class="row">
+  <div class="col grid s12 m6 l3">
+    <img src="/images/sql.png" class="responsive-img" />
+  </div>
+  <div class="col grid s12 m6 l9 ">
+    Microsoft SQL Server queries memo.
+    <ul>
+        <li>Get the value of one column based on the MAX value of another with a GROUP BY query</li>
+        <li>Space used by tables</li>
+        <li>BI Dimension Date &amp; Time</li>
+    </ul>  
+  </div>
+</div>
+</p>
+      </div>
+      <div class="card-action">
+        <a href="/notebook/post/2018/09/15/sql-notebook.html">
+          Read More <i class="material-icons" style="vertical-align:middle">touch_app</i>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  <!-- pagination -->
+
+
+</div>
+:ET

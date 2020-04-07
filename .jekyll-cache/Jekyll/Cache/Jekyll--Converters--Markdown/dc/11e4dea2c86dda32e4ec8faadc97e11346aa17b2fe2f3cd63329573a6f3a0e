@@ -1,0 +1,49 @@
+I"�<div class="row">
+  <div class="col grid s12 m6 l3">
+    <img src="/images/anaconda.png" class="responsive-img" />
+  </div>
+  <div class="col grid s12 m6 l9 ">
+
+  </div>
+</div>
+
+<p>Install some prerequisites</p>
+<pre><code class="language-bash">yum install atlas-devel gcc-c++ gcc-gfortran libgfortran python-devel redhat-rep-config
+</code></pre>
+
+<p>It is recommended to install Zipline in an isolated conda environment for Python 2.7 or 3.5 version.</p>
+
+<h2 id="create-a-conda-environment">Create a <code>conda</code> environment</h2>
+<p>Source: https://www.zipline.io/install.html</p>
+
+<pre><code class="language-console">conda create -n env_zipline python=3.5
+</code></pre>
+<p>Now you can activate the conda environment</p>
+
+<pre><code class="language-console">source activate env_zipline 
+</code></pre>
+
+<p>Source: https://pythonprogramming.net/zipline-local-install-python-programming-for-finance/</p>
+
+<p>Install prerequisites</p>
+<pre><code class="language-bash">pip install numpy
+pip install cython
+pip install -U setuptools
+pip install zipline
+</code></pre>
+
+<h2 id="using-zipline">Using Zipline</h2>
+<p><strong>Source:</strong> https://stackoverflow.com/questions/39604271/conda-environments-not-showing-up-in-jupyter-notebook</p>
+
+<p>The annoying thing is that in your <code>zipline</code> environment, you can run jupyter notebook without installing jupyter in that environment. Just run</p>
+
+<pre><code class="language-console">(env_zipline) $ conda install jupyter
+</code></pre>
+
+<p>Once you have Zipline, it’s important we talk about some of the basics of using Zipline locally. First, you need data. Data is in the form of bundles. You can either make your own bundles, or use a pre-made one. Eventually, we will use our own dataset, but, for now, let’s use a pre-made one to keep this start up process as easy as possible!</p>
+
+<p>Let’s go ahead and injest a data bundle via the command line interface (via terminal/command-line):</p>
+
+<pre><code class="language-console">zipline ingest -b quantopian-quandl
+</code></pre>
+:ET

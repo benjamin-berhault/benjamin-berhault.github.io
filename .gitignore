@@ -26,3 +26,7 @@ _posts/2018-12-28-schedule-python-recursive-task-and-sms-service-on-centos-7.md
 _posts/2019-01-17-setup-to-export-jupyter-notebook-to-pdf.md
 _posts/2019-02-27-install-postgresql-11-on-rhel-centos-7.md
 _posts/2019-02-28-install-microsoft-sql-server-on-centos-7.md
+_posts/2019-04-27-deploy-a-flask-web-app-on-centos-7-with-apache-and-gunicorn.md
+_posts/2019-06-27-shp-to-osm-pbf.md
+_posts/2019-04-23-up-and-running-osrm-locally-in-a-docker-container.md
+_posts/2019-04-11-serve-dashboards-in-python-with-dash-flask-apache-and-mod_wsgi-under-centos-7.md

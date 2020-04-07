@@ -32,18 +32,16 @@ To enable the EPEL repository on your CentOS 7 VPS, issue the following command:
 sudo yum install epel-release
 ```
 
-Once the EPEL repository is enabled run the following command to add the Node.js v10 repository:
+Once the EPEL repository is enabled run the following command to add the Node.js v12 repository:
 ```bash
-curl --silent --location https://rpm.nodesource.com/setup_10.x | sudo bash -
+curl --silent --location https://rpm.nodesource.com/setup_12.x | sudo bash -
 ```
 
-Once the NodeSource repository is enabled we can proceed with the Node.js v10 LTS and npm installation:
+Install
+
+Once the NodeSource repository is enabled we can proceed with the Node.js v12 and npm installation:
 ```bash
-# development tools to build native addons
-sudo yum install gcc-c++ make
-# install the Yarn package manager
-curl -sL https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
-sudo yum install yarn
+sudo yum install -y nodejs
 ```
 
 To verify if the Node.js installation was successful, issue the following command:
@@ -53,7 +51,7 @@ node -v
 
 The output should be like the following:
 ```bash
-v10.11.0
+v12.4.0
 ```
 
 To verify if the npm installation was successful, issue the following command:

@@ -1,0 +1,95 @@
+I"<p><strong>Source:</strong></p>
+<ul>
+  <li><a href="Deploy your Flask Web Application on Ubuntu 16.04 with Apache, Gunicorn and systemd">https://www.vioan.eu/blog/2016/10/10/deploy-your-flask-python-app-on-ubuntu-with-apache-gunicorn-and-systemd/</a></li>
+  <li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-apache-as-a-reverse-proxy-with-mod_proxy-on-centos-7">How To Use Apache as a Reverse Proxy with mod_proxy on CentOS 7</a></li>
+  <li>http://mathieu.agopian.info/blog/gunicorn-un-server-wsgi-ultra-simple-a-utiliser-et-configurer.html</li>
+</ul>
+
+<p>A reverse proxy is a type of proxy server that takes HTTP(S) requests and transparently distributes them to one or more backend servers. Reverse proxies are useful because many modern web applications process incoming HTTP requests using backend application servers which aren’t meant to be accessed by users directly and often only support rudimentary HTTP features.</p>
+
+<p>You can use a reverse proxy to prevent these underlying application servers from being directly accessed. They can also be used to distribute the load from incoming requests to several different application servers, increasing performance at scale and providing fail-safeness. They can fill in the gaps with features the application servers don’t offer, such as caching, compression, or SSL encryption too.</p>
+
+<p>Check that proxy modules for Apache are enbale</p>
+<pre><code class="language-console">httpd -M
+</code></pre>
+
+<p>You need to see those modules</p>
+<pre><code class="language-console">. . .
+ proxy_module (shared)
+. . . 
+ lbmethod_byrequests_module (shared)
+. . . 
+ proxy_balancer_module (shared)
+. . . 
+ proxy_http_module (shared)
+. . . 
+</code></pre>
+
+<ul>
+  <li><code>mod_proxy</code>, the main proxy module Apache module for redirecting connections; it allows Apache to act as a gateway to the underlying application servers.</li>
+  <li><code>mod_proxy_http</code>, which adds support for proxying HTTP connections.</li>
+  <li><code>mod_proxy_balancer</code> and <code>mod_lbmethod_byrequests</code>, which add load balancing features for multiple backend servers.</li>
+</ul>
+
+<p>Start</p>
+<pre><code>sudo /usr/local/miniconda3/bin/gunicorn -c /var/www/example2.com/report_server/app/gunicorn.conf -b 127.0.0.1:5000 -w 4 dispatcher:dispatcher
+</code></pre>
+
+<h3 id="resolved-permission-denied-in-apache-logs-when-used-as-a-reverse-proxy">[Resolved] Permission denied in Apache logs when used as a reverse proxy</h3>
+<p><strong>Source:</strong> https://confluence.atlassian.com/bitbucketserverkb/permission-denied-in-apache-logs-when-used-as-a-reverse-proxy-790957647.html</p>
+
+<h4 id="problem">Problem</h4>
+
+<p>When using Apache as a reverse proxy, Apache responds with a message that the Bitbucket server is not available and the following can be seen in the Apache error logs:</p>
+
+<pre><code>[proxy:error] [pid 23988] (13)Permission denied: AH00957: HTTP: attempt to connect to 127.0.0.1:5000 (127.0.0.1) failed
+</code></pre>
+
+<h4 id="cause">Cause</h4>
+
+<p>By default, SELinux prevents Apache from initiating outbound connections, so it is unable to proxy requests to Bitbucket Server.</p>
+
+<h4 id="resolution">Resolution</h4>
+
+<p>Run the following command on the server to allow apache to make outbound connections.</p>
+<pre><code class="language-console">/usr/sbin/setsebool -P httpd_can_network_connect 1
+</code></pre>
+
+<h2 id="setup-gunicorn-as-a-service">Setup Gunicorn as a service</h2>
+<p>We want to monitor our Flask app and to restart it on crashing or to have nice start/stop commands for it. Or to have it started automatically on reboot. In order to do that we can use <code>systemd</code>.</p>
+
+<p>Create a <code>.service</code> file for our app</p>
+
+<pre><code class="language-console">sudo vi /etc/systemd/system/report_server.service
+</code></pre>
+
+<p>With the following instructions</p>
+<pre><code class="language-console">[Unit]
+Description=report_server
+After=network.target
+
+[Service]
+User=root
+Restart=on-failure
+WorkingDirectory=/var/www/example2.com/report_server/app/
+ExecStart=/usr/local/miniconda3/bin/gunicorn -c /var/www/example2.com/report_server/app/gunicorn.conf -b 127.0.0.1:5000 -w 4 dispatcher:dispatcher
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+
+<p>Save and exit</p>
+
+<p>Activate our .service file</p>
+<pre><code class="language-console">systemctl daemon-reload
+</code></pre>
+
+<p>Enable it at boot/restart</p>
+<pre><code class="language-console">systemctl enable report_server
+</code></pre>
+
+<p>Start our app</p>
+<pre><code class="language-console">systemctl start report_server
+</code></pre>
+
+:ET

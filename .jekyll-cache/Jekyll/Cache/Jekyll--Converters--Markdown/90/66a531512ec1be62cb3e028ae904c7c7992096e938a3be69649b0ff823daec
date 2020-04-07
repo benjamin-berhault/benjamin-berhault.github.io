@@ -1,0 +1,44 @@
+I"<div class="row">
+  <div class="col grid s12 m6 l3">
+    <img src="/images/anaconda.png" class="responsive-img" />
+  </div>
+  <div class="col grid s12 m6 l9 ">
+
+  </div>
+</div>
+
+<p>Source : https://linoxide.com/linux-how-to/install-python-anaconda-miniconda-linux/</p>
+
+<p>Download last Python Anaconda (or Miniconda)</p>
+
+<ul>
+  <li>https://conda.io/miniconda.html</li>
+  <li>https://www.anaconda.com/download/#linux
+    <pre><code class="language-bash">sudo sh Miniconda3-latest-Linux-x86_64.sh
+</code></pre>
+  </li>
+</ul>
+
+<pre><code class="language-console">Do you accept the license terms? [yes|no]
+ [no] &gt;&gt;&gt;
+ Please answer 'yes' or 'no':'
+ &gt;&gt;&gt; yes
+
+Miniconda3 will now be installed into this location:
+ /root/anaconda3
+
+- Press ENTER to confirm the location
+ - Press CTRL-C to abort the installation
+ - Or specify a different location below
+
+[/root/anaconda3] &gt;&gt;&gt; /usr/local/miniconda3/
+ PREFIX=/usr/local/miniconda3
+</code></pre>
+
+<p>Towards the end, when it asks if you want to prepend Anaconda to your OS’s PATH variable, select ‘No’. This will avoid to end up to destroy your OS.</p>
+
+<pre><code class="language-console">Do you wish the installer to prepend the Miniconda3 install location
+ to PATH in your /root/.bashrc ? [yes|no]
+ [no] &gt;&gt;&gt; no
+</code></pre>
+:ET

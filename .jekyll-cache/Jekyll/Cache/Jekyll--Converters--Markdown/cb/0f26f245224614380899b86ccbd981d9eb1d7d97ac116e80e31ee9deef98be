@@ -1,0 +1,33 @@
+I"9<p>https://www.systutorials.com/241660/how-to-install-tex-live-on-centos-7-linux/</p>
+
+<p>How to install Tex Live on CentOS 7 Linux?
+By Eric Z Ma | In QA | Updated on Aug 18, 2018</p>
+
+<p>The LaTex packages in CentOS 7 Linux is not sufficient enough. I would like to Install Tex Live such as Tex Live 2016. How could I install it on CentOS 7?</p>
+
+<p>The best way I found is to use the texlive offical installation tool to install the full packages for texlive 2016. It will take around 4.5GB.</p>
+
+<p>First, remove existing texlive packages if they are installed:</p>
+
+<h1 id="yum-erase-texlive-texlive">yum erase texlive texlive*</h1>
+
+<p>Then download installation package from its website.</p>
+
+<p>And execute the installation tools in the decompressed package:</p>
+
+<h1 id="sudo-install-tl">sudo ./install-tl</h1>
+
+<p>It will download and install the packages/tools for texlive.</p>
+
+<p>You will need to install the <code>Digest::MD5</code> perl module by</p>
+
+<p>yum install perl-Digest-MD5 -y</p>
+
+<p>if it is not installed yet.</p>
+
+<p>After it is done, set the path in your ~/.bashrc or a global location accordingly:</p>
+
+<p>export PATH=/opt/texlive/2016/bin/x86_64-linux/:$PATH</p>
+
+<p>Here, /opt/texlive/ is the path you chose to install texlive. If you choose another location, you can replace it with the one you used.</p>
+:ET

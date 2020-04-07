@@ -1,0 +1,102 @@
+I"D<div class="row">
+  <div class="col grid s12 m6 l3">
+    <img src="/images/gcc.png" class="responsive-img" />
+  </div>
+  <div class="col grid s12 m6 l9 ">
+    The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, and Go, as well as libraries for these languages (libstdc++,...). GCC was originally written as the compiler for the GNU operating system. The GNU system was developed to be 100% free software, free in the sense that it respects the user's freedom.
+  </div>
+</div>
+
+<p><b>Reference:</b> <a href="https://www.gnu.org/software/gcc/">GCC official website</a></p>
+
+<p>The default GCC that comes with the CentOS 7.2 is GCC 4.8.5 which does not support the complete C++11 standard, for example, it does not fully support <a href="http://en.cppreference.com/w/cpp/regex">regular expressions</a>. In order to use regular expression functions, <a href="https://stackoverflow.com/a/8061172/6064933">we need to install at least GCC 4.9.0</a>. The following installation procedure is applicable to CentOS 7 and are not tested on other systems.</p>
+
+<h3>Downloading GCC source code</h3>
+
+<p>You can download the GCC source code from the <a href="https://ftp.gnu.org/gnu/gcc/">official GNU ftp</a>. I choose to install <a href="https://ftp.gnu.org/gnu/gcc/gcc-9.1.0/">version 9.1.0</a>.</p>
+
+<pre><code class="language-bash">cd ~/Downloads
+wget https://ftp.gnu.org/gnu/gcc/gcc-9.1.0/gcc-9.1.0.tar.gz
+</code></pre>
+
+<h3>Build and install</h3>
+
+<p>Unlike other packages, it is recommended to create another build directory outside the GCC source directory where we build GCC.</p>
+
+<p><b>Reference:</b> https://stackoverflow.com/questions/39854114/set-gcc-version-for-make-in-shell</p>
+<pre><code class="language-bash">tar xzf gcc-9.1.0.tar.gz
+cd gcc-9.1.0
+./contrib/download_prerequisites
+cd ..
+mkdir gcc-9.1.0-build
+cd gcc-9.1.0-build
+../gcc-9.1.0/configure --enable-languages=c,c++ --disable-multilib
+make
+sudo make install
+</code></pre>
+
+<p><i>(If you prefer to have GCC in your HOME directory add <code>--prefix=$HOME/gcc-9.1.0</code> to the <code>configure</code> command)</i></p>
+
+<p>The last command will end up with message specifying where GCC has been installed.</p>
+<pre><code class="language-bash">----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib/../lib64
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+</code></pre>
+
+<p>The compilation process may take a long time and you need to be patient. It will install GCC under <code>/usr/local</code>. You can change the install dir using <code>--prefix</code> option when you configure.
+Post-installation</p>
+
+<p>You should add the install dir of GCC to your <code>PATH</code> and <code>LD_LIBRARY_PATH</code> in order to use the newer GCC. Maybe a restart of your current session is also needed.</p>
+
+<p>To do that edit your shell’s rcfile (<code>~/.bashrc</code>) and add :</p>
+<pre><code class="language-bash">export PATH=/usr/local/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/lib64:$LD_LIBRARY_PATH
+</code></pre>
+
+<h3>Check your GCC installation</h3>
+
+<p>Check GCC location</p>
+<pre><code class="language-bash">whereis gcc
+</code></pre>
+
+<p>Check GCC compiler version</p>
+<pre><code class="language-bash">gcc --version
+</code></pre>
+
+<h3>Test GCC</h3>
+
+<p>Edit a script <b><code>Hello.cpp</code></b></p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    	cout &lt;&lt; "Hello World!"  &lt;&lt; endl;
+	return 0;
+}
+</code></pre>
+
+<p>Compile &amp; run it</p>
+<pre><code class="language-bash">g++ --std=c++14 Hello.cpp -o run
+./run 
+</code></pre>
+
+<p>Should return</p>
+<pre><code class="language-bash">Hello World!
+</code></pre>
+:ET

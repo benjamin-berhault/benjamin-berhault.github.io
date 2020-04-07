@@ -1,0 +1,229 @@
+I""(<div class="row" style="display: -ms-flexbox;display:-webkit-flex;display: flex;-ms-flex-align: center;-webkit-align-items: center;-webkit-box-align: center;align-items: center;">
+  <div class="col grid s12 m6 l3">
+    <center><img src="/images/dash.svg" class="responsive-img" /></center>
+  </div>
+  <div class="col grid s12 m6 l9 ">
+    <p><i>To tailor the business needs of dashboards and reports production, various proprietary solutions exist.
+    While these solutions are made to facilitate reports production they also limit the possibilities and may even complexify the task in some situations for people with programming background.
+    Data mining teams looking for an option more flexible, efficient and open-source have nowadays a serious alternative with the Dash framework, built and maintained by Plotly.
+    </i></p>
+    <p><i>Dash is a productive Python framework for building web applications.</i></p>
+    <p><i>Written on top of Flask, Plotly.js, and React.js, Dash is ideal for building data visualization apps with highly custom user interfaces in pure Python. It's particularly suited for anyone who works with data in Python.</i></p>
+    <p><i>Through a couple of simple patterns, Dash abstracts away all of the technologies and protocols that are required to build an interactive web-based application. Dash is simple enough that you can bind a user interface around your Python code in an afternoon.</i></p>
+    <p><i>Dash apps are rendered in the web browser. You can deploy your apps to servers and then share them through URLs. Since Dash apps are viewed in the web browser, Dash is inherently cross-platform and mobile ready.</i> - <a href="https://dash.plot.ly/introduction">Dash User Guide: Introduction to Dash</a></p>
+  </div>
+</div>
+
+<ul>
+  <li><a href="How To Set Up Apache Virtual Hosts on CentOS 7">https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-centos-7</a></li>
+  <li><a href="mod_wsgi - Quick Configuration Guide">https://modwsgi.readthedocs.io/en/develop/user-guides/quick-configuration-guide.html</a></li>
+  <li><a href="Running a Flask application under the Apache WSGI module">https://www.jakowicz.com/flask-apache-wsgi/</a></li>
+</ul>
+
+<ul class="collapsible no_bullets">
+    <li>
+      <div class="collapsible-header red lighten-2"><i class="material-icons">touch_app</i>[Prerequisite] Set Up Apache Virtual Hosts</div>
+      <div class="collapsible-body"><span>
+
+Install Apache
+<pre class="language-console"><code class="language-console">sudo yum -y install httpd
+</code></pre>
+
+Enable Apache as service to automatically start it after reboot
+<pre class="language-console"><code class="language-console">sudo systemctl enable httpd.service
+</code></pre>
+
+Create the directory structure
+<pre class="language-console"><code class="language-console">sudo mkdir -p /var/www/example.com/public_html
+</code></pre>
+
+Set apache as owner the `/var/www` directory
+<pre class="language-console"><code class="language-console">sudo chown -R apache:apache /var/www
+</code></pre>
+
+Give you edition permissions with through the ACL (Access Control Lists)
+<pre class="language-console"><code class="language-console">sudo setfacl -R -m u:$USER:rwx /var/www
+</code></pre>
+
+Give read access permissions to your web directory
+<pre class="language-console"><code class="language-console">sudo chmod -R 755 /var/www
+</code></pre>
+
+Create Demo Page to check that until now everything works fine
+<pre class="language-console"><code class="language-console">vi /var/www/example.com/public_html/index.html
+</code></pre>
+
+Edit in it a basic HTML page 
+<pre class="language-html"><code class="language-html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Welcome to Example.com!&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Success! The example.com virtual host is working!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+We creates a `sites-available` directory that will keep all of our virtual host files, while the `sites-enabled` directory will hold symbolic links to virtual hosts that we want to publish. 
+
+<pre class="language-console"><code class="language-console">sudo mkdir /etc/httpd/sites-available
+sudo mkdir /etc/httpd/sites-enabled
+</code></pre>
+
+Tell Apache to look for virtual hosts in the sites-enabled directory
+
+<pre class="language-console"><code class="language-console">sudo vi /etc/httpd/conf/httpd.conf
+</code></pre>
+
+Add to the end of the file:
+<pre class="language-bash"><code class="language-bash">IncludeOptional sites-enabled/*.conf
+</code></pre>
+
+Create a virtual host file
+<pre class="language-console"><code class="language-console">sudo vi /etc/httpd/sites-available/example.com.conf
+</code></pre>
+
+Edit it with the following content
+<pre class="language-bash"><code class="language-bash">&lt;VirtualHost *:80&gt;
+    ServerName www.example.com
+    ServerAlias example.com
+    DocumentRoot /var/www/example.com/public_html
+    ErrorLog /var/www/example.com/error.log
+    CustomLog /var/www/example.com/requests.log combined
+&lt;/VirtualHost&gt;
+</code></pre>
+
+Enable the virtual host file
+<pre class="language-console"><code class="language-console">sudo ln -s /etc/httpd/sites-available/example.com.conf /etc/httpd/sites-enabled/example.com.conf
+</code></pre>
+
+Restart Apache to make these changes take effect:
+<pre class="language-console"><code class="language-console">sudo apachectl restart
+</code></pre>
+
+Edit your local hosts file with administrative privileges by typing:
+<pre class="language-console"><code class="language-console">sudo vi /etc/hosts
+</code></pre>
+
+Set up local hosts file
+<pre class="language-console"><code class="language-console">127.0.0.1    localhost example.com
+::1           localhost
+</code></pre>
+</span></div>
+    </li>
+
+  </ul>
+<div class="collapsible-header blue lighten-2"><a href="http://localhost:4000/post/2019/04/10/install-anaconda-python-distribution-for-all-users-on-rhel-centos-7.html" style="color: black"><i class="material-icons">touch_app</i>[Prerequisite] Install Anaconda Python Distribution for all users </a></div>
+
+<p>What we are looking for is to serve different Dash dashboards behind Apache and Gunicorn.</p>
+
+<ul>
+  <li><b>Apache</b> is nowadays the most used web server software. Developed and maintained by the Apache Software Foundation. Apache is free and open-source. 67% of the web server worldwide use it. It is fast, reliable et permet une très bonne gestion des problématiques de sécurité. Il peut être hautement personnalisé afin de répondre aux besoins d’un grand nombre d’environnements grâce à différents modules et extensions.</li>
+  <li><b>Gunicorn</b> est une des nombreuses implémentations de serveur WSGI existante mais se détache des autres par sa stabilité. Cette spécificité en fait un composant couramment utilisée dans le déploiements d’applications Web utilisant Python telles que Instagram.</li>
+</ul>
+
+<h2 id="configure-mod_wsgi-for-a-basic-wsgi-application">Configure mod_wsgi for a basic WSGI application</h2>
+
+<p>The <b>mod_wsgi</b> package implements a simple to use Apache module which can host any Python web application which supports the Python WSGI specification.</p>
+
+<p><b>WSGI</b> stands for Web Server Gateway Interface. It is a specification describing how a web server communicates with web applications, and how web applications can be chained together to process one request.</p>
+
+<center>
+  <img src="/images/10-wsgi/01-wsgi.jpg" class="responsive-img" /><br />
+  <small><i>Image's source: <a href="https://www.slideshare.net/GrahamDumpleton/secrets-of-a-wsgi-master">Graham Dumpleton presentation</a></i></small>
+</center>
+
+<p>Install mod_wsgi</p>
+<pre><code class="language-console">sudo yum install mod_wsgi
+</code></pre>
+
+<p>Restart Apache</p>
+<pre><code class="language-console">sudo systemctl restart httpd
+</code></pre>
+
+<p>Verify that the module is loaded</p>
+<pre><code class="language-console">sudo httpd -M | grep wsgi
+</code></pre>
+
+<p>The server should respond</p>
+<pre><code class="language-console">wsgi_module (shared)
+</code></pre>
+
+<p>Create a test script in a subfolder of your web server</p>
+<pre><code class="language-console">vi /var/www/example.com/public_html/wsgi-scripts/myapp.wsgi
+</code></pre>
+
+<p>..with the following content:</p>
+<pre><code class="language-python">import sys
+sys.path.insert(0, '/var/www/example.com/public_html')
+
+from hello import app as application
+</code></pre>
+
+<p>Edit a <code>hello.py</code></p>
+<pre><code class="language-console">import sys
+print(sys.version)
+
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello1():
+    return "Hello World!"
+
+if __name__ == "__main__":
+    app.run()
+</code></pre>
+
+<p>Create an associate <code>.conf</code> file for your application</p>
+<pre><code class="language-console">sudo vi /etc/httpd/sites-available/example.com.conf
+</code></pre>
+
+<p>Edit it as follow</p>
+<pre><code class="language-console">&lt;VirtualHost *:80&gt;
+
+    WSGIDaemonProcess myapp python-path=/usr/local/miniconda3/lib/python3.6/site-packages
+    WSGIProcessGroup myapp
+    
+    WSGIScriptAlias / /var/www/example.com/public_html/hello.wsgi
+    WSGIScriptReloading On
+
+    ServerName www.example.com
+    ServerAlias example.com
+
+    DocumentRoot /var/www/example.com/public_html
+    ErrorLog /var/www/example.com/error.log
+    CustomLog /var/www/example.com/requests.log combined
+
+    &lt;Directory /var/www/example.com/public_html&gt;
+        &lt;IfVersion &lt; 2.4&gt;
+                Order allow,deny
+                Allow from all
+        &lt;/IfVersion&gt;
+        &lt;IfVersion &gt;= 2.4&gt;
+                Require all granted
+        &lt;/IfVersion&gt;
+    &lt;/Directory&gt;
+
+&lt;/VirtualHost&gt;
+</code></pre>
+<p>Restart Apache</p>
+<pre><code class="language-console">sudo apachectl restart
+</code></pre>
+
+<p>And check <code>http://example.com</code> in your browser</p>
+
+<p>It should display:</p>
+
+<pre><code>Hello World!
+</code></pre>
+
+<h2 id="structure-flask--dash">Structure Flask &amp; Dash</h2>
+
+<p>Install dependencies</p>
+<pre><code class="language-console">sudo /usr/local/miniconda3/bin/conda install -c conda-forge werkzeug
+sudo /usr/local/miniconda3/bin/conda install -c conda-forge dash-html-components
+</code></pre>
+
+:ET

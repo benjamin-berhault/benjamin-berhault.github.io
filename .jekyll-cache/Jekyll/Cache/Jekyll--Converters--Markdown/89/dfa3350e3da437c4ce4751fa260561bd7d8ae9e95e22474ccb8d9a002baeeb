@@ -1,0 +1,67 @@
+I"|<div class="row">
+  <div class="col grid s12 m6 l3">
+    <img src="/images/anaconda.png" class="responsive-img" />
+  </div>
+  <div class="col grid s12 m6 l9 ">
+    The easiest way to install Python and Jupyter Notebook is probably with Anaconda.<br />
+    <br />
+    Anaconda is a free and open source distribution of the Python programming language for data science and machine learning related applications, that aims to simplify package management and deployment. Package versions are managed by the package management system conda.
+  </div>
+</div>
+
+<p>There is a bunch of reasons why it is preferable to use such a thing as Anaconda instead of a traditional Python distributions. For me the most important reason is clearly that there is no risk of messing up your required system libraries.</p>
+
+<h2 id="install-python-with-anaconda">Install Python with Anaconda</h2>
+
+<p>Read the Anaconda documentation to see what the <a href="https://conda.io/docs/user-guide/install/download.html#anaconda-or-miniconda">difference between Anaconda and Miniconda</a></p>
+
+<p>Choose, download and install the one that fits best for your needs:</p>
+<ul>
+  <li>Miniconda download page: <a href="https://conda.io/miniconda.html">https://conda.io/miniconda.html</a></li>
+  <li>Prefer Anaconda under an entreprise network constraint (having a bunch of package already installed will save you lot of time), Anaconda download page: <a href="https://www.anaconda.com/download/#linux">https://www.anaconda.com/download/#linux</a></li>
+</ul>
+
+<pre><code class="language-bash">wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+chmod -R 755 Miniconda3-latest-Linux-x86_64.sh
+./Miniconda3-latest-Linux-x86_64.sh
+</code></pre>
+
+<p>Accept the licence and to prepend the Miniconda3 install location to PATH in your <code>/home/username/.bashrc</code></p>
+<pre><code class="language-bash">Do you wish the installer to prepend the Miniconda3 install location
+to PATH in your /home/username/.bashrc ? [yes|no]
+[no] &gt;&gt;&gt; yes
+</code></pre>
+
+<p>Refresh your environment variables</p>
+<pre><code class="language-bash">. ~/.bashrc
+</code></pre>
+
+<p>Check your default python location</p>
+<pre><code class="language-bash">which python
+</code></pre>
+<p>Check your Python version</p>
+<pre><code class="language-bash">python --version
+</code></pre>
+
+<p>Anaconda having currently no internal update to 3.7, for upgrading Python being under 3.6 for example, you will have to do something like</p>
+<pre><code class="language-bash">conda install python==3.7
+</code></pre>
+
+<p>Upgrade the packages to the newest version</p>
+<pre><code class="language-bash">conda update --all
+</code></pre>
+<p>Anaconda update doesn’t clean automatically older packages, for this we have to use the following command</p>
+<pre><code class="language-bash">conda clean -p
+</code></pre>
+
+<h2 id="install-the-jupyter-notebook">Install the Jupyter Notebook</h2>
+
+<pre><code class="language-bash">conda install -c conda-forge notebook
+</code></pre>
+
+<p>You can now launch the Jupyter Notebook with:</p>
+<pre><code class="language-bash">jupyter notebook
+</code></pre>
+
+<p>The Jupyter Notebook should open in your web browser.</p>
+:ET

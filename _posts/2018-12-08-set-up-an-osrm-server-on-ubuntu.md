@@ -34,9 +34,15 @@ author: "Benjamin Berhault"
 
 You will need at least 2.5GB of RAM (in my case with 1GB of RAM OSRM build failed).
 
+Upgrade all the packages
+```console
+sudo apt-get update
+sudo apt-get upgrade
+```
+
 Install dependencies
 ```console
-sudo apt install build-essential git cmake pkg-config \
+sudo apt-get install build-essential git cmake pkg-config \
 libbz2-dev libxml2-dev libzip-dev libboost-all-dev \
 lua5.2 liblua5.2-dev libtbb-dev
 ```

@@ -1,0 +1,142 @@
+I"�<div class="row">
+  <div class="col grid s12 m6 l3">
+    <img src="/images/python.png" class="responsive-img" />
+  </div>
+  <div class="col grid s12 m6 l9 ">
+    Using Python in a Microsoft corporate environment can rise various issues. This article introduce 3 different options hoping that one of them will fit to your situation.
+  </div>
+</div>
+
+<ul>
+  <li>Install Python with Anaconda on Windows</li>
+  <li>Deal with corporate network constraints
+    <ul>
+      <li>Solve proxy problems</li>
+      <li>Install a Python package with pip without internet access neither administrator permissions</li>
+      <li>Install a Python package manually</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="install-python-with-anaconda-on-windows">Install Python with Anaconda on Windows</h2>
+<p><b>Reference:</b> <a href="https://conda.io/docs/user-guide/install/windows.html">Conda documentation</a></p>
+
+<p>Read the Anaconda documentation to see what the <a href="https://conda.io/docs/user-guide/install/download.html#anaconda-or-miniconda">difference between Anaconda and Miniconda</a></p>
+
+<p>Choose, download and install the one that fits best for your needs:</p>
+<ul>
+  <li>Miniconda download page: <a href="https://conda.io/miniconda.html">https://conda.io/miniconda.html</a></li>
+  <li>Prefer Anaconda under an entreprise network constraint (having a bunch of package already installed will save you lot of time) - Anaconda download page: <a href="https://www.anaconda.com/download/#linux">https://www.anaconda.com/download/#linux</a></li>
+</ul>
+
+<h2 id="deal-with-corporate-network-constraints">Deal with corporate network constraints</h2>
+
+<p>Let’s say that we would like to install the <code>pandas_profiling</code> package.</p>
+
+<h4 id="solve-proxy-problems-for-the-anaconda-package-manager">Solve proxy problems for the Anaconda package manager</h4>
+<p>Trying to install a Python package with the <code>conda</code> command line tool, you could end up with a corporate proxy problem and being stuck with something like:</p>
+
+<pre><code class="language-console">conda install -c conda-forge pandas_profiling
+Fetching package metadata:
+</code></pre>
+
+<p>To tackle that problem contact your network administrator and ask for details on the proxy.</p>
+
+<p>With it edit your <code>.condarc</code> config file.</p>
+
+<div class="row">
+  <div class="col">
+    <div class="card grey darken-1">
+      <div class="card-content white-text">
+<a href="https://conda.io/docs/user-guide/configuration/use-condarc.html">&#91;conda.io&#93;</a> The conda configuration file, <code>.condarc</code>, is an optional runtime configuration file that allows advanced users to configure various aspects of conda, such as which channels it searches for packages, proxy settings and environment directories.<br />
+<br />
+The <code>.condarc</code> file is not included by default, but it is automatically created in your home directory (<code>C:\Users\Username</code>) the first time you run the command: <code>conda config</code>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ul>
+  <li>with credentials:</li>
+</ul>
+
+<pre><code class="language-bash">proxy_servers:
+  http: http://user:pass@corp.com:8080
+  https: https://user:pass@corp.com:8080
+
+ssl_verify: False
+</code></pre>
+
+<ul>
+  <li>without credentials:</li>
+</ul>
+
+<pre><code class="language-bash">proxy_servers:
+  http: http://corp.com:8080
+  https: https://corp.com:8080
+
+ssl_verify: False
+</code></pre>
+
+<p>Once the proxy information has been updated, you will be able to update conda and install new packages.</p>
+
+<h4 id="install-a-python-package-with-pip-without-internet-access-neither-administrator-permissions">Install a Python package with pip without internet access neither administrator permissions</h4>
+
+<p>On a machine where you have internet access, download from <a href="https://pypi.org">https://pypi.org</a> or any other relevant source the .whl file of the package you want to install.</p>
+
+<p>The .whl for pandas_profiling is downloadable from <a href="https://pypi.org/project/pandas-profiling/#files">https://pypi.org/project/pandas-profiling/#files</a></p>
+
+<p>Move this .whl file on the destination machine, the one that does not have or restricted internet access, and run the following command (replacing the .whl filename by one you just get):</p>
+
+<pre><code class="language-bash">pip install pandas_profiling-1.4.1-py2.py3-none-any.whl
+</code></pre>
+
+<p>You could probably face a red warning as:</p>
+
+<pre><code class="language-bash">xxxxxx xx.x.x requires xxxxxx&gt;=xx.x.x, which is not installed.
+</code></pre>
+
+<p>This message indicates that you have to follow this process first for each missing Python package before being able to install the initial desired package.</p>
+
+<h4 id="install-a-python-package-manually">Install a Python package manually</h4>
+
+<ul>
+  <li>Download the package source files</li>
+  <li>Unzip it if it is</li>
+  <li>cd into the directory containing setup.py</li>
+  <li>If there is any installation instruction contained in the documentation, read it and follow the instructions OTHERWISE</li>
+  <li>Type in
+    <pre><code class="language-python">python setup.py install
+</code></pre>
+  </li>
+</ul>
+
+<p>You may need administrator privileges for the last step.</p>
+
+<h4 id="upgrade-all-python-packages-at-once">Upgrade all Python packages at once</h4>
+<pre><code class="language-python">pip install -U $(pip list --outdated | awk 'NR&gt;2 {print $1}')
+</code></pre>
+
+<h4 id="export-a-jupyter-notebook-in-pdf-via-latex-on-windows">Export a Jupyter Notebook in PDF via LaTeX on Windows</h4>
+
+<p>Download and install <a href="https://miktex.org/download">MiKTeX</a></p>
+
+<p>If needed, set proxy settings for MikTeX thorugh the MiKTeX Console: Settings &gt; General</p>
+<ul>
+  <li>Check <b>Always install missing packages on-the-fly</b></li>
+  <li>Change…</li>
+  <li>Check <b>Remote package repository</b></li>
+  <li>Connexion Settings…</li>
+  <li>Enter your proxy infos</li>
+  <li>OK</li>
+  <li>Next</li>
+  <li>Select a Host from your Country</li>
+  <li>Finish</li>
+</ul>
+
+<p>Still in the MiKTeXConsole, update MiKTeX packages from the Updates tab with the <b>Check for updates</b> and <b>Update now</b> buttons.</p>
+
+<p>Install nbconvert</p>
+<pre><code class="language-console">conda install -c conda-forge nbconvert
+</code></pre>
+:ET

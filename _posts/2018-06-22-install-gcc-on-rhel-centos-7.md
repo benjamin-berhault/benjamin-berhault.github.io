@@ -22,11 +22,11 @@ The default GCC that comes with the CentOS 7.2 is GCC 4.8.5 which does not suppo
 
 <h3>Downloading GCC source code</h3>
 
-You can download the GCC source code from the [official GNU ftp](https://ftp.gnu.org/gnu/gcc/). I choose to install [version 8.2.0](https://ftp.gnu.org/gnu/gcc/gcc-8.2.0/).
+You can download the GCC source code from the [official GNU ftp](https://ftp.gnu.org/gnu/gcc/). I choose to install [version 9.1.0](https://ftp.gnu.org/gnu/gcc/gcc-9.1.0/).
 
 ```bash
 cd ~/Downloads
-wget https://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.gz
+wget https://ftp.gnu.org/gnu/gcc/gcc-9.1.0/gcc-9.1.0.tar.gz
 ```
 
 <h3>Build and install</h3>
@@ -35,18 +35,18 @@ Unlike other packages, it is recommended to create another build directory outsi
 
 <b>Reference:</b> https://stackoverflow.com/questions/39854114/set-gcc-version-for-make-in-shell
 ```bash
-tar xzf gcc-8.2.0.tar.gz
-cd gcc-8.2.0
+tar xzf gcc-9.1.0.tar.gz
+cd gcc-9.1.0
 ./contrib/download_prerequisites
 cd ..
-mkdir gcc-8.2.0-build
-cd gcc-8.2.0-build
-../gcc-8.2.0/configure --enable-languages=c,c++ --disable-multilib
+mkdir gcc-9.1.0-build
+cd gcc-9.1.0-build
+../gcc-9.1.0/configure --enable-languages=c,c++ --disable-multilib
 make
 sudo make install
 ```
 
-<i>(If you prefer to have GCC in your HOME directory add `--prefix=$HOME/gcc-8.2.0` to the `configure` command)</i>
+<i>(If you prefer to have GCC in your HOME directory add `--prefix=$HOME/gcc-9.1.0` to the `configure` command)</i>
 
 The last command will end up with message specifying where GCC has been installed. 
 ```bash

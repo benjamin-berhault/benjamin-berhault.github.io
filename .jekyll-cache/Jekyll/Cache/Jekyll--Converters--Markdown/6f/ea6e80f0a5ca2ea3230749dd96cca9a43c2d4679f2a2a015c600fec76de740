@@ -1,0 +1,100 @@
+I" <div class="row">
+  <div class="col grid s12 m6 l3">
+    <center><img src="/images/pgadmin.png" class="responsive-img" /></center>
+  </div>
+  <div class="col grid s12 m6 l9 ">
+    PgAdmin 4 is a rewrite of the popular pgAdmin3 management tool for the PostgreSQL (<a href="http://www.postgresql.org">http://www.postgresql.org</a>) database. Installing the last version under CentOS 7 can be a bit tricky, here it is one way how to do it.
+  </div>
+</div>
+
+<p>Download the Python wheel for the last pgAdmin release listed on the following page : <a href="https://www.pgadmin.org/download/pgadmin-4-python-wheel/">https://www.pgadmin.org/download/pgadmin-4-python-wheel/</a>.</p>
+<pre><code class="language-console">cd ~/Downloads
+wget https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v4.10/pip/pgadmin4-4.10-py2.py3-none-any.whl
+</code></pre>
+
+<p>The pgAdmin 4 team advices to use a virtual environment therefore create one dedicated to pgAdmin.</p>
+<pre><code class="language-console">conda create -n pgadmin4 python=3.6
+</code></pre>
+
+<p>Activate this new environment.</p>
+<pre><code class="language-console">conda activate pgadmin4
+</code></pre>
+
+<p>Install the Python wheel you just download.</p>
+<pre><code class="language-console">pip install pgadmin4-4.10-py2.py3-none-any.whl
+</code></pre>
+
+<p>Check the pgAdmin4 installation location.</p>
+<pre><code class="language-console">sudo find / -name pgAdmin4.py
+</code></pre>
+
+<p>It should return something like:</p>
+<pre><code class="language-console">/home/username/anaconda3/envs/pgadmin4/lib/python3.6/site-packages/pgadmin4/pgAdmin4.py
+</code></pre>
+
+<p>Edit a <code>config_local.py</code> in the same directory.</p>
+<pre><code class="language-console">vi /home/username/anaconda3/envs/pgadmin4/lib/python3.6/site-packages/pgadmin4/config_local.py
+</code></pre>
+
+<p>Insert (<code>i</code>) in it the following content:</p>
+<pre><code class="language-bash">import os
+DATA_DIR = os.path.realpath(os.path.expanduser(u'~/.pgadmin/'))
+LOG_FILE = os.path.join(DATA_DIR, 'pgadmin4.log')
+SQLITE_PATH = os.path.join(DATA_DIR, 'pgadmin4.db')
+SESSION_DB_PATH = os.path.join(DATA_DIR, 'sessions') 
+STORAGE_DIR = os.path.join(DATA_DIR, 'storage')
+SERVER_MODE = False
+</code></pre>
+
+<p>Save and close this configuration file (<code>:wq</code>).</p>
+
+<p>Run pgAdmin 4.</p>
+<pre><code class="language-console">python $(python -c "from distutils.sysconfig import get_python_lib; print(get_python_lib() + '/pgadmin4/pgAdmin4.py')")
+</code></pre>
+
+<p>Open the given to address (<a href="http://127.0.0.1:5050">http://127.0.0.1:5050</a>) to access the PgAdmin 4 interface.</p>
+
+<h4 id="create-a-shortcut">Create a shortcut</h4>
+
+<p>Create a dedicated folder for your shortcuts.</p>
+<pre><code class="language-console">mkdir ~/.shortcuts
+touch ~/.shortcuts/pgadmin4
+chmod +x ~/.shortcuts/pgadmin4
+</code></pre>
+
+<p>Edit in it a bash script for pgadmin4</p>
+<pre><code class="language-console">vi ~/.shortcuts/pgadmin4
+</code></pre>
+
+<p>..with the following content:</p>
+<pre><code class="language-bash">#!/bin/bash
+eval "$(conda shell.bash hook)"
+conda activate pgadmin4
+python /home/username/anaconda3/envs/pgadmin4/lib/python3.6/site-packages/pgadmin4/pgAdmin4.py
+</code></pre>
+
+<p>Save and close it (<code>:wq</code>).</p>
+
+<p>Add the <code>~/.shortcuts</code> directory to your <code>~/.bashrc</code> file.</p>
+<pre><code class="language-console">echo 'export PATH="/home/username/.shortcuts:$PATH"' &gt;&gt; ~/.bashrc
+</code></pre>
+
+<p>In a new terminal window, you will now be able to launch pgAdmin 4 just by typing the <code>pgadmin4</code> command.</p>
+
+<h4 id="connecting-to-a-postgresql-database-with-pgadmin4">Connecting to a PostgreSQL database with pgAdmin4</h4>
+
+<ul>
+  <li>Open pgAdmin4</li>
+  <li>Under the <strong>Browser</strong> panel right click on <strong>Servers &gt; Create &gt; Server…</strong></li>
+  <li>Enter any relevant name for your server eg: <em>Localhost</em></li>
+  <li>Click on the <strong>Connection</strong> tab</li>
+  <li>Enter a <strong>Host</strong> (on your own local system the default is “localhost” otherwise the IP address of the system where the PostgreSQL database is installed)</li>
+  <li>Enter the <strong>Port</strong> (the default port for PostgreSQL server is “5432”)</li>
+  <li>Enter the <strong>Maintenance Database</strong> name (the default is <em>postgres</em>)</li>
+  <li>Enter the <strong>Username</strong> (the default user is <em>postgres</em>)</li>
+  <li>Enter the <strong>Password</strong> (the password for the <em>postgres</em> user)</li>
+  <li><strong>Save</strong></li>
+</ul>
+
+<p>Now the server and its objects should appear.</p>
+:ET

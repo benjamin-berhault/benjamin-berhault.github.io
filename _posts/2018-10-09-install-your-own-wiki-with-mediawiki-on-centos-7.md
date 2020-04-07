@@ -122,7 +122,7 @@ sudo yum --enablerepo=remi install remi-release
 Remi will not enabled by default, when you need it just do
 ```bash
 sudo yum --enablerepo=remi,remi-php72 install httpd php php-common
-systemctl restart httpd.service
+sudo systemctl restart httpd.service
 ```
 
 #### Install PHP modules
@@ -144,16 +144,22 @@ systemctl restart httpd.service
 
 ```bash
 sudo yum --enablerepo=remi,remi-php72 install php-pecl-apcu php-cli php-pear php-pdo php-mysqlnd php-pgsql php-pecl-mongodb php-pecl-memcache php-pecl-memcached php-gd php-mbstring php-mcrypt php-xml
-systemctl restart postgresql-10
+sudo systemctl restart postgresql-10
 ```
 
 #### Start Apache HTTP server (httpd) and autostart Apache HTTP server (httpd) on boot
 ```bash
-systemctl start httpd ## use restart after update
-systemctl enable httpd
+sudo systemctl start httpd ## use restart after update
+sudo systemctl enable httpd
 ```
 
 #### Create test PHP page to check that Apache, PHP and PHP modules are working
+
+Give to your current user read write access
+```
+sudo setfacl -Rm u:username:rwx /var/www
+```
+
 Edit a <code>test.php</code> page
 ```bash
 vi /var/www/html/index.php
@@ -176,7 +182,7 @@ By default SELinux prevented Apache from serving my files, even in read mode: he
 When you have finished installing Apache, ensures apache (through the apache group) has read-write access. 
 
 ```bash
-sudo chown -R httpd:httpd /var/www ## chown defines who owns the file
+sudo chown -R apache:apache /var/www ## chown defines who owns the file
 ```
 
 Modify permissions a little bit to ensure that read access is permitted to the general web directory, and all of the files and folders inside, so that pages can be served correctly
@@ -218,12 +224,12 @@ Check the MediaWiki version you want to install: [https://releases.wikimedia.org
 Download MediaWiki.
 ```bash
 cd ~/Downloads
-wget https://releases.wikimedia.org/mediawiki/1.31/mediawiki-1.31.0.tar.gz
+wget https://releases.wikimedia.org/mediawiki/1.32/mediawiki-1.32.2.tar.gz
 ```
 
 Unpack the package.
 ```bash
-tar xzf mediawiki-1.31.0.tar.gz
+tar xzf mediawiki-1.32.2.tar.gz
 ```
 
 Move MediaWiki files to your webroot directory <code>/var/www/html</code>

@@ -1,0 +1,305 @@
+I"�:<div class="row">
+  <div class="col grid s12 m6 l3">
+    <img src="/images/statistics.png" class="responsive-img" />
+  </div>
+  <div class="col grid s12 m6 l9 ">
+    Todo.
+    <ul>
+        <li>...</li>
+    </ul>  
+  </div>
+</div>
+
+<h2 id="basic">Basic</h2>
+
+<h4 id="difference-between-upper-case-and-lower-cas-letters-in-probability-and-statistics">Difference between upper case and lower cas letters in probability and statistics?</h4>
+<p>By convention :</p>
+<ul>
+  <li><b>upper case variables</b> denote random variables.</li>
+  <li><b>lower case variables</b> denote a particular instanciation of the random variable having been observed.</li>
+</ul>
+
+<h4 id="expected-value-and-average">Expected value and average</h4>
+<p><b>Source:</b> <a href="https://math.stackexchange.com/questions/904343/what-is-the-difference-between-average-and-expected-value">https://math.stackexchange.com/questions/904343/what-is-the-difference-between-average-and-expected-value</a></p>
+
+<ul>
+  <li><b>Expected value </b> - <script type="math/tex">\mu_x=E_x[X]</script>, is a parameter associated with the distribution of a random variable X.</li>
+  <li><b>Average (arithmetic mean)</b> - <script type="math/tex">\overline{X}_n</script> is a computation performed on a sample of size <script type="math/tex">n</script> from that distribution.</li>
+</ul>
+
+<p>Let <script type="math/tex">x</script> represent the outcome of a roll of an unbiased six-sided die. The possible values for <script type="math/tex">x</script> are 1, 2, 3, 4, 5, and 6, each having the probability of occurrence of <script type="math/tex">1/6</script>. The expectation value (or expected value) of <script type="math/tex">x</script> is then given by:</p>
+
+<script type="math/tex; mode=display">x_{expected}=1(1/6)+2⋅(1/6)+3⋅(1/6)+4⋅(1/6)+5⋅(1/6)+6⋅(1/6)=21/6=3.5</script>
+
+<p>Suppose that in a sequence of ten rolls of the die, if the outcomes are 5, 2, 6, 2, 2, 1, 2, 3, 6, 1, then the average (arithmetic mean) of the results is given by:</p>
+
+<script type="math/tex; mode=display">x_{average}=(5+2+6+2+2+1+2+3+6+1)/10=3.0</script>
+
+<p>We say that the average value is 3.0, with the distance of 0.5 from the expectation value of 3.5. If we roll the die <script type="math/tex">n</script> times, where <script type="math/tex">n</script> is very large, then the average will converge to the expected value.</p>
+
+<h4 id="normal-distribution">Normal Distribution</h4>
+<p>A continuous random variable follow a normal distribution if the probability density function is given by:</p>
+
+<script type="math/tex; mode=display">f(x)=\frac{1}{\sqrt{2 \pi \sigma^2 }}.e^{-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}}</script>
+
+<p>With</p>
+<ul>
+  <li><script type="math/tex">e = 2.71828</script>,</li>
+  <li><script type="math/tex">\pi=3.14159</script>,</li>
+  <li><script type="math/tex">\mu</script> the mean or expectation of the distribution and</li>
+  <li><script type="math/tex">\sigma ^{2}</script> the variance.</li>
+</ul>
+
+<h4 id="inferred-data"><a href="https://www.exchangewire.com/blog/2016/03/22/inferred-vs-observed-data-do-you-really-know-the-difference/">Inferred data</a></h4>
+<p>Any prediction is an inference; and the process of predicting future behaviour from past actions is the backbone of targeting with data. However, to maintain accuracy, the raw data has to be real observed behaviour.</p>
+
+<h4 id="estimate"><a href="http://www.abs.gov.au/websitedbs/a3121120.nsf/home/statistical+language+-+estimate+and+projection">Estimate</a></h4>
+<p>An estimate is a value that is inferred for a population based on data collected from a sample of units from that population.</p>
+
+<p>An estimate is not a guess, it is a value based on sampled data which has been adjusted using statistical estimation procedures.</p>
+
+<h4 id="détection-dobservations-atypiques"><a href="http://eric.univ-lyon2.fr/~jjacques/Download/Cours/Slides-Stat-de-Base-II.pdf">Détection d’observations atypiques</a></h4>
+<h5 id="effet-levier">Effet levier</h5>
+<p>L’effet levier <script type="math/tex">h_i</script> mesure l’impact de <script type="math/tex">Y_i</script> dans l’estimation <script type="math/tex">\hat{Y}_i</script></p>
+
+<script type="math/tex; mode=display">h_i=\frac{1}{n}+\frac{(X_i-\bar{X}^2)}{\sum_{j=1}^n (X_j-\bar{X}^2)}</script>
+
+<p>Cet impact est directement lié à l’éloignement de l’observation <script type="math/tex">X_i</script> à la moyenne des observations <script type="math/tex">\bar{X}</script>.</p>
+
+<p>Un grand effet levier cractérisera une observation atypique.</p>
+
+<h4 id="résidus">Résidus</h4>
+
+<script type="math/tex; mode=display">\epsilon_i=\hat{Y}_i - Y_i</script>
+
+<h4 id="résidus-normalisésstudentisés">Résidus normalisés/studentisés</h4>
+<p>// TODO</p>
+
+<h4 id="distance-de-cook">Distance de Cook</h4>
+<p>// TODO</p>
+
+<h4 id="projection">Projection</h4>
+<p>Projections indicate what future values for the population would be if the assumed patterns of change were to occur. They are not a prediction that the population will change in this manner.</p>
+
+<h4 id="forecast">Forecast</h4>
+<p>Forecasts speculate future values for the population with a certain level of confidence, based on current and past values as an expectation (prediction) of what will happen.</p>
+
+<h4 id="degrees-of-freedom"><a href="https://www.statisticshowto.datasciencecentral.com/degrees-of-freedom/">Degrees of freedom</a></h4>
+<p>Degrees of freedom of an estimate is the number of independent pieces of information that went into calculating the estimate. In order to get the df for the estimate, you have to subtract 1 from the number of items.</p>
+
+<script type="math/tex; mode=display">\text{Degrees of Freedom} = n – 1</script>
+
+<h4 id="coefficient-of-determination">Coefficient of determination</h4>
+<p>The coefficient of determination is the square of the correlation (r) between predicted y scores and actual y scores; thus, it ranges from 0 to 1.</p>
+
+<p><a href="https://stattrek.com/statistics/dictionary.aspx?definition=coefficient_of_determination">https://stattrek.com/statistics/dictionary.aspx?definition=coefficient_of_determination</a></p>
+
+<h4 id="correlation">Correlation</h4>
+<p>Correlation is another way to determine how two variables are related. In addition to telling you whether variables are positively or inversely related, correlation also tells you the degree to which the variables tend to move together.</p>
+
+<p>Using covariance, you could determine whether units were increasing or decreasing, but it was impossible to measure the degree to which the variables moved together because covariance does not use one standard unit of measurement. To measure the degree to which variables move together, you must use correlation.</p>
+
+<h4 id="correlation-matrix">Correlation matrix</h4>
+<p>// TODO</p>
+
+<h4 id="covariance">Covariance</h4>
+<p>Covariance provides a measure of the strength of the correlation between two or more sets of random variates.</p>
+
+<p>Correlation standardizes the measure of interdependence between two variables and, consequently, tells you how closely the two variables move. The correlation measurement, called a correlation coefficient, will always take on a value between 1 and – 1.</p>
+
+<h4 id="covariance-matrix">Covariance matrix</h4>
+<p>// TODO</p>
+
+<h4 id="null-hypothesis">Null hypothesis</h4>
+<p>The null hypothesis is a general statement or default position that there is no relationship between two measured phenomena, or no association among groups.</p>
+
+<h4 id="chi-square-statistic"><a href="https://www.statisticshowto.datasciencecentral.com/probability-and-statistics/chi-square/">Chi-Square Statistic</a></h4>
+
+<p>A chi-square statistic is one way to show a relationship between two categorical variables. It is a single number that tells you how much difference exists between your observed counts and the counts you would expect if there were no relationship at all in the population.</p>
+
+<p>The formula for the chi-square statistic used in the chi square test is
+the <b>chi-square formula</b>:</p>
+
+<script type="math/tex; mode=display">\chi^2_c=\sum\frac{(O_i - E_i)^2}{E_i}</script>
+
+<ul>
+  <li><script type="math/tex">c</script> - degrees of freedom</li>
+  <li><script type="math/tex">O</script> - observed value</li>
+  <li><script type="math/tex">E</script> - expected value.</li>
+</ul>
+
+<p>Instead of calculating manually it you will use something like:</p>
+
+<ul>
+  <li>Chi Square Test in SPSS.</li>
+  <li>Chi Square P-Value in Excel.</li>
+</ul>
+
+<p>A low value for chi-square means there is a high correlation between your two sets of data. In theory, if your observed and expected values were equal (“no difference”) then chi-square would be zero — an event that is unlikely to happen in real life. Deciding whether a chi-square test statistic is large enough to indicate a statistically significant difference isn’t as easy it seems. It would be nice if we could say a chi-square test statistic &gt;10 means a difference, but unfortunately that isn’t the case.</p>
+
+<p>You could take your calculated chi-square value and compare it to a critical value from a <a href="/images/03-statistics-notebook/01-statistics-notebook.gif">chi-square table</a>. If the chi-square value is more than the critical value, then there is a significant difference.</p>
+
+<p>You could also use a p-value. First state the null hypothesis and the alternate hypothesis. Then generate a chi-square curve for your results along with a p-value (See: Calculate a chi-square p-value Excel). Small p-values (under 5%) usually indicate that a difference is significant (or “small enough”).</p>
+
+<p>The Chi-square statistic can only be used on numbers. They can’t be used for percentages, proportions, means or similar statistical value.</p>
+
+<h3><a href="https://www.statisticshowto.datasciencecentral.com/probability-and-statistics/chi-square/">What is a Chi Square Test?</a></h3>
+
+<p>There are <b>two types of chi-square tests</b>. Both use the chi-square statistic and distribution for different purposes:</p>
+
+<ul>
+	<li> A <b>chi-square goodness of fit test</b> determines if a sample data matches a population. For more details on this type, see: Goodness of Fit Test.</li>
+	<li> A <b>chi-square test for independence</b> compares two variables in a contingency table to see if they are related. In a more general sense, it tests to see whether distributions of categorical variables differ from each another.
+	<div style="padding-left: 30px">
+		<ul>
+			<li> &minus; A <b>very small chi square test statistic</b> means that your observed data fits your expected data extremely well. In other words, there is a relationship.</li>
+		    <li> &minus; A <b>very large chi square test statistic</b> means that the data does not fit very well. In other words, there isn’t a relationship.</li>
+		</ul>
+	</div>
+    </li>
+</ul>
+
+<h2 id="detrending">Detrending</h2>
+<p>Detrending is removing a trend from a time series; a trend usually refers to a change in the mean over time. When you detrend data, you remove an aspect from the data that you think is causing some kind of distortion. For example, you might detrend data that shows an overall increase, in order to see subtrends. Usually, these subtrends are seen as fluctuations on a time series graph.</p>
+
+<h2 id="simple-regression">Simple regression</h2>
+
+<p>Having 20 observations of 2 variables <script type="math/tex">x</script> and <script type="math/tex">y</script> whose the standard deviation is respectively 2 and 3. Complete the following tables:</p>
+
+<center>
+<div class="row">
+  <div class="col s12 m6 l3 my_tab">
+    <table>
+      <tbody>
+        <tr>
+            <td></td>
+            <td>$$y$$</td>
+            <td>$$x$$</td>
+        </tr>
+        <tr>
+          <td>$$y$$</td>
+          <td>9</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>$$x$$</td>
+          <td></td>
+          <td>4</td>
+        </tr>
+      </tbody>
+    </table>
+  <i>Table 1: Covariance Matrix</i>
+  </div>
+
+  <div class="col s12 m6 l3 my_tab">
+    <table>
+      <tbody>
+        <tr>
+            <td></td>
+            <td>$$y$$</td>
+            <td>$$x$$</td>
+        </tr>
+        <tr>
+          <td>$$y$$</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>$$x$$</td>
+          <td>0.6</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <i>Table 2: Correlation matrix</i>
+  </div>
+</div>
+</center>
+
+<h4 id="solution">Solution</h4>
+
+<p>Having <script type="math/tex">\sigma_X^2=4</script>, <script type="math/tex">\sigma_Y^2=9</script></p>
+
+<p>We have <script type="math/tex">\sigma_X=2</script>, <script type="math/tex">\sigma_Y=3</script></p>
+
+<p>And because the correlation coefficient between <script type="math/tex">x</script> and <script type="math/tex">y</script> is given above <script type="math/tex">cor(X,Y)=0.6</script>, we have</p>
+
+<script type="math/tex; mode=display">cor(X,Y)=\frac{cov(X,Y)}{\sigma_X \times \sigma_Y}</script>
+
+<script type="math/tex; mode=display">cov(X,Y)=cor(X,Y) \times \sigma_X \times \sigma_Y</script>
+
+<script type="math/tex; mode=display">cov(X,Y)=0.6 \times 2 \times 3 = 3.6</script>
+
+<center>
+<div class="row">
+  <div class="col s12 m6 l3 my_tab">
+    <table>
+      <tbody>
+        <tr>
+            <td></td>
+            <td>$$y$$</td>
+            <td>$$x$$</td>
+        </tr>
+        <tr>
+          <td>$$y$$</td>
+          <td>9</td>
+          <td><font color="blue">3.6</font></td>
+        </tr>
+        <tr>
+          <td>$$x$$</td>
+          <td><font color="blue">3.6</font></td>
+          <td>4</td>
+        </tr>
+      </tbody>
+    </table>
+  <i>Table 1: Covariance Matrix</i>
+  </div>
+
+  <div class="col s12 m6 l3 my_tab">
+    <table>
+      <tbody>
+        <tr>
+            <td></td>
+            <td>$$y$$</td>
+            <td>$$x$$</td>
+        </tr>
+        <tr>
+          <td>$$y$$</td>
+          <td><font color="blue">1</font></td>
+          <td><font color="blue">0.6</font></td>
+        </tr>
+        <tr>
+          <td>$$x$$</td>
+          <td>0.6</td>
+          <td><font color="blue">1</font></td>
+        </tr>
+      </tbody>
+    </table>
+    <i>Table 2: Correlation matrix</i>
+  </div>
+</div>
+</center>
+
+<p>b. Calculate the equation of the regression line of y on x</p>
+
+<p>We want to find <script type="math/tex">a</script> and <script type="math/tex">b</script> in <script type="math/tex">\hat{y}_i=a+bx_i</script></p>
+
+<p>So, <script type="math/tex">b=\frac{cov(x,y)}{var(x)}=\frac{3.6}{4}=0.9</script></p>
+
+<p>and <script type="math/tex">a=\bar{y}-b\bar{x}=3-0.9\times2=1.2</script></p>
+
+<script type="math/tex; mode=display">\hat{y}_i=1.2+0.9x_i</script>
+
+<p>c. Give the coefficient <script type="math/tex">R^2</script> of determination of the line</p>
+
+<script type="math/tex; mode=display">R^2=cor^2(x,y)=0.36</script>
+
+<h2 id="advanced-technics">Advanced technics</h2>
+
+<ul>
+  <li>Classification tree</li>
+  <li>Random forest</li>
+  <li>Boosting</li>
+  <li>Bagging</li>
+</ul>
+:ET

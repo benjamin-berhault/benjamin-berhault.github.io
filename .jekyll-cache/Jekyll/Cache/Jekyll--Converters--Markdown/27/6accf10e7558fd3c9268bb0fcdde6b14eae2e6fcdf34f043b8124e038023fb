@@ -1,0 +1,64 @@
+I"g	<p>Reference :</p>
+<ul>
+  <li><a href="https://www.twilio.com/docs/sms/tutorials/how-to-send-sms-messages-python?code-sample=code-send-an-sms-using-the-programmable-sms-api&amp;code-language=Python&amp;code-sdk-version=5.x#send-an-sms-message-in-python-via-the-rest-api">Send an SMS message in Python via the REST API</a></li>
+  <li><a href="https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/">How To Add Jobs To cron Under Linux or UNIX</a></li>
+</ul>
+
+<p>Twilio configuration : https://www.youtube.com/watch?v=hV-gy0qyET8&amp;t=428s</p>
+
+<p>Install twilio</p>
+<pre><code class="language-console">pip install twilio
+</code></pre>
+
+<p>Edit a Python script <code>send_sms.py</code></p>
+<pre><code class="language-python">#!/usr/bin/python
+from twilio.rest import Client
+
+account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' # Found on Twilio Console Dashboard
+auth_token = 'your_auth_token' # Found on Twilio Console Dashboard
+
+myPhone = '+33XXXXXXXXX' # Phone number you used to verify your Twilio account
+TwilioNumber = '+33XXXXXXXXX ' # Phone number given to you by Twilio
+
+client = Client(account_sid, auth_token)
+
+client.messages.create(
+ 	to=myPhone,
+ 	from_=TwilioNumber,
+	body='I sent a text message from Python! ' + u'\U0001f680')
+</code></pre>
+
+<p>You should receive a message <code>I sent a text message from Python! ' + u'\U0001f680'</code> u’\U0001f680’</p>
+
+<p>You can try your script</p>
+<pre><code class="language-console">python send_sms.py
+</code></pre>
+
+<p>setup a cron task</p>
+<pre><code class="language-console">crontab -e
+</code></pre>
+
+<p>Define your task</p>
+<pre><code class="language-console">33 * * * 1,2,3,4,5 /home/benjamin/miniconda3/bin/python /home/benjamin/Documents/playground/cron/send_hello.py &gt;/dev/null 2&gt;&amp;1
+</code></pre>
+
+<p><code>&gt;/dev/null 2&gt;&amp;1</code> avoid receiving email output from crontab to your local email account.</p>
+
+<h4 id="to-disable-a-task">To disable a task</h4>
+<p><code>crontab -e</code> then comment out each line you don’t want to run with <code>#</code>.</p>
+
+<p>Or</p>
+
+<p>First, back up the crontab:</p>
+<pre><code class="language-console">crontab -l &gt; my_cron_backup.txt
+</code></pre>
+
+<p>Then you can empty it:</p>
+<pre><code class="language-console">crontab -r
+</code></pre>
+
+<p>To restore:</p>
+<pre><code class="language-console">crontab my_cron_backup.txt
+crontab -l
+</code></pre>
+:ET

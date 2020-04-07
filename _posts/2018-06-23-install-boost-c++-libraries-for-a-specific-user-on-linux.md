@@ -26,8 +26,8 @@ Check the last archive of Boost C++ libraries available from: [https://www.boost
 Download it on your machine.
 ```bash
 cd ~/Downloads
-wget https://dl.bintray.com/boostorg/release/1.67.0/source/boost_1_67_0.tar.bz2
-tar jxf boost_1_67_0.tar.bz2
+wget https://dl.bintray.com/boostorg/release/1.70.0/source/boost_1_70_0.tar.bz2
+tar jxf boost_1_70_0.tar.bz2
 ```
 
 Some <code>tar</code> options are:
@@ -38,7 +38,7 @@ Some <code>tar</code> options are:
 
 Build Boost
 ```bash
-cd ./boost_1_67_0
+cd ./boost_1_70_0
 mkdir ~/.local/boost-libs
 ./bootstrap.sh --prefix=$HOME/.local/boost-libs
 ./b2 install

@@ -1,0 +1,9 @@
+I"¸<div class="row">
+  <div class="col grid s12 m6 l3">
+    <img src="/images/postgresql.png" class="responsive-img" />
+  </div>
+  <div class="col grid s12 m6 l9 ">
+    As a CentOS/RHEL 7 user, for lot of different reasons, you could have the needs to have a relational database management system with an extensible amount of space on your personnal laptop. First in that case PostgreSQL is a serious candidate  The problem with a regular PostgreSQL installation on CentOS is that you will end up installing it on your root partition that are not made by default to handle a huge amount of data. In my case I have just one disk so that I want the data be host on the home partition.
+  </div>
+</div>
+:ET

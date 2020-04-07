@@ -68,7 +68,8 @@ Anaconda update doesn't clean automatically older packages, for this we have to 
 conda clean -p
 ```
 
-Install Jupyter Notebook
+## Install the Jupyter Notebook
+
 ```bash
 conda install -c conda-forge notebook
 ```

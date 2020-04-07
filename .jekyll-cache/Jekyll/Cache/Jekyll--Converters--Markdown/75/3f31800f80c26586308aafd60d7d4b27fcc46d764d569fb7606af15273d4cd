@@ -1,0 +1,632 @@
+I"ÚZ<div class="row">
+  <div class="col grid s12 m6 l3">
+    <img src="/images/materialize.png" class="responsive-img" />
+  </div>
+  <div class="col grid s12 m6 l9 ">
+    Materialize is a modern responsive CSS framework based on Material Design by Google. This page gathers together the materialize components demo pages provided by the Jekyll Theme used.
+  </div>
+</div>
+
+<p style="margin-left: 40px;">
+  <a href="#buttons">Buttons</a><br />
+  <a href="#css">CSS</a><br />
+  <a href="#table">Table</a><br />
+  <a href="#carousel">Carousel</a><br />
+</p>
+
+<h1 id="buttons">Buttons</h1>
+
+<div class="section">
+    <h5>Raised</h5> 
+
+    <div class="row">
+          <div class="col s12">
+                <a class="waves-effect waves-light btn">button</a>
+                <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
+                <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a>
+          </div>
+    </div>
+</div>
+
+<pre><code class="language-html">&lt;div class="row"&gt;
+      &lt;div class="col s12"&gt;
+            &lt;a class="waves-effect waves-light btn"&gt;button&lt;/a&gt;
+            &lt;a class="waves-effect waves-light btn"&gt;&lt;i class="material-icons left"&gt;cloud&lt;/i&gt;button&lt;/a&gt;
+            &lt;a class="waves-effect waves-light btn"&gt;&lt;i class="material-icons right"&gt;cloud&lt;/i&gt;button&lt;/a&gt;
+      &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<div class="divider"></div>
+<div class="section">
+    <h5>Floating</h5> 
+
+    <div class="row">
+            <div class="col s12">
+                <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+    </div>
+</div>
+
+<pre><code class="language-html">&lt;div class="row"&gt;
+        &lt;div class="col s12"&gt;
+            &lt;a class="btn-floating btn-large waves-effect waves-light red"&gt;&lt;i class="material-icons"&gt;add&lt;/i&gt;&lt;/a&gt;
+        &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<div class="divider"></div>
+<div class="section">
+    <h5>Large</h5> 
+
+    <div class="row">
+          <div class="col s12">
+                <a class="waves-effect waves-light btn-large">Button</a>
+                <a class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>button</a>
+                <a class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i>button</a>
+          </div>
+    </div>
+</div>
+
+<pre><code class="language-html">&lt;div class="row"&gt;
+      &lt;div class="col s12"&gt;
+            &lt;a class="waves-effect waves-light btn-large"&gt;Button&lt;/a&gt;
+            &lt;a class="waves-effect waves-light btn-large"&gt;&lt;i class="material-icons left"&gt;cloud&lt;/i&gt;button&lt;/a&gt;
+            &lt;a class="waves-effect waves-light btn-large"&gt;&lt;i class="material-icons right"&gt;cloud&lt;/i&gt;button&lt;/a&gt;
+      &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<div class="divider"></div>
+<div class="section">
+    <h5>Disabled</h5> 
+
+    <div class="row">
+        <div class="col s12">
+                <a class="btn-large disabled">Button</a>
+                <a class="btn disabled">Button</a>
+                <a class="btn-flat disabled">Button</a>
+                <a class="btn-floating disabled"><i class="material-icons">add</i></a>      
+        </div>
+    </div>
+</div>
+
+<pre><code class="language-html">&lt;div class="row"&gt;
+    &lt;div class="col s12"&gt;
+            &lt;a class="btn-large disabled"&gt;Button&lt;/a&gt;
+            &lt;a class="btn disabled"&gt;Button&lt;/a&gt;
+            &lt;a class="btn-flat disabled"&gt;Button&lt;/a&gt;
+            &lt;a class="btn-floating disabled"&gt;&lt;i class="material-icons"&gt;add&lt;/i&gt;&lt;/a&gt;      
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h1 id="css">CSS</h1>
+
+<div class="section">
+    <h5>Shadow</h5>
+    <div class="row">
+              <div class="col s12 m4 l2">
+                <p class="z-depth-0 shadow-demo"></p>
+              </div>
+              <div class="col s12 m4 l2">
+                <p class="z-depth-1 shadow-demo"></p>
+              </div>
+              <div class="col s12 m4 l2">
+                <p class="z-depth-2 shadow-demo"></p>
+              </div>
+              <div class="col s12 m4 l2">
+                <p class="z-depth-3 shadow-demo"></p>
+              </div>
+              <div class="col s12 m4 l2">
+                <p class="z-depth-4 shadow-demo"></p>
+              </div>
+              <div class="col s12 m4 l2">
+                <p class="z-depth-5 shadow-demo"></p>
+              </div>
+    </div>
+</div>
+
+<pre><code class="language-html">&lt;div class="row"&gt;
+          &lt;div class="col s12 m4 l2"&gt;
+            &lt;p class="z-depth-0 shadow-demo"&gt;&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class="col s12 m4 l2"&gt;
+            &lt;p class="z-depth-1 shadow-demo"&gt;&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class="col s12 m4 l2"&gt;
+            &lt;p class="z-depth-2 shadow-demo"&gt;&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class="col s12 m4 l2"&gt;
+            &lt;p class="z-depth-3 shadow-demo"&gt;&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class="col s12 m4 l2"&gt;
+            &lt;p class="z-depth-4 shadow-demo"&gt;&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class="col s12 m4 l2"&gt;
+            &lt;p class="z-depth-5 shadow-demo"&gt;&lt;/p&gt;
+          &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<div class="divider"></div>
+<div class="section">
+    <h5>Columns</h5>
+    <div class="row">
+            <div class="col grid-example s12 blue lighten-1"><span class="flow-text">s12</span></div>
+            <div class="col grid-example s12 m4 l2 teal lighten-1"><span class="flow-text">s12 m4 l2</span></div>
+            <div class="col grid-example s12 m4 l8 teal lighten-1"><span class="flow-text">s12 m4 l8</span></div>
+            <div class="col grid-example s12 m4 l2 teal lighten-1"><span class="flow-text">s12 m4 l2</span></div>
+            <div class="col grid-example s12 m6 l3 purple lighten-3"><span class="flow-text">s12 m6 l3</span></div>
+            <div class="col grid-example s12 m6 l3 purple lighten-3"><span class="flow-text">s12 m6 l3</span></div>
+            <div class="col grid-example s12 m6 l3 purple lighten-3"><span class="flow-text">s12 m6 l3</span></div>
+            <div class="col grid-example s12 m6 l3 purple lighten-3"><span class="flow-text">s12 m6 l3</span></div>
+    </div>
+</div>
+
+<pre><code class="language-html">&lt;div class="row"&gt;
+        &lt;div class="col grid-example s12 blue lighten-1"&gt;&lt;span class="flow-text"&gt;s12&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="col grid-example s12 m4 l2 teal lighten-1"&gt;&lt;span class="flow-text"&gt;s12 m4 l2&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="col grid-example s12 m4 l8 teal lighten-1"&gt;&lt;span class="flow-text"&gt;s12 m4 l8&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="col grid-example s12 m4 l2 teal lighten-1"&gt;&lt;span class="flow-text"&gt;s12 m4 l2&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="col grid-example s12 m6 l3 purple lighten-3"&gt;&lt;span class="flow-text"&gt;s12 m6 l3&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="col grid-example s12 m6 l3 purple lighten-3"&gt;&lt;span class="flow-text"&gt;s12 m6 l3&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="col grid-example s12 m6 l3 purple lighten-3"&gt;&lt;span class="flow-text"&gt;s12 m6 l3&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="col grid-example s12 m6 l3 purple lighten-3"&gt;&lt;span class="flow-text"&gt;s12 m6 l3&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<div class="divider"></div>
+<div class="section">
+    <h5>Offset</h5>
+    <div class="row">
+            <div class="col s12 grid-example"><span class="flow-text">This div is 12-columns wide on all screen sizes</span></div>
+            <div class="col s6 offset-s6 grid-example"><span class="flow-text">6-columns (offset-by-6)</span></div>
+    </div>
+</div>
+
+<pre><code class="language-html">&lt;div class="row"&gt;
+        &lt;div class="col s12 grid-example"&gt;&lt;span class="flow-text"&gt;This div is 12-columns wide on all screen sizes&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="col s6 offset-s6 grid-example"&gt;&lt;span class="flow-text"&gt;6-columns (offset-by-6)&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h1 id="table">Table</h1>
+
+<div class="section">
+    <h5>Borderless Table</h5> 
+    <div class="row">
+          <div class="col s12">
+            <table>
+              <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Item Name</th>
+                    <th>Item Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Alvin</td>
+                  <td>Eclair</td>
+                  <td>$0.87</td>
+                </tr>
+                <tr>
+                  <td>Alan</td>
+                  <td>Jellybean</td>
+                  <td>$3.76</td>
+                </tr>
+                <tr>
+                  <td>Jonathan</td>
+                  <td>Lollipop</td>
+                  <td>$7.00</td>
+                </tr>
+                <tr>
+                  <td>Shannon</td>
+                  <td>KitKat</td>
+                  <td>$9.99</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    </div>
+</div>
+
+<pre><code class="language-html">&lt;div class="row"&gt;
+      &lt;div class="col s12"&gt;
+        &lt;table&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Name&lt;/th&gt;
+                &lt;th&gt;Item Name&lt;/th&gt;
+                &lt;th&gt;Item Price&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Alvin&lt;/td&gt;
+              &lt;td&gt;Eclair&lt;/td&gt;
+              &lt;td&gt;$0.87&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Alan&lt;/td&gt;
+              &lt;td&gt;Jellybean&lt;/td&gt;
+              &lt;td&gt;$3.76&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Jonathan&lt;/td&gt;
+              &lt;td&gt;Lollipop&lt;/td&gt;
+              &lt;td&gt;$7.00&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Shannon&lt;/td&gt;
+              &lt;td&gt;KitKat&lt;/td&gt;
+              &lt;td&gt;$9.99&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<div class="divider"></div>
+<div class="section">
+    <h5>Bordered Table</h5> 
+    <div class="row">
+          <div class="col s12">
+            <table class="bordered">
+              <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Item Name</th>
+                    <th>Item Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Alvin</td>
+                  <td>Eclair</td>
+                  <td>$0.87</td>
+                </tr>
+                <tr>
+                  <td>Alan</td>
+                  <td>Jellybean</td>
+                  <td>$3.76</td>
+                </tr>
+                <tr>
+                  <td>Jonathan</td>
+                  <td>Lollipop</td>
+                  <td>$7.00</td>
+                </tr>
+                <tr>
+                  <td>Shannon</td>
+                  <td>KitKat</td>
+                  <td>$9.99</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    </div>
+</div>
+
+<pre><code class="language-html">&lt;div class="row"&gt;
+      &lt;div class="col s12"&gt;
+        &lt;table class="bordered"&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Name&lt;/th&gt;
+                &lt;th&gt;Item Name&lt;/th&gt;
+                &lt;th&gt;Item Price&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Alvin&lt;/td&gt;
+              &lt;td&gt;Eclair&lt;/td&gt;
+              &lt;td&gt;$0.87&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Alan&lt;/td&gt;
+              &lt;td&gt;Jellybean&lt;/td&gt;
+              &lt;td&gt;$3.76&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Jonathan&lt;/td&gt;
+              &lt;td&gt;Lollipop&lt;/td&gt;
+              &lt;td&gt;$7.00&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Shannon&lt;/td&gt;
+              &lt;td&gt;KitKat&lt;/td&gt;
+              &lt;td&gt;$9.99&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<div class="divider"></div>
+<div class="section">
+    <h5>Striped Table</h5> 
+    <div class="row">
+          <div class="col s12">
+            <table class="striped">
+              <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Item Name</th>
+                    <th>Item Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Alvin</td>
+                  <td>Eclair</td>
+                  <td>$0.87</td>
+                </tr>
+                <tr>
+                  <td>Alan</td>
+                  <td>Jellybean</td>
+                  <td>$3.76</td>
+                </tr>
+                <tr>
+                  <td>Jonathan</td>
+                  <td>Lollipop</td>
+                  <td>$7.00</td>
+                </tr>
+                <tr>
+                  <td>Shannon</td>
+                  <td>KitKat</td>
+                  <td>$9.99</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    </div>
+</div>
+
+<pre><code class="language-html">&lt;div class="row"&gt;
+      &lt;div class="col s12"&gt;
+        &lt;table class="striped"&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Name&lt;/th&gt;
+                &lt;th&gt;Item Name&lt;/th&gt;
+                &lt;th&gt;Item Price&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Alvin&lt;/td&gt;
+              &lt;td&gt;Eclair&lt;/td&gt;
+              &lt;td&gt;$0.87&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Alan&lt;/td&gt;
+              &lt;td&gt;Jellybean&lt;/td&gt;
+              &lt;td&gt;$3.76&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Jonathan&lt;/td&gt;
+              &lt;td&gt;Lollipop&lt;/td&gt;
+              &lt;td&gt;$7.00&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Shannon&lt;/td&gt;
+              &lt;td&gt;KitKat&lt;/td&gt;
+              &lt;td&gt;$9.99&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<div class="divider"></div>
+<div class="section">
+    <h5>Highlight Table</h5> 
+    <div class="row">
+          <div class="col s12">
+            <table class="highlight">
+              <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Item Name</th>
+                    <th>Item Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Alvin</td>
+                  <td>Eclair</td>
+                  <td>$0.87</td>
+                </tr>
+                <tr>
+                  <td>Alan</td>
+                  <td>Jellybean</td>
+                  <td>$3.76</td>
+                </tr>
+                <tr>
+                  <td>Jonathan</td>
+                  <td>Lollipop</td>
+                  <td>$7.00</td>
+                </tr>
+                <tr>
+                  <td>Shannon</td>
+                  <td>KitKat</td>
+                  <td>$9.99</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    </div>
+</div>
+
+<pre><code class="language-html">&lt;div class="row"&gt;
+      &lt;div class="col s12"&gt;
+        &lt;table class="highlight"&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Name&lt;/th&gt;
+                &lt;th&gt;Item Name&lt;/th&gt;
+                &lt;th&gt;Item Price&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Alvin&lt;/td&gt;
+              &lt;td&gt;Eclair&lt;/td&gt;
+              &lt;td&gt;$0.87&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Alan&lt;/td&gt;
+              &lt;td&gt;Jellybean&lt;/td&gt;
+              &lt;td&gt;$3.76&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Jonathan&lt;/td&gt;
+              &lt;td&gt;Lollipop&lt;/td&gt;
+              &lt;td&gt;$7.00&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Shannon&lt;/td&gt;
+              &lt;td&gt;KitKat&lt;/td&gt;
+              &lt;td&gt;$9.99&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<div class="divider"></div>
+<div class="section">
+    <h5>Responsive Table</h5> 
+    <div class="row">
+          <div class="col s12">
+            <table class="responsive-table">
+              <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Item Name</th>
+                    <th>Item Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Alvin</td>
+                  <td>Eclair</td>
+                  <td>$0.87</td>
+                </tr>
+                <tr>
+                  <td>Alan</td>
+                  <td>Jellybean</td>
+                  <td>$3.76</td>
+                </tr>
+                <tr>
+                  <td>Jonathan</td>
+                  <td>Lollipop</td>
+                  <td>$7.00</td>
+                </tr>
+                <tr>
+                  <td>Shannon</td>
+                  <td>KitKat</td>
+                  <td>$9.99</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    </div>
+</div>
+
+<pre><code class="language-html">&lt;div class="row"&gt;
+      &lt;div class="col s12"&gt;
+        &lt;table class="responsive-table"&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Name&lt;/th&gt;
+                &lt;th&gt;Item Name&lt;/th&gt;
+                &lt;th&gt;Item Price&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Alvin&lt;/td&gt;
+              &lt;td&gt;Eclair&lt;/td&gt;
+              &lt;td&gt;$0.87&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Alan&lt;/td&gt;
+              &lt;td&gt;Jellybean&lt;/td&gt;
+              &lt;td&gt;$3.76&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Jonathan&lt;/td&gt;
+              &lt;td&gt;Lollipop&lt;/td&gt;
+              &lt;td&gt;$7.00&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Shannon&lt;/td&gt;
+              &lt;td&gt;KitKat&lt;/td&gt;
+              &lt;td&gt;$9.99&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h1 id="carousel">Carousel</h1>
+
+<div class="section">
+    <div class="row">
+          <div class="carousel carousel-slider center" data-indicators="true" data-namespace="DIVcarouselcarousel-slider1" style="height: 400px;">
+          <div class="carousel-fixed-item center with-indicators">
+            <a class="btn waves-effect white grey-text darken-text-2">button</a>
+          </div>
+          <div class="carousel-item red white-text active" href="#one!" style="z-index: 0; opacity: 1; display: block; transform: translateX(0px) translateX(0px) translateX(0px) translateZ(0px);">
+            <h2>First Panel</h2>
+            <p class="white-text">This is your first panel</p>
+          </div>
+          <div class="carousel-item amber white-text" href="#two!" style="transform: translateX(0px) translateX(953.906px) translateZ(0px); z-index: -1; opacity: 1; display: block;">
+            <h2>Second Panel</h2>
+            <p class="white-text">This is your second panel</p>
+          </div>
+          <div class="carousel-item green white-text" href="#three!" style="transform: translateX(0px) translateX(-1907.81px) translateZ(0px); z-index: -2; opacity: 1; display: block;">
+            <h2>Third Panel</h2>
+            <p class="white-text">This is your third panel</p>
+          </div>
+          <div class="carousel-item blue white-text" href="#four!" style="transform: translateX(0px) translateX(-953.906px) translateZ(0px); z-index: -1; opacity: 1; display: block;">
+            <h2>Fourth Panel</h2>
+            <p class="white-text">This is your fourth panel</p>
+          </div>
+        <ul class="indicators"><li class="indicator-item active"></li><li class="indicator-item"></li><li class="indicator-item"></li><li class="indicator-item"></li></ul></div>
+    </div>
+</div>
+
+<pre><code class="language-html">&lt;div class="row"&gt;
+      &lt;div class="carousel carousel-slider center" data-indicators="true" data-namespace="DIVcarouselcarousel-slider1" style="height: 400px;"&gt;
+      &lt;div class="carousel-fixed-item center with-indicators"&gt;
+        &lt;a class="btn waves-effect white grey-text darken-text-2"&gt;button&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class="carousel-item red white-text active" href="#one!" style="z-index: 0; opacity: 1; display: block; transform: translateX(0px) translateX(0px) translateX(0px) translateZ(0px);"&gt;
+        &lt;h2&gt;First Panel&lt;/h2&gt;
+        &lt;p class="white-text"&gt;This is your first panel&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="carousel-item amber white-text" href="#two!" style="transform: translateX(0px) translateX(953.906px) translateZ(0px); z-index: -1; opacity: 1; display: block;"&gt;
+        &lt;h2&gt;Second Panel&lt;/h2&gt;
+        &lt;p class="white-text"&gt;This is your second panel&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="carousel-item green white-text" href="#three!" style="transform: translateX(0px) translateX(-1907.81px) translateZ(0px); z-index: -2; opacity: 1; display: block;"&gt;
+        &lt;h2&gt;Third Panel&lt;/h2&gt;
+        &lt;p class="white-text"&gt;This is your third panel&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="carousel-item blue white-text" href="#four!" style="transform: translateX(0px) translateX(-953.906px) translateZ(0px); z-index: -1; opacity: 1; display: block;"&gt;
+        &lt;h2&gt;Fourth Panel&lt;/h2&gt;
+        &lt;p class="white-text"&gt;This is your fourth panel&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;ul class="indicators"&gt;&lt;li class="indicator-item active"&gt;&lt;/li&gt;&lt;li class="indicator-item"&gt;&lt;/li&gt;&lt;li class="indicator-item"&gt;&lt;/li&gt;&lt;li class="indicator-item"&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+:ET

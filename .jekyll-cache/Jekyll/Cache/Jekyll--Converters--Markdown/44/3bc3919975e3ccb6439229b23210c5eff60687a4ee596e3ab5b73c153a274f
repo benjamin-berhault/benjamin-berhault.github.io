@@ -1,0 +1,95 @@
+I"A<div class="row">
+  <div class="col grid s12 m6 l3">
+    <img src="/images/vocabulary.png" class="responsive-img" />
+  </div>
+  <div class="col grid s12 m6 l9 ">
+  	blablabla 
+  </div>
+</div>
+
+<p>Update Anaconda with last Python version</p>
+<pre><code class="language-bash">conda install python==3.7
+</code></pre>
+<p>Creating a Pandas DataFrame with a numpy array</p>
+<pre><code class="language-python">import numpy as np
+import pandas as pd
+
+values = np.array([2,3,1,0])
+
+index = ['Row'+str(i) for i in range(1, len(values)+1)]
+df = pd.DataFrame(values, index=index)
+df.describe()
+</code></pre>
+
+<p>Average of a list</p>
+<pre><code class="language-python">l = [15, 18, 2, 36, 12, 78, 5, 6, 9]
+sum(l) / float(len(l))
+</code></pre>
+
+<h4 id="weighted-linear-regression">Weighted Linear Regression</h4>
+<p><b>Source:</b> <a href="http://www.alexsalo.xyz/weighted-linear-regression-python/">http://www.alexsalo.xyz/weighted-linear-regression-python/</a></p>
+
+<p>While linear regression allows to draw a line to fit into the data in such a way to minimize Squared Error, weighted regression takes into account the significance of training examples: it makes sense that those data points that are closer to x, that we are trying to predict on, have more influence on it.</p>
+
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+import pylab
+
+#weighted linear regression
+def wls(x, y, tau=0.3):
+    """
+    :param x: feature matrix
+    :param y: target vector
+    :param tau: smoothing factor - Gaussian bump's width
+    :return: plot of matplotlib
+    """
+    x = np.mat(x).T
+    y = np.mat(y).T
+    m = x.shape[0] #number of examples
+
+    dummy = np.mat(np.ones((m,), dtype=np.int))
+    X = np.hstack((dummy.T, x)) #design matrix
+
+    #try predicting on new possible examples
+    xpred = np.linspace(x.min(), x.max(), 200)
+    ypred = np.zeros(200)
+
+    for i in range(len(xpred)):
+        xval = xpred[i]
+
+        W = np.eye(m) #weights for current ith example
+        theta = np.zeros(m) #thetas for that
+
+        #fill weights via Gaussian sigmoid
+        for j in range(m):
+            W[j][j] = np.exp(-np.linalg.norm(x[j] - xval)**2 / 2*tau**2)
+
+        #calc theta
+        theta = np.linalg.inv(X.T * W * X) * (X.T * (W*y))
+
+        #make prediction
+        ypred[i] = np.mat([1, xval]) * theta
+
+    plt.plot(x, y, 'ro', xpred, ypred, 'b-')
+    pylab.show()
+    return plt
+
+# create a data sample
+x0, A, gamma = 12, 3, 5
+
+n = 200
+x = np.linspace(1, 20, n)
+yexact = A * gamma**2 / (gamma**2 + (x-x0)**2)
+
+# Add some noise with a sigma of 0.5 apart from a particularly noisy region
+# near x0 where sigma is 3
+sigma = np.ones(n)*0.5
+sigma[np.abs(x-x0+1)&lt;1] = 3
+noise = np.random.randn(n) * sigma
+y = yexact + noise
+
+wls(x, y)
+</code></pre>
+
+<center><img src="/images/09-python-notebook/01-python-notebook.png" class="responsive-img" /></center>
+:ET

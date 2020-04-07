@@ -1,0 +1,29 @@
+I"ô<p>getting started with IRC</p>
+
+<ul>
+  <li><a href="https://weechat.org/files/doc/stable/weechat_quickstart.en.html">WeeChat Documentation</a></li>
+  <li>[Getting started Youtube video on WeeChat]https://www.youtube.com/watch?v=SEAne0vihac)</li>
+</ul>
+
+<p>install weechat</p>
+<pre><code class="language-console">sudo yum install weechat
+</code></pre>
+
+<p>First add an IRC server</p>
+<pre><code class="language-console">/server add freenode chat.freenode.net
+</code></pre>
+
+<p>Connect to IRC server you just added</p>
+<pre><code class="language-console">/connect freenode
+</code></pre>
+
+<p>Search for channels whose name contains <code>python</code></p>
+<pre><code class="language-console">/msg alis list *python*
+</code></pre>
+
+<p>Search for channels whose topic contains <code>python</code></p>
+<pre><code class="language-console">/msg alis list * -topic *python*
+</code></pre>
+
+<p>Commands: <a href="https://gist.github.com/xero/2d6e4b061b4ecbeb9f99">https://gist.github.com/xero/2d6e4b061b4ecbeb9f99</a></p>
+:ET

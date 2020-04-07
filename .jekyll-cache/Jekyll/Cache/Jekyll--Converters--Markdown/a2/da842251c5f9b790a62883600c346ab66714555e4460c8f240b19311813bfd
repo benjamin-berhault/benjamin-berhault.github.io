@@ -1,0 +1,26 @@
+I"ƒ<pre><code>git clone --recursive https://github.com/pnorman/ogr2osm
+cd ogr2osm/
+wget https://download.geofabrik.de/europe/andorra-latest-free.shp.zip
+unzip andorra-latest-free.shp.zip
+conda install -c conda-forge gdal=2.4.1
+python ogr2osm.py gis_osm_roads_free_1.shp
+</code></pre>
+<p>source: https://wiki.openstreetmap.org/wiki/Osmconvert</p>
+<pre><code>wget http://m.m.i24.cc/osmconvert64
+chmod +x ./osmconvert64
+./osmconvert64 gis_osm_roads_free_1.osm --out-pbf &gt; gis_osm_roads_free_1.osm.pbf
+</code></pre>
+
+<h1 id="simple-way">simple way</h1>
+<p>Download the josm-tested.jar : https://josm.openstreetmap.de/</p>
+<pre><code>java -jar josm-tested.jar
+</code></pre>
+<p>Shp to .osm (https://help.openstreetmap.org/questions/65879/shp-to-osm)
+Yes, install the OpenData plugin in JOSM, then just open the shapefile from JOSM and save it as a regular .osm file. https://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpenData</p>
+
+<p>source: https://wiki.openstreetmap.org/wiki/Osmconvert</p>
+<pre><code>wget http://m.m.i24.cc/osmconvert64
+chmod +x ./osmconvert64
+./osmconvert64 gis_osm_roads_free_1.osm --out-pbf &gt; gis_osm_roads_free_1.osm.pbf
+</code></pre>
+:ET
