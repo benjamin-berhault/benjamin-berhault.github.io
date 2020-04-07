@@ -1,7 +1,7 @@
 .bundle
 .sass-cache
 Gemfile.lock
-.jekyll-cache
+.jekyll-cache/
 _site
 *.gem
 _posts/1970-01-01-draft.md
