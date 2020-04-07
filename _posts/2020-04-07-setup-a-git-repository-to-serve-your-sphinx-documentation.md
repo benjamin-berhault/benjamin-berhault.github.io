@@ -73,8 +73,8 @@ python -m http.server 8080 --directory ./docs
 ```
 Your Sphinx documentation will be serve at `0.0.0.0:8080`
 
-## To install a custom theme
-Install the theme you want, here `sphinx_rtd_theme`
+## Install a theme
+Get a theme you want install, here we want to install `sphinx_rtd_theme` available with `pip`
 ```console
 pip install sphinx_rtd_theme
 ```
