@@ -1,5 +1,7 @@
 .bundle
 Gemfile.lock
+notebooks.md
+projects.md
 _site/
 .sass-cache/
 .jekyll-cache/
