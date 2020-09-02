@@ -17,7 +17,7 @@ author: "Benjamin Berhault"
 
 The SSIDB database for <b>Microsoft SQL Server Integration Services</b> provides us everything we need to correctly monitor SSIS jobs and packages without having to reinvent the wheel so take advantage of it.
 
-Here we will see how to query the SSISDB database to monitor SSIS jobs and packages allow us the ability to build reports of the form: 
+Here we will see how to query the SSISDB database to monitor SSIS jobs and packages letting us the ability to build reports of the form: 
 
 <div class="row">
   <div class="col grid s12 m6 l6">
