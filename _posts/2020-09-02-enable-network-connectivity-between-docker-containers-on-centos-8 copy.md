@@ -8,7 +8,7 @@ author: "Benjamin Berhault"
 
 <div class="row">
   <div class="col grid s12 m6 l3">
-    <center><img src="{{ '/images/12-docker/docker-networking.png' | relative_url }}" class="responsive-img"></center>
+    <center><img src="{{ '/images/13-SSIS/03-monitoring-ssis.png' | relative_url }}" class="responsive-img"></center>
   </div>
   <div class="col grid s12 m6 l9 ">
     How to monitor SSIS job and package executions.
