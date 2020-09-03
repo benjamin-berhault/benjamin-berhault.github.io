@@ -52,10 +52,6 @@ layout: default
         {{ content }}
       </div>
 
-      {% if site.disqus.shortname %}
-        {% include disqus_comments.html %}
-      {% endif %}
-
     <center>  
       {% include share.html %}
     </center>
@@ -114,6 +110,11 @@ layout: default
         {% endfor %}
 
     </div>
+
+    {% if site.disqus.shortname %}
+      {% include disqus_comments.html %}
+    {% endif %}
+    
     <br>
 
 </article>
