@@ -4,16 +4,9 @@ comments: true
 title: "Install Boost C++ Libraries for a Specific User on Linux"
 categories: post
 author: "Benjamin Berhault"
+description: Boost provides free peer-reviewed portable C++ source libraries. Libraries are intended to work well with the C++ Standard Library. Boost libraries are intended to be widely useful, and usable across a broad spectrum of applications. The Boost license encourages both commercial and non-commercial use.
+image: images/boost.png
 ---
-
-<div class="row">
-  <div class="col grid s12 m6 l3">
-    <img src="{{ '/images/boost.png' | relative_url }}" class="responsive-img">
-  </div>
-  <div class="col grid s12 m6 l9 ">
-    Boost provides free peer-reviewed portable C++ source libraries. Libraries are intended to work well with the C++ Standard Library. Boost libraries are intended to be widely useful, and usable across a broad spectrum of applications. The Boost license encourages both commercial and non-commercial use.
-  </div>
-</div>
 
 <b>Reference:</b> [https://www.boost.org/](https://www.boost.org/)
 

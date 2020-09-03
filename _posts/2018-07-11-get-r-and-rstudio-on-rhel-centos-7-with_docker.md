@@ -4,18 +4,9 @@ comments: true
 title: "Get R and RStudio on RHEL/CentOS 7 with Docker"
 categories: post
 author: "Benjamin Berhault"
+description: You can encounter some trouble installing R and RStudio on CentOS/RHEL. One alternative to avoid those troubles is to use Docker. Docker containers aimed to really simplify your life in some situations. It is a tool you have to have in your pocket.
+image: images/r_docker.png
 ---
-
-<div class="row">
-  <div class="col grid s12 m6 l3">
-    <img src="{{ '/images/r_docker.png' | relative_url }}" class="responsive-img">
-  </div>
-  <div class="col grid s12 m6 l9 ">
-    You can encounter some trouble installing R and RStudio on CentOS/RHEL. One alternative to avoid those troubles is to use Docker. Docker containers aimed to really simplify your life in some situations. It is a tool you have to have in your pocket.
-  </div>
-</div>
-
-
 
 ## Install Docker
 <b>Reference:</b> [Get Docker CE for CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)

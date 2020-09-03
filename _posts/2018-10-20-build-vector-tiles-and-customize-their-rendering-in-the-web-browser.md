@@ -3,18 +3,9 @@ layout: post
 title: "Build Vector Tiles and Customize Their Rendering in the Web Browser"
 categories: post
 author: "Benjamin Berhault"
+description: Mapbox GL JS is a web mapping library based on WebGL.<br><br> Using Mapbox GL JS for serving tilesets is an interesting option especially if rendering a map on the fly in the client web browser is what you are looking for. This ability allows you to render efficiently data-driven map. 
+image: images/mapbox.png
 ---
-
-<div class="row">
-  <div class="col grid s12 m6 l3">
-    <img src="{{ '/images/mapbox.png' | relative_url }}" class="responsive-img">
-  </div>
-  <div class="col grid s12 m6 l9 ">
-    Mapbox GL JS is a web mapping library based on WebGL.<br>
-    <br>
-    Using Mapbox GL JS for serving tilesets is an interesting option especially if rendering a map on the fly in the client web browser is what you are looking for. This ability allows you to render efficiently data-driven map. 
-  </div>
-</div>
 
 The below instructions detail the process for a RHEL/CentOS 7 Linux distribution.
 

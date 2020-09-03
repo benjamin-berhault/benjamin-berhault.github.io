@@ -4,19 +4,9 @@ title: "Power BI Good Practices"
 categories: post
 author: "Benjamin Berhault"
 meta: "Power BI"
+description: Power BI is a great tool for making reports from a wide variety of data sources accessible to as many people as possible.<br>By applying a few principles during report design, report response times can be significantly increased and their subsequent maintenance easier.<br><br>Although knowledge of SQL is not necessary for the use of Power BI, the learning of minimal knowledge of this language should nevertheless be seriously considered to fully benefit from the capabilities of Power BI.
+image: images/power_bi.png
 ---
-
-<div class="row">
-  <div class="col grid s12 m6 l3">
-    <img src="{{ '/images/power_bi.png' | relative_url }}" class="responsive-img">
-  </div>
-  <div class="col grid s12 m6 l9 ">
-Power BI is a great tool for making reports from a wide variety of data sources accessible to as many people as possible.<br>
-By applying a few principles during report design, report response times can be significantly increased and their subsequent maintenance easier.<br>
-<br>
-Although knowledge of SQL is not necessary for the use of Power BI, the learning of minimal knowledge of this language should nevertheless be seriously considered to fully benefit from the capabilities of Power BI.
-  </div>
-</div>
 
 ## Foreword
 Power BI offers 2 ways to connect to data on which the reports will be based:

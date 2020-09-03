@@ -4,16 +4,9 @@ comments: true
 title: "Install Last Node.js on RHEL/CentOS 7 and Avoid Permissions Errors"
 categories: post
 author: "Benjamin Berhault"
+description: Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. As an asynchronous event driven JavaScript runtime, Node is designed to build scalable network applications.
+image: images/node_js.png
 ---
-
-<div class="row">
-  <div class="col grid s12 m6 l3">
-    <img src="{{ '/images/node_js.png' | relative_url }}" class="responsive-img">
-  </div>
-  <div class="col grid s12 m6 l9 ">
-    Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. As an asynchronous event driven JavaScript runtime, Node is designed to build scalable network applications.
-  </div>
-</div>
 
 ## Install Node.js and npm
 <b>References:</b>

@@ -4,18 +4,9 @@ comments: true
 title: "Set Up an OSRM Server on Ubuntu 16"
 categories: post
 author: "Benjamin Berhault"
+description: The Open Source Routing Machine or OSRM is a C++ implementation of a <b>high-performance routing engine</b> for shortest paths in road networks. Licensed under the permissive 2-clause BSD license, OSRM is a free network service hosting the following services&#58; <a href="http://project-osrm.org/docs/v5.5.1/api/#nearest-service">nearest</a>, <a href="http://project-osrm.org/docs/v5.5.1/api/#tile-service">route</a>, <a href="http://project-osrm.org/docs/v5.5.1/api/#table-service">table</a>, <a href="http://project-osrm.org/docs/v5.5.1/api/#match-service">match</a>, <a href="http://project-osrm.org/docs/v5.5.1/api/#trip-service">trip</a>, <a href="http://project-osrm.org/docs/v5.5.1/api/#tile-service">tile</a>.<br><br>We will see in this post how to deploy your own OSRM service in case you want to use it on your own data or just to not be limited by the number requests with responses like&#58; <code>{'message'&#58; 'Too Many Requests'}</code>.
+image: images/osrm.png
 ---
-
-<div class="row">
-  <div class="col grid s12 m6 l3">
-    <img src="{{ '/images/osrm.png' | relative_url }}" class="responsive-img">
-  </div>
-  <div class="col grid s12 m6 l9 ">
-    The Open Source Routing Machine or OSRM is a C++ implementation of a <b>high-performance routing engine</b> for shortest paths in road networks. Licensed under the permissive 2-clause BSD license, OSRM is a free network service hosting the following services: <a href="http://project-osrm.org/docs/v5.5.1/api/#nearest-service">nearest</a>, <a href="http://project-osrm.org/docs/v5.5.1/api/#tile-service">route</a>, <a href="http://project-osrm.org/docs/v5.5.1/api/#table-service">table</a>, <a href="http://project-osrm.org/docs/v5.5.1/api/#match-service">match</a>, <a href="http://project-osrm.org/docs/v5.5.1/api/#trip-service">trip</a>, <a href="http://project-osrm.org/docs/v5.5.1/api/#tile-service">tile</a>.<br>
-    <br>
-    We will see in this post how to deploy your own OSRM service in case you want to use it on your own data or just to not be limited by the number requests with responses like: <code>{'message': 'Too Many Requests'}</code>.
-  </div>
-</div>
 
 <b>Sources:</b>
 * [https://www.digitalocean.com/community/tutorials/how-to-set-up-an-osrm-server-on-ubuntu-14-04](https://www.digitalocean.com/community/tutorials/how-to-set-up-an-osrm-server-on-ubuntu-14-04)

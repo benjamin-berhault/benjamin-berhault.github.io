@@ -4,16 +4,9 @@ comments: true
 title: "Install Python on Windows and Deal with Corporate Network Constraints"
 categories: post
 author: "Benjamin Berhault"
+description: Using Python in a Microsoft corporate environment can rise various issues. This article introduce 3 different options hoping that one of them will fit to your situation.
+image: images/python.png
 ---
-
-<div class="row">
-  <div class="col grid s12 m6 l3">
-    <img src="{{ '/images/python.png' | relative_url }}" class="responsive-img">
-  </div>
-  <div class="col grid s12 m6 l9 ">
-    Using Python in a Microsoft corporate environment can rise various issues. This article introduce 3 different options hoping that one of them will fit to your situation.
-  </div>
-</div>
 
 * Install Python with Anaconda on Windows
 * Deal with corporate network constraints

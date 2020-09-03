@@ -30,7 +30,33 @@ layout: page
           <i class="material-icons">date_range</i>
           {{post.date | date: "%d/%m/%Y"}}
         </p>
-        <p id="post-content">{{post.excerpt | remove: '<p>' | remove: '</p>'}}</p>
+        <!--<p id="post-content">{{post.excerpt | remove: '<p>' | remove: '</p>'}}</p>-->
+
+
+        <div class="row">
+          <div class="col grid s12 m5 l4">
+  
+            {% if post.youtube %}
+                <div onMouseOver="showVideoOnHover(this)" onMouseOut="hideVideo()"  onclick = "showVideo(this)">
+                    <img id="post_image" width="100%" src="{{post.image | prepend: '/' }}"  data-src = "https://www.youtube.com/embed/{{ post.youtube }}?autoplay=1&mute=1&enablejsapi=1"/>
+  
+                    <iframe id="youtube" width="100%" style="display:none;" onStateChange="alert('onStateChange');">
+                    </iframe>
+                </div>
+            {% else %}
+                <img src="{{ post.image | prepend: '/' }}" alt="Featured image" class="responsive-img">
+            {% endif %}
+                             
+          </div>
+          <div class="col grid s12 m7 l8">
+          <p class="post-content">
+  
+            {{ post.description }}
+          
+          </p>
+          </div>
+        </div>
+
       </div>
       <div class="card-action">
         <a href="{{ post.url | relative_url }}">
@@ -41,6 +67,10 @@ layout: page
   </div>
   {% endfor %}
 
+
+
+
+  
   <!-- pagination -->
 {% if paginator.total_pages > 1 %}
   <div class="col s12 center-align">

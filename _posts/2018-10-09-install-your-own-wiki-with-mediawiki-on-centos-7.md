@@ -4,20 +4,9 @@ comments: true
 title: "Install Your Own Wiki with Mediawiki on RHEL/CentOS 7"
 categories: post
 author: "Benjamin Berhault"
+description: It does not matter whether you are employed in a real estate company or a restaurant. Every company needs a wiki. A wiki is a tool for managing knowledge. And as a manager you will want to perpetuate and promote the rapid transmission of knowledge among collaborators, so you will need an operational manual aka wiki. A wiki is critical for competitive business but it is also incredibly useful for an individual to manage and organize knowledge.<br><br> In short, whether you are a company or an individual wishing to manage a knowledge a wiki is the tool you have to have.<br><br> Here, we'll see how to install MediaWiki on RHEL/CentOS 7 supported by PostgreSQL and Apache that makes it working like a charm.
+image: images/dark_wiki.png
 ---
-
-<div class="row">
-  <div class="col grid s12 m6 l3">
-    <img src="{{ '/images/dark_wiki.png' | relative_url }}" class="responsive-img">
-  </div>
-  <div class="col grid s12 m6 l9 ">
-    It does not matter whether you are employed in a real estate company or a restaurant. Every company needs a wiki. A wiki is a tool for managing knowledge. And as a manager you will want to perpetuate and promote the rapid transmission of knowledge among collaborators, so you will need an operational manual aka wiki. A wiki is critical for competitive business but it is also incredibly useful for an individual to manage and organize knowledge.<br>
-      <br>
-  In short, whether you are a company or an individual wishing to manage a knowledge a wiki is the tool you have to have.<br>
-      <br>
-    Here, we'll see how to install MediaWiki on RHEL/CentOS 7 supported by PostgreSQL and Apache that makes it working like a charm.
-  </div>
-</div>
 
 #### Page content
 <div style="padding-left: 30px">

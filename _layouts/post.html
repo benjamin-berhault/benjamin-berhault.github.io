@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+{% include svg-icons.html %}
+
 <div class="container">
     <div class="section">
     <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
@@ -22,6 +24,29 @@ layout: default
           {% endif %}
         </p>
       </header>
+      <div class="row">
+        <div class="col grid s12 m5 l4">
+
+          {% if page.youtube %}
+              <div onMouseOver="showVideoOnHover(this)" onMouseOut="hideVideo()"  onclick = "showVideo(this)">
+                  <img id="post_image" width="100%" src="{{page.image | prepend: '/' }}"  data-src = "https://www.youtube.com/embed/{{ page.youtube }}?autoplay=1&mute=1&enablejsapi=1"/>
+
+                  <iframe id="youtube" width="100%" style="display:none;" onStateChange="alert('onStateChange');">
+                  </iframe>
+              </div>
+          {% else %}
+              <img src="{{ page.image | prepend: '/' }}" alt="Featured image" class="responsive-img">
+          {% endif %}
+                           
+        </div>
+        <div class="col grid s12 m7 l8">
+        <p class="post-content">
+
+          {{ page.description }}
+        
+        </p>
+        </div>
+      </div>
 
       <div class="post-content" itemprop="articleBody">
         {{ content }}
@@ -30,10 +55,72 @@ layout: default
       {% if site.disqus.shortname %}
         {% include disqus_comments.html %}
       {% endif %}
-    </article>
+
+    {% include share.html %}
+
+    <h3>{{ site.translations.text.see_also | default: "See also" }}</h3>
+
+    <div class="row">
+            {% assign next_posts = site.posts | where_exp:"post","post.is_generated != true" | where_exp:"post","post.path != page.path" %}
+            {% assign shuffled_array = next_posts | shuffle %}
+            {% for post in shuffled_array limit:3 %}
+
+            <div class="col s12">
+            <div class="card hoverable">
+                <div class="card-content">
+                <span id="post-title" class="card-title to-title-case" style="font-weight: bold;">
+                        {{post.title}}
+                </span>
+
+                <p id="post-date" style="margin: 4px">
+                    <i class="material-icons" style="vertical-align:middle" >date_range</i>
+                    {{post.date | date: "%d/%m/%Y"}}
+                </p>
+
+                <div class="row" style="margin: 5px 0px">
+                  <div class="col grid s12 m3 l3">
+          
+                    {% if post.youtube %}
+                        <div onMouseOver="showVideoOnHover(this)" onMouseOut="hideVideo()"  onclick = "showVideo(this)">
+                            <img id="post_image" width="100%" src="{{post.image | prepend: '/' }}"  data-src = "https://www.youtube.com/embed/{{ post.youtube }}?autoplay=1&mute=1&enablejsapi=1"/>
+          
+                            <iframe id="youtube" width="100%" style="display:none;" onStateChange="alert('onStateChange');">
+                            </iframe>
+                        </div>
+                    {% else %}
+                        <img src="{{ post.image | prepend: '/' }}" alt="Featured image" class="responsive-img">
+                    {% endif %}
+                                     
+                  </div>
+                  <div class="col grid s12 m3 l3">
+                  <p class="post-content">
+          
+                    {{ post.description }}
+                  
+                  </p>
+                  </div>
+                </div>
+                
+                </div>
+                <div class="card-action">
+                <a href="{{ post.url | relative_url }}">
+                    Read More <i class="material-icons" style="vertical-align:middle">touch_app</i>
+                </a>
+                </div>
+            </div>
+            </div>
+
+        {% endfor %}
+
     </div>
+    <br>
+
+</article>
 </div>
-<script>$('.carousel.carousel-slider').carousel({fullWidth: true});</script>
+</div> 
+
 {% if site.disqus.shortname %}
   {% include disqus.html %}
 {% endif %}
+
+<script>$('.carousel.carousel-slider').carousel({fullWidth: true});</script>

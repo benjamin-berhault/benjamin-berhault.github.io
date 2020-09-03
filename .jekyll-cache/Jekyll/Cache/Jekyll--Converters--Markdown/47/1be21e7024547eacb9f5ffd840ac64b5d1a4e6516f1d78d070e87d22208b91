@@ -1,9 +1,0 @@
-I"Å<div class="row">
-  <div class="col grid s12 m6 l3">
-    <center><img src="/images/pgadmin.png" class="responsive-img" /></center>
-  </div>
-  <div class="col grid s12 m6 l9 ">
-    PgAdmin 4 is a rewrite of the popular pgAdmin3 management tool for the PostgreSQL (<a href="http://www.postgresql.org">http://www.postgresql.org</a>) database. Installing the last version under CentOS 7 can be a bit tricky, here it is one way how to do it.
-  </div>
-</div>
-:ET

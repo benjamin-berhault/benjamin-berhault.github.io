@@ -4,16 +4,9 @@ comments: true
 title: "Monitor SSIS job and package executions"
 categories: post
 author: "Benjamin Berhault"
+description: How to monitor SSIS job and package executions.
+image: images/13-SSIS/03-monitoring-ssis.png
 ---
-
-<div class="row">
-  <div class="col grid s12 m6 l3">
-    <center><img src="{{ '/images/13-SSIS/03-monitoring-ssis.png' | relative_url }}" class="responsive-img"></center>
-  </div>
-  <div class="col grid s12 m6 l9 ">
-    How to monitor SSIS job and package executions.
-  </div>
-</div>
 
 The SSIDB database for <b>Microsoft SQL Server Integration Services</b> provides us everything we need to correctly monitor SSIS jobs and packages without having to reinvent the wheel so take advantage of it.
 

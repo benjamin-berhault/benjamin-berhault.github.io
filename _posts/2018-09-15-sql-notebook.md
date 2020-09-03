@@ -4,22 +4,9 @@ comments: true
 title: "SQL Notebook"
 categories: [notebook, post]
 author: "Benjamin Berhault"
+description: Microsoft SQL Server queries memo.<ul><li>Get the value of one column based on the MAX value of another with a GROUP BY query</li><li>Space used by tables</li><li>BI Dimension Date & Time</li></ul> 
+image: images/sql.png
 ---
-
-<div class="row">
-  <div class="col grid s12 m6 l3">
-    <img src="{{ '/images/sql.png' | relative_url }}" class="responsive-img">
-  </div>
-  <div class="col grid s12 m6 l9 ">
-    Microsoft SQL Server queries memo.
-    <ul>
-        <li>Get the value of one column based on the MAX value of another with a GROUP BY query</li>
-        <li>Space used by tables</li>
-        <li>BI Dimension Date & Time</li>
-    </ul>  
-  </div>
-</div>
-
 
 Get the value of one column based on the MAX value of another with a GROUP BY query:
 

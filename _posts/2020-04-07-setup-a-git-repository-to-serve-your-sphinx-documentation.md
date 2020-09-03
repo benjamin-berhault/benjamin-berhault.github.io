@@ -4,17 +4,9 @@ comments: true
 title: "Setup a GitHub repository to serve your Sphinx documentation"
 categories: post
 author: "Benjamin Berhault"
+description: Sphinx and GitHub provide an efficient and free way to publish your documentation online. Here we describe how to do so.
+image: images/11-sphinx-github-pages/sphinx-documentation.png
 ---
-
-<div class="row">
-  <div class="col grid s12 m6 l3">
-    <center><img src="{{ '/images/11-sphinx-github-pages/sphinx-documentation.png' | relative_url }}" class="responsive-img"></center>
-  </div>
-  <div class="col grid s12 m6 l9 ">
-    Sphinx and GitHub provide an efficient and free way to publish your documentation online. Here we describe how to do so.
-  </div>
-</div>
-
 
 #### Prerequisites
 * [Python installed on your local machine](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html#installation)

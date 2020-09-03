@@ -4,16 +4,9 @@ comments: true
 title: "Install Last PgAdmin 4 on RHEL/CentOS 7"
 categories: post
 author: "Benjamin Berhault"
+description: PgAdmin 4 is a rewrite of the popular pgAdmin3 management tool for the PostgreSQL (<a href="http://www.postgresql.org">http://www.postgresql.org</a>) database. Installing the last version under CentOS 7 can be a bit tricky, here it is one way how to do it.
+image: images/pgadmin.png
 ---
-
-<div class="row">
-  <div class="col grid s12 m6 l3">
-    <center><img src="{{ '/images/pgadmin.png' | relative_url }}" class="responsive-img"></center>
-  </div>
-  <div class="col grid s12 m6 l9 ">
-    PgAdmin 4 is a rewrite of the popular pgAdmin3 management tool for the PostgreSQL (<a href="http://www.postgresql.org">http://www.postgresql.org</a>) database. Installing the last version under CentOS 7 can be a bit tricky, here it is one way how to do it.
-  </div>
-</div>
 
 Download the Python wheel for the last pgAdmin release listed on the following page : [https://www.pgadmin.org/download/pgadmin-4-python-wheel/](https://www.pgadmin.org/download/pgadmin-4-python-wheel/).
 ```console

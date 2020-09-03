@@ -1,9 +1,0 @@
-I"­<div class="row">
-  <div class="col grid s12 m6 l3">
-    <img src="/images/r_docker.png" class="responsive-img" />
-  </div>
-  <div class="col grid s12 m6 l9 ">
-    You can encounter some trouble installing R and RStudio on CentOS/RHEL. One alternative to avoid those troubles is to use Docker. Docker containers aimed to really simplify your life in some situations. It is a tool you have to have in your pocket.
-  </div>
-</div>
-:ET

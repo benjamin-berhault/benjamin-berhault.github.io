@@ -5,19 +5,9 @@ title: "Install MetaTrader 5 64-bit on RHEL/CentOS 7"
 categories: post
 author: "Benjamin Berhault"
 tags: ["metatrader"]
+description: MetaTrader 5 is a free application for traders allowing to perform technical analysis and trading operations in the Forex and exchange markets. A reason why you would choose MetaTrader 5 over MetaTrader 4 is that <a href="https://www.mql5.com/en/forum/68087">the new MQL5 compiler has been optimized for the 64-bit version</a>. <br><br> MetaTrader can be installed and run on computers with Linux using Wine. Wine is a free software that allows users of the Unix-based systems to run an application developed for the Microsoft Windows systems. Even if the documentation explains <a href="https://www.metatrader4.com/en/trading-platform/help/userguide/install_linux">how to install it on Ubuntu</a>, doing so can be a bit tricky. So, let's see how to have MeatTrader 5 64-bit operational on RHEL/CentOS 7.
+image: images/metatrader4.png
 ---
-
-
-<div class="row">
-  <div class="col grid s12 m6 l3">
-    <img src="{{ '/images/metatrader4.png' | relative_url }}" class="responsive-img">
-  </div>
-  <div class="col grid s12 m6 l9 ">
-    MetaTrader 5 is a free application for traders allowing to perform technical analysis and trading operations in the Forex and exchange markets. A reason why you would choose MetaTrader 5 over MetaTrader 4 is that <a href="https://www.mql5.com/en/forum/68087">the new MQL5 compiler has been optimized for the 64-bit version</a>. <br>
-    <br>
-    MetaTrader can be installed and run on computers with Linux using Wine. Wine is a free software that allows users of the Unix-based systems to run an application developed for the Microsoft Windows systems. Even if the documentation explains <a href="https://www.metatrader4.com/en/trading-platform/help/userguide/install_linux">how to install it on Ubuntu</a>, doing so can be a bit tricky. So, let's see how to have MeatTrader 5 64-bit operational on RHEL/CentOS 7.
-  </div>
-</div>
 
 <b>Good to know:</b> MQL5 compiler for x64 platforms claims a speed up calculations from 2 to 10 times with the new MQL5 compiler for x64 platforms.
 <a href="https://www.mql5.com/en/forum/68087"><img src="{{ '/images/07-install-metatrader-5/01-install-metatrader-5.png' | relative_url }}" class="responsive-img"></a>

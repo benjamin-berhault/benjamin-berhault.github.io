@@ -1,9 +1,0 @@
-I"à<div class="row">
-  <div class="col grid s12 m6 l3">
-    <img src="/images/boost.png" class="responsive-img" />
-  </div>
-  <div class="col grid s12 m6 l9 ">
-    Boost provides free peer-reviewed portable C++ source libraries. Libraries are intended to work well with the C++ Standard Library. Boost libraries are intended to be widely useful, and usable across a broad spectrum of applications. The Boost license encourages both commercial and non-commercial use.
-  </div>
-</div>
-:ET

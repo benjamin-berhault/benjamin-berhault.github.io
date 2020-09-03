@@ -4,18 +4,9 @@ comments: true
 title: "Install Anaconda Python Distribution for all users on RHEL/CentOS 7"
 categories: post
 author: "Benjamin Berhault"
+description: The easiest way to install Python and Jupyter Notebook is probably with Anaconda.<br><br>Anaconda is a free and open source distribution of the Python programming language for data science and machine learning related applications, that aims to simplify package management and deployment. Package versions are managed by the package management system conda.
+image: images/anaconda.png
 ---
-
-<div class="row">
-  <div class="col grid s12 m6 l3">
-    <img src="{{ '/images/anaconda.png' | relative_url }}" class="responsive-img">
-  </div>
-  <div class="col grid s12 m6 l9 ">
-    The easiest way to install Python and Jupyter Notebook is probably with Anaconda.<br>
-    <br>
-    Anaconda is a free and open source distribution of the Python programming language for data science and machine learning related applications, that aims to simplify package management and deployment. Package versions are managed by the package management system conda.
-  </div>
-</div>
 
 First install `bzip2` and `wget` if you do not have those yet
 ```console

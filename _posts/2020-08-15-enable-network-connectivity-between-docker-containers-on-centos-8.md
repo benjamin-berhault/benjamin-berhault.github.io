@@ -4,16 +4,9 @@ comments: true
 title: "Enable network connectivity between Docker containers on CentOS 8"
 categories: post
 author: "Benjamin Berhault"
+description: Enable a network connectivity between Docker containers on CentOS 8.
+image: images/12-docker/docker-networking.png
 ---
-
-<div class="row">
-  <div class="col grid s12 m6 l3">
-    <center><img src="{{ '/images/12-docker/docker-networking.png' | relative_url }}" class="responsive-img"></center>
-  </div>
-  <div class="col grid s12 m6 l9 ">
-    Enable a network connectivity between Docker containers on CentOS 8.
-  </div>
-</div>
 
 #### Reference
 * [No network connectivity to/from Docker CE container on CentOS 8](https://serverfault.com/questions/987686/no-network-connectivity-to-from-docker-ce-container-on-centos-8)
